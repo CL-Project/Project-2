@@ -1,0 +1,33 @@
+[project]
+name = "hi-en-semantic-search"
+version = "0.1.0"
+description = "Static vs. pretrained embeddings for Hindi-English cross-lingual retrieval (course project)"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "tqdm",
+    "pyyaml",
+    "gensim",
+    "torch",
+    "transformers",
+    "sentence-transformers",
+    "rank-bm25",
+    "datasets",
+    "sentencepiece",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

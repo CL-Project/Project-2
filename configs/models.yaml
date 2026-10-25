@@ -1,0 +1,15 @@
+encoders:
+  labse:      {hf_id: sentence-transformers/LaBSE,                max_len: 256, fp16: true}
+  mE5_base:   {hf_id: intfloat/multilingual-e5-base,             max_len: 512, fp16: true, query_prefix: "query: ", passage_prefix: "passage: "}
+  muril:      {hf_id: google/muril-base-cased,                   max_len: 512, fp16: true, pooling: mean}
+static:
+  dim: 300
+  vocab_cap: 200000
+  word2vec:   {window: 5, min_count: 5, negative: 10, epochs: 5, workers: 8}
+  fasttext:   {window: 5, min_count: 5, negative: 10, epochs: 5, min_n: 3, max_n: 6, workers: 8}
+  glove:      {window: 15, min_count: 5, epochs: 15, threads: 8, memory_gb: 4}
+alignment:
+  seed_dict_size: 5000
+  method: procrustes
+  retrieval: csls
+  csls_k: 10

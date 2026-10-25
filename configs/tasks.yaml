@@ -1,0 +1,11 @@
+seed: 42
+bootstrap_samples: 1000
+t1_bli:
+  metrics: [P@1, P@5]
+  directions: [hi-en, en-hi]
+t2_parallel:
+  metrics: [Acc@1, MRR, Recall@5]
+  directions: [hi-en, en-hi]
+t3_xquad:
+  metrics: [Recall@1, Recall@5, MRR]
+  settings: [hi-en, hi-hi, en-hi, en-en]   # query lang - paragraph lang

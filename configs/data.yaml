@@ -1,0 +1,17 @@
+# Dataset sources. Verify licenses and Hindi coverage before use.
+muse:
+  dir: data/raw/muse
+  pairs: [en-hi, hi-en]
+flores:
+  dir: data/raw/flores
+  splits: [dev, devtest]
+xquad:
+  dir: data/raw/xquad
+  languages: [hi, en]
+sib200:
+  dir: data/raw/sib200
+  languages: [hin_Deva, eng_Latn]
+wikipedia:
+  dir: data/raw/wikipedia
+  languages: [hi, en]
+  match_token_count: true   # downsample English to Hindi token count
