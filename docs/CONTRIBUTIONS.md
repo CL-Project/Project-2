@@ -8,7 +8,7 @@ Member identities (fill in):
 | Member | Name | Roll number | Git identity |
 |---|---|---|---|
 | A | **TBD** | **TBD** | **TBD** |
-| B | **TBD** | **TBD** | **TBD** |
+| B | Pranjal Baranwal | 2025114004 | `P-B <pranjalbaranwal304@gmail.com>` |
 
 Suggested workstreams (`PLAN.md` Appendix D) — the humans decide who is A and who is B:
 
@@ -22,6 +22,9 @@ Suggested workstreams (`PLAN.md` Appendix D) — the humans decide who is A and 
 |---|---|---|---|
 | S00 | Project docs and decision log | TBD | `docs/AI_USE_LOG.md`, `docs/CONTRIBUTIONS.md`, `docs/DECISIONS.md` created |
 | S03 | Reconcile skeleton with proposal | TBD | Dropped static family and `sib200` removed, `stanza`/`regex` added, configs extended, probe-set header updated, README RQs rewritten |
+| S06 | Ranking metrics and paired bootstrap | B | `src/metrics.py`, `tests/test_metrics.py` (15 tests) |
+| S08 | Results and per-item logging utilities | B | `src/results_log.py`, `tests/test_results_log.py` (9 tests) |
+| S09 | Shared synthetic test fixtures | B | `tests/conftest.py`, `tests/test_fixtures.py` (3 tests) |
 
 ## Statement for the report
 

@@ -7,15 +7,15 @@ Legend: **Owner** A / B is a *suggested* split of the two members (the humans de
 ## Status checklist
 
 - [x] S00 Project docs and decision log
-- [✓] S01 (H) Email instructors
-- [✓] S02 Environment check
+- [x] S01 (H) Email instructors
+- [x] S02 Environment check
 - [x] S03 Reconcile skeleton with proposal
-- [ ] S04 First real commit
+- [x] S04 First real commit
 - [ ] S05 `textproc.py` + tests
-- [ ] S06 `metrics.py` + tests
+- [x] S06 `metrics.py` + tests
 - [ ] S07 `retrieval.py` + tests
-- [ ] S08 `results_log.py` + tests
-- [ ] S09 Shared test fixtures
+- [x] S08 `results_log.py` + tests
+- [x] S09 Shared test fixtures
 - [ ] S10 `download_data.py`
 - [ ] S11 Data validation and data card
 - [ ] S12 `preprocess_wiki.py`
