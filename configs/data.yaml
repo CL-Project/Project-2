@@ -1,17 +1,59 @@
-# Dataset sources. Verify licenses and Hindi coverage before use.
+# Dataset sources and split settings. Verify licenses and Hindi coverage before use.
+# Every path is relative to the repository root; raw downloads live under data/raw/.
 muse:
   dir: data/raw/muse
   pairs: [en-hi, hi-en]
+  splits:
+    train: "0-5000"      # seed dictionary, used for Procrustes only
+    test: "5000-6500"    # evaluation only, never for fitting or tuning
 flores:
   dir: data/raw/flores
+  tarball_url: https://dl.fbaipublicfiles.com/nllb/flores200_dataset.tar.gz
   splits: [dev, devtest]
+  languages: {hi: hin_Deva, en: eng_Latn}
+  expected_sentences: {dev: 997, devtest: 1012}
 xquad:
   dir: data/raw/xquad
-  languages: [hi, en]
-sib200:
-  dir: data/raw/sib200
-  languages: [hin_Deva, eng_Latn]
+  hf_dataset: google/xquad
+  configs: {hi: xquad.hi, en: xquad.en}
+  split: validation
+  expected_questions: 1190
+  expected_paragraphs: 240
 wikipedia:
   dir: data/raw/wikipedia
   languages: [hi, en]
-  match_token_count: true   # downsample English to Hindi token count
+  # Hindi dumped fully; English streamed (never download the full dump).
+  english_mode: stream
+  # Deterministic split by hash of article title (S12).
+  shards:
+    train: 0.90
+    distractor: 0.05
+    fit: 0.05
+  min_devanagari_ratio_hi: 0.4
+  match_token_count: true   # downsample English to the Hindi train token count
+t3_distractors:
+  source_shard: distractor
+  n_per_language: 10000
+  seed: 42
+  min_tokens: 40
+  max_tokens: 250
+  overlap_shingle: 8        # drop distractors sharing an 8-token shingle with XQuAD
+fasttext_pretrained:
+  # Aligned wiki vectors for `ft_ref`; optional Common Crawl vectors for `ft_cc`.
+  dir: data/raw/fasttext
+  ref:
+    hi: https://dl.fbaipublicfiles.com/fasttext/vectors-aligned/wiki.hi.align.vec
+    en: https://dl.fbaipublicfiles.com/fasttext/vectors-aligned/wiki.en.align.vec
+  cc:
+    hi: https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.hi.300.vec.gz
+    en: https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.en.300.vec.gz
+  load_limit: 200000        # frequency-sorted files: never load fully
+kaikki:
+  dir: data/raw/kaikki
+  hi_jsonl: kaikki.org-dictionary-Hindi.jsonl
+miracl:                     # optional, S33 only; check access terms first
+  dir: data/raw/miracl
+  language: hi
+  hf_dataset: miracl/miracl
+  split: dev
+  max_random_passages: 20000

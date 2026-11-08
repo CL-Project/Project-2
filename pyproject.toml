@@ -20,6 +20,8 @@ dependencies = [
     "scikit-learn",
     "matplotlib",
     "seaborn",
+    "stanza>=1.15.0",
+    "regex>=2026.9.29",
 ]
 
 [dependency-groups]

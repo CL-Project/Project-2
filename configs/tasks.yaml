@@ -9,3 +9,6 @@ t2_parallel:
 t3_xquad:
   metrics: [Recall@1, Recall@5, MRR]
   settings: [hi-en, hi-hi, en-hi, en-en]   # query lang - paragraph lang
+t3b_miracl:                                # optional, S33 only
+  metrics: [MRR@10, Recall@10]
+  settings: [hi-hi]

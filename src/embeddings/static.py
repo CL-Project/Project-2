@@ -1,1 +1,1 @@
-"""Train and load static embeddings (Word2Vec, FastText via gensim; GloVe loader for Stanford output)."""
+"""Train and load static embeddings (Word2Vec and fastText via gensim; pretrained aligned fastText)."""

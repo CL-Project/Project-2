@@ -1,1 +1,1 @@
-id	hindi_sentence	ambiguous_word	intended_sense	english_reference
+id	word	word_romanized	intended_sense	hindi_sentence	english_match	english_contrast	status	annotator
