@@ -92,14 +92,14 @@ Examples (Hindi question / English question):
 
 Dump date: **20231101**; Hindi files: **2**, 0.24 GB.
 
-`data/raw/MANIFEST.json` records **16** files.
+`data/raw/MANIFEST.json` records **19** files.
 
 ## Wikipedia training corpora (S12)
 
 | Language | Articles | Train | Distractor | Fit | Sentences | Tokens | Types | Wall time (s) |
 |---|---|---|---|---|---|---|---|---|
-| hi | 163093 | 146743 | 8199 | 8151 | 1842478 | 36992370 | 812905 | 289.0 |
-| en | 111020 | 100008 | 5456 | 5556 | 1763685 | 36992408 | 597933 | 313.6 |
+| hi | 163093 | 146743 | 8199 | 8151 | 1842478 | 36992370 | 812905 | 234.0 |
+| en | 111020 | 100008 | 5456 | 5556 | 1763685 | 36992408 | 597933 | 271.0 |
 
 Equal-size rule: English train tokens are **0.000%** away from the Hindi total (36992370 vs 36992408).
 
