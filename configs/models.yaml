@@ -1,7 +1,13 @@
+encoder_defaults:
+  word_max_len: 16          # S14: `word` kind is a single token, never a sentence
+  word_batch_size: 512
 encoders:
-  labse:      {hf_id: sentence-transformers/LaBSE,                max_len: 256, fp16: true}
-  me5:        {hf_id: intfloat/multilingual-e5-base,             max_len: 512, fp16: true, query_prefix: "query: ", passage_prefix: "passage: "}
-  muril:      {hf_id: google/muril-base-cased,                   max_len: 512, fp16: true, pooling: mean}
+  labse:      {hf_id: sentence-transformers/LaBSE,                max_len: 256, fp16: true, pooling: sentence_transformers, batch_size: 64}
+  me5:        {hf_id: intfloat/multilingual-e5-base,             max_len: 512, fp16: true, pooling: sentence_transformers, batch_size: 32, query_prefix: "query: ", passage_prefix: "passage: "}
+  muril:      {hf_id: google/muril-base-cased,                   max_len: 512, fp16: true, pooling: mean, batch_size: 32}
+baselines:
+  bm25:       {k1: 1.5, b: 0.75}   # rank_bm25 defaults, no stemming, no stopword list (S17)
+  mt:         {hf_id: Helsinki-NLP/opus-mt-hi-en, fp16: true, num_beams: 4, max_length: 256, batch_size: 32}
 static:
   dim: 300
   vocab_cap: 200000
