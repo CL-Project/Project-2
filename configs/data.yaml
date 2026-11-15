@@ -22,6 +22,8 @@ xquad:
 wikipedia:
   dir: data/raw/wikipedia
   languages: [hi, en]
+  # Pinned dump date; the Hub config is "<dump_date>.<lang>". Record it in docs/DATA.md.
+  dump_date: "20231101"
   # Hindi dumped fully; English streamed (never download the full dump).
   english_mode: stream
   # Deterministic split by hash of article title (S12).

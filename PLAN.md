@@ -11,15 +11,15 @@ Legend: **Owner** A / B is a *suggested* split of the two members (the humans de
 - [x] S02 Environment check
 - [x] S03 Reconcile skeleton with proposal
 - [x] S04 First real commit
-- [ ] S05 `textproc.py` + tests
+- [x] S05 `textproc.py` + tests
 - [x] S06 `metrics.py` + tests
-- [ ] S07 `retrieval.py` + tests
+- [x] S07 `retrieval.py` + tests
 - [x] S08 `results_log.py` + tests
 - [x] S09 Shared test fixtures
-- [ ] S10 `download_data.py`
-- [ ] S11 Data validation and data card
-- [ ] S12 `preprocess_wiki.py`
-- [ ] S13 Contamination filter report
+- [x] S10 `download_data.py`
+- [x] S11 Data validation and data card
+- [x] S12 `preprocess_wiki.py`
+- [x] S13 Contamination filter report
 - [ ] S14 `encoders.py` with caching
 - [ ] S15 T2 with LaBSE
 - [ ] S16 T2 with mE5 and MuRIL

@@ -27,6 +27,15 @@ Every pre-registered or post-hoc decision that affects results. Decisions fixed 
 - No `app/` directory and no demo code exist (confirmed).
 - README research questions rewritten to the proposal's RQ1 (with H1 to H3) and RQ2.
 
+## Data pipeline (S10 to S13)
+
+| # | Date | Decision | Status | Why / where |
+|---|---|---|---|---|
+| D11 | 2026-11-15 | **Wikipedia dump pinned to `20231101`** (`configs/data.yaml` → `wikipedia.dump_date`). Hindi is downloaded fully; English is streamed and never stored. | fixed | PLAN S10/S12, `AGENTS.md` §4. Pinning the date makes the corpus reproducible; streaming English avoids a >20 GB download on a 16 GB laptop. |
+| D12 | 2026-11-15 | **English `train` is capped at the Hindi `train` token count** (37,000,208 vs 37,000,208 in the current build, 0.000% apart). English articles are streamed in a seeded shuffled order (`t3_distractors.seed` = 42, shuffle buffer 10,000) and processing stops when the target is reached. | fixed | PLAN S12 step 5, `AGENTS.md` §4. Equal-sized corpora are required for the static comparison; the seeded shuffle keeps the choice random rather than "first N articles". |
+| D13 | 2026-11-15 | **Contamination filter compares tokenized sentence keys**, not raw strings: a `train` sentence is dropped when its `tokenize()` output equals that of a FLORES dev/devtest sentence or an XQuAD context/question/answer sentence of the same language. Keys shorter than 3 tokens are not indexed. | fixed | `AGENTS.md` §10.4, PLAN S13. Raw-string matching fails because `sentence_split` strips the terminal danda/period; indexing short answers ("A", "W") inflates the removed count with strings that `MIN_TOKENS` would drop anyway. |
+| D14 | 2026-11-15 | **`data/` contents are git-ignored** (`.gitignore`), with `.gitkeep` files retaining the directory structure; `__pycache__`, `.venv` and LaTeX build output are ignored too. | fixed | `AGENTS.md` §12. The corpora are several GB and must never be committed. |
+
 ## Open items (answers to record here)
 
 - Report deadline and format/page limit: **TBD** (S01).

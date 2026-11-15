@@ -1,1 +1,28 @@
 .commandcode/
+AGENTS.md
+
+# Data, vectors and model weights are never committed (AGENTS.md §12).
+# .gitkeep files keep the directory structure in the repository.
+data/raw/*
+data/processed/*
+data/vectors/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/vectors/.gitkeep
+
+# Python and tooling artefacts
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# LaTeX build output
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.bbl
+report/*.blg
+report/*.fls
+report/*.fdb_latexmk
