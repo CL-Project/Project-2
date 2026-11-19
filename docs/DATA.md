@@ -92,7 +92,7 @@ Examples (Hindi question / English question):
 
 Dump date: **20231101**; Hindi files: **2**, 0.24 GB.
 
-`data/raw/MANIFEST.json` records **16** files.
+`data/raw/MANIFEST.json` records **19** files.
 
 ## Wikipedia training corpora (S12)
 

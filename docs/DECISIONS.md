@@ -42,3 +42,9 @@ Every pre-registered or post-hoc decision that affects results. Decisions fixed 
 - Which member is A and which is B: **TBD** (PLAN Appendix D).
 - Instructor stance on AI-assisted code: **TBD** (S01).
 - GitHub repository URL: **TBD**.
+
+## Blockers needing a human (recorded 2026-11-18)
+
+| # | Issue | Evidence | Consequence |
+|---|---|---|---|
+| B1 | **CUDA is unavailable.** `torch.cuda.is_available()` is `False` and `nvidia-smi` cannot reach the driver. The GPU is an **RTX 4060 Max-Q** (`01:00.0`, AD107M), not the RTX 4050 described in `AGENTS.md` §4. The nvidia kmods are installed and signed for the running kernel `6.14.0-63.fc42.x86_64` (`/lib/modules/6.14.0-63.fc42.x86_64/extra/nvidia/nvidia.ko.xz`, signer `fedora_1775040905_c7a5f636`), but nothing is loaded (`lsmod` has no nvidia entry) and the kernel log shows `nouveau 0000:01:00.0: NVIDIA AD107` binding the device at boot. SecureBoot is enabled and `mokutil --list-enrolled` shows no MOK, so the akmod may be unsigned for this boot chain. | Needs a human: try `sudo modprobe nvidia` and read `dmesg`; if it fails on signature, enroll the akmod MOK (`sudo kmodgenca -a`, `sudo mokutil --import /etc/pki/akmods/certs/public_key.der`, reboot and enroll in the MOK manager) or blacklist `nouveau`. Also update `AGENTS.md` §4 — the hardware line names the wrong GPU. | Every GPU step (S14 to S16, S19 to S31, S39) currently runs CPU-only. PLAN Appendix B heuristics assume fp16 on the 6 GB card, and `AGENTS.md` §4 budgets assume it. No encoder result should be reported as "on GPU" until this is fixed. |
