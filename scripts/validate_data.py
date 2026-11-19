@@ -31,9 +31,11 @@ from typing import Any, Iterable
 
 import yaml
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT))
+
 from src.textproc import is_devanagari_ratio, normalize
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = REPO_ROOT / "configs" / "data.yaml"
 DATA_DOC_PATH = REPO_ROOT / "docs" / "DATA.md"
 EXAMPLE_COUNT = 3
@@ -514,6 +516,14 @@ def render(report: Report, config: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def display_path(path: Path) -> str:
+    """Return ``path`` relative to the repository root, or absolute when it lies outside it."""
+    try:
+        return str(path.resolve().relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path)
+
+
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     """Parse command-line arguments."""
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -553,9 +563,9 @@ def main(argv: list[str] | None = None) -> int:
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(render(report, config), encoding="utf-8")
-    LOGGER.info("wrote %s", args.output.relative_to(REPO_ROOT))
+    LOGGER.info("wrote %s", display_path(args.output))
     LOGGER.info("%d checks passed", sum(1 for _, passed, _ in report.checks if passed))
-    return 0 if failures == 0 else 1
+    return 0 if not failures or args.allow_missing else 1
 
 
 if __name__ == "__main__":

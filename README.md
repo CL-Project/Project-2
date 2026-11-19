@@ -27,10 +27,34 @@ Pre-stated hypotheses:
 Add a dependency with `uv add <package>`; commit `pyproject.toml` and `uv.lock` together.
 
 ## Reproduce
-TODO: `scripts/download_data.py` -> `scripts/preprocess_wiki.py` -> `scripts/train_static.py` -> `scripts/run_eval.py`
+Python is always invoked through `uv run` from the repository root; every script is argparse-driven (`--help`).
+
+```bash
+# 1. Data (S10-S13): download, validate, build the Wikipedia corpora
+uv run python scripts/download_data.py                 # data/raw + MANIFEST.json
+uv run python scripts/validate_data.py                 # writes docs/DATA.md
+uv run python scripts/preprocess_wiki.py               # data/processed/wiki.*
+
+# 2. T2 parallel sentence retrieval with the pretrained encoders (S14-S17)
+uv run python scripts/run_eval.py --task t2_flores --system labse         # both directions
+uv run python scripts/run_eval.py --task t2_flores --system me5
+uv run python scripts/run_eval.py --task t2_flores --system muril          # control
+uv run python scripts/run_eval.py --task t2_flores --system bm25_mt --settings hi-en
+
+# 3. Results table (S18)
+uv run python scripts/make_table.py --task t2_flores
+```
+
+Encoded vectors are cached under `data/vectors/embeddings/`; pass `--force` to re-encode.
+Machine translations for `bm25_mt` are cached in `data/processed/flores_hi2en.tsv`.
+Raw data, vectors and cached embeddings are git-ignored (`AGENTS.md` §12).
 
 ## Results
-TODO: results table and the static-vs-pretrained gap figure.
+Current numbers, with 95% bootstrap CIs and the caveats that belong with them, are in
+[`docs/RESULTS.md`](docs/RESULTS.md). **Checkpoint 1 (T2, 2,009 FLORES pairs, Acc@1):**
+LaBSE 1.000, mE5 0.999, MuRIL 0.971, BM25+MT 0.958 for `hi-en`. T2 is close to ceiling for the
+sentence-trained encoders, so it leaves little room to observe a static-vs-pretrained gap; that is
+reported rather than hidden.
 
 ## Repository layout
 - `configs/` dataset, model and task settings

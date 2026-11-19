@@ -20,11 +20,11 @@ Legend: **Owner** A / B is a *suggested* split of the two members (the humans de
 - [x] S11 Data validation and data card
 - [x] S12 `preprocess_wiki.py`
 - [x] S13 Contamination filter report
-- [ ] S14 `encoders.py` with caching
-- [ ] S15 T2 with LaBSE
-- [ ] S16 T2 with mE5 and MuRIL
-- [ ] S17 BM25 + MT baseline on T2
-- [ ] S18 Checkpoint 1: results table v0
+- [x] S14 `encoders.py` with caching
+- [x] S15 T2 with LaBSE
+- [x] S16 T2 with mE5 and MuRIL
+- [x] S17 BM25 + MT baseline on T2
+- [x] S18 Checkpoint 1: results table v0
 - [ ] S19 Train Word2Vec and fastText
 - [ ] S20 Shared candidate vocabularies
 - [ ] S21 `align.py` (Procrustes) + tests

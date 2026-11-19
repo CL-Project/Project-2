@@ -44,9 +44,11 @@ from typing import Any, Iterable, Iterator
 
 import yaml
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT))
+
 from src.textproc import is_devanagari_ratio, normalize, sentence_split, tokenize
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = REPO_ROOT / "configs" / "data.yaml"
 PROCESSED_DIR = REPO_ROOT / "data" / "processed"
 SHARD_NAMES = ("train", "distractor", "fit")
