@@ -11,8 +11,8 @@ baselines:
 static:
   dim: 300
   vocab_cap: 200000
-  word2vec:   {window: 5, min_count: 5, negative: 10, epochs: 5, workers: 8}
-  fasttext:   {window: 5, min_count: 5, negative: 10, epochs: 5, min_n: 3, max_n: 6, workers: 8}
+  word2vec:   {window: 5, min_count: 5, negative: 10, epochs: 5, sg: 1, workers: 8}
+  fasttext:   {window: 5, min_count: 5, negative: 10, epochs: 5, sg: 1, min_n: 3, max_n: 6, bucket: 2000000, workers: 8}
 alignment:
   seed_dict_size: 5000
   method: procrustes
