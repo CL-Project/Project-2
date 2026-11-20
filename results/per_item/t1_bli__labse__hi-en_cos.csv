@@ -1,0 +1,1459 @@
+query_id,gold_ids,rank_of_best_gold,top1,top5,rr,n_candidates
+अंगूठी,"[""ring""]",1,True,True,1.0,112703
+अंगूर,"[""grape"", ""grapes""]",16,False,False,0.0625,112703
+अंटार्कटिक,"[""antarctic"", ""antarctica""]",1,True,True,1.0,112703
+अंडमान,"[""andaman""]",532,False,False,0.0018796992481203006,112703
+अंतरण,"[""spacing""]",1,True,True,1.0,112703
+अकादमिक,"[""academic""]",1,True,True,1.0,112703
+अक्षम,"[""disabled"", ""destitute""]",1,True,True,1.0,112703
+अग्र,"[""front""]",4,False,True,0.25,112703
+अचल,"[""immovable""]",2,False,True,0.5,112703
+अजीत,"[""ajit""]",92,False,False,0.010869565217391304,112703
+अटल,"[""resolute"", ""adamant"", ""irrevocable"", ""obdurate""]",8,False,False,0.125,112703
+अठारह,"[""eighteen""]",1,True,True,1.0,112703
+अदृश्य,"[""invisible"", ""latent"", ""imperceptible""]",1,True,True,1.0,112703
+अधीनस्थ,"[""subordinate""]",2,False,True,0.5,112703
+अनगिनत,"[""infinite"", ""countless"", ""myriad""]",2,False,True,0.5,112703
+अनजाने,"[""unknowingly""]",1,True,True,1.0,112703
+अनन्य,"[""exclusive""]",3,False,True,0.3333333333333333,112703
+अनावरण,"[""unveiled""]",21,False,False,0.047619047619047616,112703
+अनिरुद्ध,"[""anirudh""]",915,False,False,0.001092896174863388,112703
+अनुमोदित,"[""approved"", ""reviewed""]",1,True,True,1.0,112703
+अनुवादक,"[""translator"", ""translators""]",1,True,True,1.0,112703
+अनुवादित,"[""translated""]",1,True,True,1.0,112703
+अनुसूची,"[""schedule""]",1,True,True,1.0,112703
+अनूठा,"[""unique"", ""immersive"", ""quaint""]",2,False,True,0.5,112703
+अनूदित,"[""translated""]",14,False,False,0.07142857142857142,112703
+अन्याय,"[""injustice""]",1,True,True,1.0,112703
+अपडेट,"[""update"", ""updates""]",1,True,True,1.0,112703
+अपराधियों,"[""criminals"", ""offenders"", ""culprits""]",1,True,True,1.0,112703
+अपोलो,"[""apollo""]",1,True,True,1.0,112703
+अप्रत्याशित,"[""unexpected""]",1,True,True,1.0,112703
+अभय,"[""abhay""]",1,True,True,1.0,112703
+अभिगम,"[""access""]",132,False,False,0.007575757575757576,112703
+अभियान्त्रिकी,"[""engineering""]",145,False,False,0.006896551724137931,112703
+अभूतपूर्व,"[""phenomenal""]",7,False,False,0.14285714285714285,112703
+अमित,"[""amit""]",18,False,False,0.05555555555555555,112703
+अमीनो,"[""amino""]",1,True,True,1.0,112703
+अमूर्त,"[""abstract""]",2230,False,False,0.0004484304932735426,112703
+अमृता,"[""amrita""]",1,True,True,1.0,112703
+अमोनिया,"[""ammonia""]",1,True,True,1.0,112703
+अम्बेडकर,"[""ambedkar""]",1,True,True,1.0,112703
+अम्मा,"[""amma""]",566,False,False,0.0017667844522968198,112703
+अम्लीय,"[""acidic""]",21,False,False,0.047619047619047616,112703
+अयोग्य,"[""ineligible"", ""unfit"", ""worthless""]",1,True,True,1.0,112703
+अरविंद,"[""aravind"", ""arvind""]",1,True,True,1.0,112703
+अरुणा,"[""aruna""]",1,True,True,1.0,112703
+अर्ल,"[""earl""]",28,False,False,0.03571428571428571,112703
+अलवर,"[""alwar""]",2,False,True,0.5,112703
+अलाउद्दीन,"[""alauddin""]",1,True,True,1.0,112703
+अलास्का,"[""alaska""]",1,True,True,1.0,112703
+अल्जीरिया,"[""algeria""]",1,True,True,1.0,112703
+अल्फा,"[""alpha"", ""alfa""]",1,True,True,1.0,112703
+अवगत,"[""cognizant""]",31,False,False,0.03225806451612903,112703
+अवधारणाओं,"[""concepts""]",1,True,True,1.0,112703
+अश्लील,"[""porn""]",2,False,True,0.5,112703
+असफलता,"[""failure""]",1,True,True,1.0,112703
+असीम,"[""endless"", ""infinitely"", ""asim""]",5,False,True,0.2,112703
+असुर,"[""asura""]",1540,False,False,0.0006493506493506494,112703
+असुरक्षित,"[""unsafe"", ""insecure""]",1,True,True,1.0,112703
+अस्थिर,"[""unstable"", ""capricious"", ""giddy""]",1,True,True,1.0,112703
+अस्थिरता,"[""instability""]",1,True,True,1.0,112703
+अस्पतालों,"[""hospitals""]",2,False,True,0.5,112703
+आँखें,"[""eyes""]",2,False,True,0.5,112703
+आंकड़ा,"[""data""]",19,False,False,0.05263157894736842,112703
+आंग्ल,"[""anglo""]",12,False,False,0.08333333333333333,112703
+आंत,"[""gut"", ""intestine""]",1,True,True,1.0,112703
+आंत्र,"[""typhoid""]",22502,False,False,4.4440494178295264e-05,112703
+आइलैंड,"[""island""]",4,False,True,0.25,112703
+आईपी,"[""ip""]",1,True,True,1.0,112703
+आखिरकार,"[""eventually"", ""finally""]",2,False,True,0.5,112703
+आटा,"[""flour"", ""dough""]",1,True,True,1.0,112703
+आणविक,"[""molecular""]",1,True,True,1.0,112703
+आतंक,"[""terrorism"", ""terror""]",2,False,True,0.5,112703
+आतंकवादियों,"[""militants"", ""terrorists""]",1,True,True,1.0,112703
+आत्मसमर्पण,"[""surrender""]",1,True,True,1.0,112703
+आदर्शों,"[""ideals""]",1,True,True,1.0,112703
+आधुनिकता,"[""modernity""]",1,True,True,1.0,112703
+आपरेशन,"[""operation""]",4,False,True,0.25,112703
+आपात,"[""emergency""]",2567,False,False,0.00038955979742890534,112703
+आपातकाल,"[""emergency""]",1,True,True,1.0,112703
+आभासी,"[""virtual""]",1,True,True,1.0,112703
+आभूषण,"[""jewelry"", ""jewellery""]",1,True,True,1.0,112703
+आमिर,"[""amir"", ""aamir""]",2,False,True,0.5,112703
+आमेर,"[""amer""]",10,False,False,0.1,112703
+आयताकार,"[""rectangular"", ""rectangle""]",1,True,True,1.0,112703
+आयुध,"[""ordnance""]",8,False,False,0.125,112703
+आयुर्वेदिक,"[""ayurvedic"", ""ayurveda""]",1,True,True,1.0,112703
+आरोपों,"[""accusations""]",2,False,True,0.5,112703
+आर्क,"[""arc""]",7,False,False,0.14285714285714285,112703
+आर्द्रता,"[""humidity""]",1,True,True,1.0,112703
+आवंटित,"[""allotted""]",2,False,True,0.5,112703
+आश्वासन,"[""solace""]",470,False,False,0.002127659574468085,112703
+आसमान,"[""sky"", ""skies""]",2,False,True,0.5,112703
+आसवन,"[""distillation""]",18699,False,False,5.3478795657521794e-05,112703
+इंजीनियरों,"[""engineers""]",2,False,True,0.5,112703
+इंटरफ़ेस,"[""interface""]",1,True,True,1.0,112703
+इंटेल,"[""intel""]",10,False,False,0.1,112703
+इंडीज,"[""indies""]",1,True,True,1.0,112703
+इंडीज़,"[""indies""]",2,False,True,0.5,112703
+इंतजार,"[""wait""]",4,False,True,0.25,112703
+इंसुलिन,"[""insulin""]",1,True,True,1.0,112703
+इज़,"[""iz""]",263,False,False,0.0038022813688212928,112703
+इज़राइल,"[""israel""]",2,False,True,0.5,112703
+इटावा,"[""etawah""]",4,False,True,0.25,112703
+इन्टरनेट,"[""internet"", ""interrupt""]",1,True,True,1.0,112703
+इब्न,"[""ibn""]",1,True,True,1.0,112703
+इमाम,"[""imam""]",654,False,False,0.0015290519877675841,112703
+इयान,"[""ian""]",1,True,True,1.0,112703
+इराक़,"[""iraq""]",1,True,True,1.0,112703
+इरादे,"[""intention""]",5,False,True,0.2,112703
+इवान,"[""ivan""]",3,False,True,0.3333333333333333,112703
+इसराइल,"[""israel""]",3,False,True,0.3333333333333333,112703
+इसरो,"[""isro""]",1,True,True,1.0,112703
+इस्लामिक,"[""islamic""]",1,True,True,1.0,112703
+ईंटों,"[""brick""]",12,False,False,0.08333333333333333,112703
+ईथर,"[""aether""]",2,False,True,0.5,112703
+ईमान,"[""faith""]",3,False,True,0.3333333333333333,112703
+ईस्टर,"[""easter""]",1,True,True,1.0,112703
+ईस्टवुड,"[""eastwood""]",1,True,True,1.0,112703
+उठता,"[""arise""]",5,False,True,0.2,112703
+उठाना,"[""raising""]",22,False,False,0.045454545454545456,112703
+उड़,"[""fly""]",1,True,True,1.0,112703
+उत्कीर्ण,"[""engraving""]",144,False,False,0.006944444444444444,112703
+उत्खनन,"[""excavation""]",1,True,True,1.0,112703
+उत्तेजक,"[""provocative"", ""stimulant""]",4,False,True,0.25,112703
+उत्तेजना,"[""excitement"", ""furore""]",5,False,True,0.2,112703
+उत्परिवर्तन,"[""mutation""]",2,False,True,0.5,112703
+उत्पादकता,"[""productivity""]",1,True,True,1.0,112703
+उत्पीड़न,"[""assault"", ""harassment""]",2,False,True,0.5,112703
+उत्प्रेरक,"[""catalyst""]",58,False,False,0.017241379310344827,112703
+उदा,"[""ex""]",44,False,False,0.022727272727272728,112703
+उद्धार,"[""rescue"", ""deliver""]",1,True,True,1.0,112703
+उद्योगपति,"[""industrialist""]",1,True,True,1.0,112703
+उन्नयन,"[""elevation"", ""upgrade"", ""exaltation""]",3,False,True,0.3333333333333333,112703
+उपनिवेशवाद,"[""colony"", ""colonialism""]",1,True,True,1.0,112703
+उपनिवेशों,"[""colony""]",96,False,False,0.010416666666666666,112703
+उपनिषद्,"[""upanishads""]",4498,False,False,0.00022232103156958648,112703
+उपसर्ग,"[""prefix""]",803,False,False,0.0012453300124533001,112703
+उभरते,"[""emerging""]",10,False,False,0.1,112703
+उभरा,"[""emerged"", ""bulging""]",6,False,False,0.16666666666666666,112703
+उमर,"[""omar"", ""umar""]",7,False,False,0.14285714285714285,112703
+उर्वर,"[""exuberant""]",199,False,False,0.005025125628140704,112703
+उर्वरक,"[""fertilizer""]",2,False,True,0.5,112703
+उल्टा,"[""reverse"", ""inverted""]",2,False,True,0.5,112703
+उल्टी,"[""vomiting"", ""vomit""]",1,True,True,1.0,112703
+उषा,"[""usha""]",1,True,True,1.0,112703
+उस्ताद,"[""ustad""]",8,False,False,0.125,112703
+ऋणात्मक,"[""negative""]",1,True,True,1.0,112703
+ऋषिकेश,"[""rishikesh""]",2541,False,False,0.0003935458480913026,112703
+एंजाइम,"[""enzyme""]",1,True,True,1.0,112703
+एंटीबॉडी,"[""antibody""]",1,True,True,1.0,112703
+एंडरसन,"[""anderson""]",2,False,True,0.5,112703
+एंडी,"[""andy""]",2,False,True,0.5,112703
+एंड्रयू,"[""andrew""]",2,False,True,0.5,112703
+एकजुट,"[""unite""]",3,False,True,0.3333333333333333,112703
+एकदिवसीय,"[""odi""]",9018,False,False,0.00011088933244621867,112703
+एकाधिकार,"[""monopoly""]",3,False,True,0.3333333333333333,112703
+एक्यूपंक्चर,"[""acupuncture""]",23,False,False,0.043478260869565216,112703
+एक्सेस,"[""access""]",1,True,True,1.0,112703
+एडम,"[""adam""]",99,False,False,0.010101010101010102,112703
+एडम्स,"[""adams""]",1,True,True,1.0,112703
+एथलीट,"[""athletes"", ""athlete""]",1,True,True,1.0,112703
+एथलेटिक्स,"[""athletics""]",1,True,True,1.0,112703
+एथिलीन,"[""ethylene""]",1,True,True,1.0,112703
+एथेंस,"[""athens""]",1,True,True,1.0,112703
+एनालॉग,"[""analog""]",2,False,True,0.5,112703
+एनिमेशन,"[""animation"", ""animations""]",1,True,True,1.0,112703
+एनी,"[""annie""]",194,False,False,0.005154639175257732,112703
+एनीमेशन,"[""animation"", ""optimization"", ""animations""]",1,True,True,1.0,112703
+एफबीआई,"[""fbi""]",1,True,True,1.0,112703
+एमआईटी,"[""mit""]",338,False,False,0.0029585798816568047,112703
+एमटीवी,"[""mtv""]",1,True,True,1.0,112703
+एमी,"[""amy"", ""emmy""]",1,True,True,1.0,112703
+एयरबस,"[""airbus""]",1,True,True,1.0,112703
+एयरवेज,"[""airways""]",8,False,False,0.125,112703
+एलिजाबेथ,"[""elizabeth""]",3,False,True,0.3333333333333333,112703
+एलेक्स,"[""alex""]",4,False,True,0.25,112703
+एलेन,"[""ellen""]",14831,False,False,6.742633672712562e-05,112703
+एव,"[""ave"", ""av"", ""ew""]",53,False,False,0.018867924528301886,112703
+एवरेस्ट,"[""everest""]",335,False,False,0.0029850746268656717,112703
+एवेन्यू,"[""avenue""]",2,False,True,0.5,112703
+एसी,"[""ac""]",1,True,True,1.0,112703
+एस्टन,"[""aston""]",5,False,True,0.2,112703
+एस्टेट,"[""estate""]",1,True,True,1.0,112703
+ऐन,"[""ann"", ""ain""]",12,False,False,0.08333333333333333,112703
+ऑक्सीकरण,"[""oxidation""]",2,False,True,0.5,112703
+ऑटोमोबाइल,"[""automobile"", ""automobiles""]",2,False,True,0.5,112703
+ऑपरेटर,"[""operator"", ""operators""]",1,True,True,1.0,112703
+ऑप्टिकल,"[""optical""]",2,False,True,0.5,112703
+ऑब्जेक्ट,"[""objects"", ""object""]",1,True,True,1.0,112703
+ऑयल,"[""oil""]",1,True,True,1.0,112703
+ऑर,"[""orr""]",48,False,False,0.020833333333333332,112703
+ओपेरा,"[""opera""]",32,False,False,0.03125,112703
+ओबेरॉय,"[""oberoi""]",6,False,False,0.16666666666666666,112703
+ओमान,"[""oman""]",1,True,True,1.0,112703
+ओवेन,"[""owen""]",2,False,True,0.5,112703
+औचित्य,"[""justification""]",1,True,True,1.0,112703
+कंकाल,"[""skeleton""]",1,True,True,1.0,112703
+कंपन,"[""vibration"", ""vibrations"", ""vibrate""]",1,True,True,1.0,112703
+कंपनियाँ,"[""companies""]",2,False,True,0.5,112703
+कक्षाओं,"[""classrooms""]",1,True,True,1.0,112703
+कच्चा,"[""raw""]",1,True,True,1.0,112703
+कच्छ,"[""kutch""]",9,False,False,0.1111111111111111,112703
+कट्टर,"[""staunch"", ""dogmatic"", ""rabid""]",17,False,False,0.058823529411764705,112703
+कठपुतली,"[""puppet""]",27,False,False,0.037037037037037035,112703
+कठिनाइयों,"[""difficulties""]",1,True,True,1.0,112703
+कठोरता,"[""stiffness"", ""hardness""]",1,True,True,1.0,112703
+कड़ा,"[""hard"", ""tight""]",3,False,True,0.3333333333333333,112703
+कथाएं,"[""tales""]",8,False,False,0.125,112703
+कथाकार,"[""storyteller""]",1,True,True,1.0,112703
+कनाडाई,"[""canadian""]",2,False,True,0.5,112703
+कपिल,"[""kapil"", ""kapila""]",1,True,True,1.0,112703
+कबीले,"[""tribe""]",1,True,True,1.0,112703
+कभार,"[""sparingly""]",9468,False,False,0.00010561892691170258,112703
+कमजोरी,"[""weakness""]",1,True,True,1.0,112703
+कमर,"[""waist"", ""qamar""]",1,True,True,1.0,112703
+कमला,"[""kamala"", ""kamla""]",1,True,True,1.0,112703
+कमांड,"[""command"", ""commands""]",3,False,True,0.3333333333333333,112703
+कमाल,"[""awesome""]",246,False,False,0.0040650406504065045,112703
+कमिश्नर,"[""commissioner""]",1,True,True,1.0,112703
+कमेटी,"[""committee""]",2,False,True,0.5,112703
+कम्प्यूटिंग,"[""computing""]",47,False,False,0.02127659574468085,112703
+करों,"[""taxes""]",1,True,True,1.0,112703
+करोड़ों,"[""myriad""]",69,False,False,0.014492753623188406,112703
+कर्ज,"[""debt""]",2,False,True,0.5,112703
+कर्मियों,"[""personnel""]",1,True,True,1.0,112703
+कलन,"[""calculus""]",3214,False,False,0.00031113876789047915,112703
+कलश,"[""pot"", ""pinnacle"", ""kalash""]",81,False,False,0.012345679012345678,112703
+कल्कि,"[""kalki""]",6,False,False,0.16666666666666666,112703
+कवक,"[""fungus""]",1,True,True,1.0,112703
+कस्टम,"[""custom"", ""customs""]",1,True,True,1.0,112703
+कहें,"[""say""]",2,False,True,0.5,112703
+क़ुरान,"[""quran""]",5,False,True,0.2,112703
+काँच,"[""glass""]",3104,False,False,0.00032216494845360824,112703
+कांड,"[""scandal""]",121,False,False,0.008264462809917356,112703
+काई,"[""kai""]",46,False,False,0.021739130434782608,112703
+कागज़,"[""paper""]",1,True,True,1.0,112703
+कादर,"[""kader""]",95,False,False,0.010526315789473684,112703
+कामयाबी,"[""success""]",1,True,True,1.0,112703
+कारखाना,"[""factory""]",1,True,True,1.0,112703
+कारखानों,"[""factories""]",1,True,True,1.0,112703
+कारें,"[""cars""]",1,True,True,1.0,112703
+कार्गो,"[""cargo""]",1,True,True,1.0,112703
+कार्टर,"[""carter""]",1,True,True,1.0,112703
+कार्बोनेट,"[""carbonate""]",1,True,True,1.0,112703
+कार्यक्षमता,"[""functionality""]",1,True,True,1.0,112703
+कार्यक्षेत्र,"[""scope"", ""workplace""]",2,False,True,0.5,112703
+कार्यभार,"[""assignment"", ""assignments""]",8,False,False,0.125,112703
+कालक्रम,"[""chronology""]",4,False,True,0.25,112703
+किंगफिशर,"[""kingfisher""]",1,True,True,1.0,112703
+किट,"[""kit""]",1,True,True,1.0,112703
+किम,"[""kim""]",5,False,True,0.2,112703
+किरणें,"[""rays""]",1,True,True,1.0,112703
+किरन,"[""kiran""]",803,False,False,0.0012453300124533001,112703
+किराए,"[""rent"", ""fares""]",2,False,True,0.5,112703
+किशोरावस्था,"[""teenager"", ""adolescence""]",1,True,True,1.0,112703
+किस्में,"[""variety"", ""varieties"", ""strands""]",1,True,True,1.0,112703
+कीड़े,"[""worms""]",6,False,False,0.16666666666666666,112703
+कुंवर,"[""kunwar""]",1247,False,False,0.0008019246190858059,112703
+कुक,"[""cook""]",3402,False,False,0.00029394473838918284,112703
+कुत्ता,"[""dog""]",2,False,True,0.5,112703
+कुरान,"[""quran"", ""koran""]",1,True,True,1.0,112703
+कुरु,"[""kuru""]",63,False,False,0.015873015873015872,112703
+कुर्सी,"[""chair""]",1,True,True,1.0,112703
+कुलपति,"[""vc""]",36317,False,False,2.753531404025663e-05,112703
+कुवैत,"[""kuwait""]",1,True,True,1.0,112703
+कुश,"[""kush""]",3027,False,False,0.0003303600925008259,112703
+कृषक,"[""farmers""]",4,False,True,0.25,112703
+केक,"[""cake""]",2,False,True,0.5,112703
+केदारनाथ,"[""kedarnath""]",1,True,True,1.0,112703
+केन्या,"[""kenya""]",1,True,True,1.0,112703
+केप,"[""cape""]",17,False,False,0.058823529411764705,112703
+केली,"[""kelly"", ""kaylee""]",1,True,True,1.0,112703
+कैदियों,"[""prisoners""]",1,True,True,1.0,112703
+कैनेडी,"[""kennedy""]",2,False,True,0.5,112703
+कैपिटल,"[""capitol"", ""capitals""]",2,False,True,0.5,112703
+कैप्टन,"[""captain"", ""capt""]",1,True,True,1.0,112703
+कैफीन,"[""caffeine""]",1,True,True,1.0,112703
+कैमरून,"[""cameroon""]",3,False,True,0.3333333333333333,112703
+कैमरे,"[""cameras""]",3,False,True,0.3333333333333333,112703
+कैम्प,"[""camp"", ""camps""]",2,False,True,0.5,112703
+कैरी,"[""carey"", ""carrie""]",5,False,True,0.2,112703
+कैलगरी,"[""calgary""]",1,True,True,1.0,112703
+कैलिफ़ोर्निया,"[""california""]",1,True,True,1.0,112703
+कैल्सियम,"[""calcium""]",1,True,True,1.0,112703
+कैसा,"[""how""]",2,False,True,0.5,112703
+कॉपी,"[""copies"", ""copy"", ""copied""]",1,True,True,1.0,112703
+कॉफ़ी,"[""coffee"", ""cutoff""]",1,True,True,1.0,112703
+कॉमन्स,"[""commons""]",12,False,False,0.08333333333333333,112703
+कॉमर्स,"[""commerce""]",1,True,True,1.0,112703
+कॉमिक,"[""comic""]",2,False,True,0.5,112703
+कॉलेजों,"[""colleges""]",1,True,True,1.0,112703
+कोकेन,"[""cocaine""]",1,True,True,1.0,112703
+कोच्चि,"[""kochi""]",1,True,True,1.0,112703
+कोणीय,"[""angular""]",1,True,True,1.0,112703
+कोबेन,"[""cobain""]",79,False,False,0.012658227848101266,112703
+कोलम्बिया,"[""colombia""]",1,True,True,1.0,112703
+कोलेस्ट्रॉल,"[""cholesterol""]",1,True,True,1.0,112703
+कौर,"[""kaur""]",1,True,True,1.0,112703
+क्योकि,"[""because""]",7,False,False,0.14285714285714285,112703
+क्रांतिकारियों,"[""revolutionaries""]",1,True,True,1.0,112703
+क्रियाएँ,"[""activities"", ""activity"", ""actions"", ""verbs""]",1,True,True,1.0,112703
+क्रियान्वयन,"[""implementation""]",1,True,True,1.0,112703
+क्रियाशील,"[""active"", ""adjective""]",1,True,True,1.0,112703
+क्रिश्चियन,"[""christian""]",5,False,True,0.2,112703
+क्रिस्टोफर,"[""christopher""]",4,False,True,0.25,112703
+क्रीम,"[""cream""]",2,False,True,0.5,112703
+क्रूर,"[""brutal"", ""cruel""]",1,True,True,1.0,112703
+क्रोधित,"[""angry"", ""furious"", ""aggravated""]",1,True,True,1.0,112703
+क्लबों,"[""club""]",8,False,False,0.125,112703
+क्लाइंट,"[""clients"", ""client""]",1,True,True,1.0,112703
+क्लान,"[""klan""]",35,False,False,0.02857142857142857,112703
+क्लैप्टन,"[""clapton""]",1,True,True,1.0,112703
+क्लोरीन,"[""chlorine""]",1,True,True,1.0,112703
+क्वार्टर,"[""quarter""]",7,False,False,0.14285714285714285,112703
+क्षतिपूर्ति,"[""compensation"", ""damages"", ""retrieval""]",1,True,True,1.0,112703
+क्षारीय,"[""align"", ""alkaline"", ""alkali""]",7,False,False,0.14285714285714285,112703
+क्षितिज,"[""horizon""]",1,True,True,1.0,112703
+क्षुद्रग्रह,"[""asteroid"", ""asteroids""]",1,True,True,1.0,112703
+खतरों,"[""dangers""]",1,True,True,1.0,112703
+खरीदारी,"[""purchase"", ""shopping""]",1,True,True,1.0,112703
+खलनायक,"[""villain"", ""villains""]",1,True,True,1.0,112703
+खां,"[""khan""]",17535,False,False,5.70287995437696e-05,112703
+खाई,"[""ditch""]",1,True,True,1.0,112703
+खानों,"[""mines""]",8,False,False,0.125,112703
+खिड़की,"[""window""]",1,True,True,1.0,112703
+खुर्द,"[""khurd""]",1,True,True,1.0,112703
+खोजा,"[""discovered"", ""searched""]",1,True,True,1.0,112703
+खोजी,"[""exploration""]",34,False,False,0.029411764705882353,112703
+खोपड़ी,"[""skull""]",1,True,True,1.0,112703
+गंगाधर,"[""gangadhar""]",1,True,True,1.0,112703
+गंतव्य,"[""destination"", ""destinations""]",1,True,True,1.0,112703
+गंधक,"[""sulfur"", ""sulphur""]",39,False,False,0.02564102564102564,112703
+गज,"[""yards"", ""yardstick""]",1315,False,False,0.0007604562737642585,112703
+गतिविधियाँ,"[""activities""]",1,True,True,1.0,112703
+गन,"[""gun""]",2311,False,False,0.00043271311120726956,112703
+गन्ना,"[""sugarcane""]",1,True,True,1.0,112703
+गरिमा,"[""dignity""]",1,True,True,1.0,112703
+गर्भगृह,"[""sanctum"", ""cella""]",95,False,False,0.010526315789473684,112703
+गर्भपात,"[""abortion""]",1,True,True,1.0,112703
+गर्भाधान,"[""insemination""]",2,False,True,0.5,112703
+गर्व,"[""proud""]",2,False,True,0.5,112703
+गली,"[""street""]",1,True,True,1.0,112703
+गल्फ,"[""gulf""]",14,False,False,0.07142857142857142,112703
+गवाह,"[""witness"", ""witnesses""]",1,True,True,1.0,112703
+गवाही,"[""testimony"", ""testify""]",1,True,True,1.0,112703
+ग़ज़ल,"[""ghazal""]",1,True,True,1.0,112703
+ग़लत,"[""wrong"", ""erroneous""]",2,False,True,0.5,112703
+गा,"[""sing"", ""ga""]",1,True,True,1.0,112703
+गांधीजी,"[""gandhiji""]",1,True,True,1.0,112703
+गार्ड,"[""guard"", ""guards""]",4,False,True,0.25,112703
+गिना,"[""counted""]",802,False,False,0.0012468827930174563,112703
+गिने,"[""numbered"", ""counted""]",917,False,False,0.0010905125408942203,112703
+गिरफ्तारी,"[""arrest""]",1,True,True,1.0,112703
+गिरोह,"[""gang""]",1,True,True,1.0,112703
+गिल,"[""gill""]",2,False,True,0.5,112703
+गुंजन,"[""gunjan""]",25,False,False,0.04,112703
+गुजर,"[""passing""]",3,False,True,0.3333333333333333,112703
+गुजरता,"[""passes""]",6,False,False,0.16666666666666666,112703
+गुड़,"[""molasses""]",4761,False,False,0.00021003990758244065,112703
+गुणांक,"[""coefficient""]",1,True,True,1.0,112703
+गुदा,"[""anal"", ""anus""]",1,True,True,1.0,112703
+गुम्बद,"[""dome"", ""domes""]",72,False,False,0.013888888888888888,112703
+गुरुकुल,"[""seminary"", ""gurukul""]",1,True,True,1.0,112703
+गुरुवार,"[""thursday"", ""thursdays""]",4,False,True,0.25,112703
+गेंदबाज,"[""bowler""]",1,True,True,1.0,112703
+गेंदों,"[""balls""]",2,False,True,0.5,112703
+गेज,"[""gauge""]",1027,False,False,0.0009737098344693282,112703
+गेट्स,"[""gates""]",1,True,True,1.0,112703
+गेहूं,"[""wheat""]",1,True,True,1.0,112703
+गैरी,"[""gary"", ""garry""]",1,True,True,1.0,112703
+गैसें,"[""gases""]",1,True,True,1.0,112703
+गोदावरी,"[""godavari""]",1,True,True,1.0,112703
+गोपीनाथ,"[""gopinath""]",1,True,True,1.0,112703
+गोबर,"[""dung""]",854,False,False,0.00117096018735363,112703
+गोरखा,"[""gurkha""]",2,False,True,0.5,112703
+गोला,"[""sphere""]",22,False,False,0.045454545454545456,112703
+गोलार्ध,"[""hemisphere""]",32,False,False,0.03125,112703
+गोलियों,"[""gunshots""]",34,False,False,0.029411764705882353,112703
+गोलीबारी,"[""shooting"", ""shootout""]",2,False,True,0.5,112703
+ग्राफ,"[""graph""]",1,True,True,1.0,112703
+ग्रीनहाउस,"[""greenhouse""]",4,False,True,0.25,112703
+ग्रीवा,"[""cervix""]",6090,False,False,0.00016420361247947455,112703
+ग्रीष्म,"[""summer"", ""summers""]",1,True,True,1.0,112703
+ग्रोवर,"[""grover""]",526,False,False,0.0019011406844106464,112703
+ग्लास,"[""glass""]",1,True,True,1.0,112703
+ग्लूकोज,"[""glucose""]",1,True,True,1.0,112703
+घटा,"[""decrease""]",1,True,True,1.0,112703
+घराने,"[""genres""]",77396,False,False,1.2920564370251692e-05,112703
+घर्षण,"[""friction""]",1,True,True,1.0,112703
+घाटियों,"[""valleys""]",1,True,True,1.0,112703
+घात,"[""ambush""]",190,False,False,0.005263157894736842,112703
+घुटने,"[""knee""]",2,False,True,0.5,112703
+घूमती,"[""revolves"", ""revolving""]",3,False,True,0.3333333333333333,112703
+घृणा,"[""hate"", ""hatred"", ""disdain""]",1,True,True,1.0,112703
+घेर,"[""surround""]",1,True,True,1.0,112703
+घेरा,"[""circle"", ""siege"", ""perimeter""]",3,False,True,0.3333333333333333,112703
+घोटाले,"[""scandal""]",142,False,False,0.007042253521126761,112703
+चढ़,"[""rust""]",16182,False,False,6.179705846001731e-05,112703
+चढ़ाव,"[""lows""]",2226,False,False,0.0004492362982929021,112703
+चतुर्भुज,"[""quadrilateral"", ""rectangle""]",2,False,True,0.5,112703
+चन्द,"[""chand"", ""callers""]",1,True,True,1.0,112703
+चमकदार,"[""luminous"", ""shiny"", ""dazzling""]",3,False,True,0.3333333333333333,112703
+चमत्कार,"[""miracle"", ""wonders"", ""miracles""]",1,True,True,1.0,112703
+चलना,"[""walk"", ""walking""]",2,False,True,0.5,112703
+चलाता,"[""executes""]",29,False,False,0.034482758620689655,112703
+चलाना,"[""execution"", ""exec""]",1046,False,False,0.0009560229445506692,112703
+चश्मे,"[""glasses"", ""goggles"", ""eyeglasses""]",1,True,True,1.0,112703
+चांद,"[""moon""]",1,True,True,1.0,112703
+चादर,"[""sheet"", ""shawl""]",9,False,False,0.1111111111111111,112703
+चार्टर,"[""charter""]",1,True,True,1.0,112703
+चालुक्य,"[""chalukya"", ""chalukyas""]",83,False,False,0.012048192771084338,112703
+चिंतित,"[""concerned"", ""worried"", ""anxious"", ""apprehensive""]",1,True,True,1.0,112703
+चिकन,"[""chicken""]",1,True,True,1.0,112703
+चिकनी,"[""smooth"", ""greasy""]",1,True,True,1.0,112703
+चिट्ठा,"[""blog""]",8039,False,False,0.00012439358129120537,112703
+चिन,"[""chin""]",800,False,False,0.00125,112703
+चिप,"[""chip""]",1,True,True,1.0,112703
+चिप्स,"[""chips""]",1,True,True,1.0,112703
+चीता,"[""leopard"", ""cheetah""]",1,True,True,1.0,112703
+चूहे,"[""rats"", ""mice""]",1,True,True,1.0,112703
+चेतन,"[""chetan""]",1,True,True,1.0,112703
+चेन,"[""chain"", ""chen""]",1,True,True,1.0,112703
+चैत्र,"[""chaitra""]",1,True,True,1.0,112703
+चैन,"[""chain"", ""chan""]",6,False,False,0.16666666666666666,112703
+चैम्पियन,"[""champion"", ""champ""]",2,False,True,0.5,112703
+चोर,"[""thieves"", ""thief"", ""chor""]",1,True,True,1.0,112703
+चौकी,"[""outpost"", ""checkpoint""]",1,True,True,1.0,112703
+छत्रपति,"[""chhatrapati""]",1,True,True,1.0,112703
+छद्म,"[""pseudo""]",1815,False,False,0.0005509641873278236,112703
+छाल,"[""bark""]",13,False,False,0.07692307692307693,112703
+छावनी,"[""cantonment""]",5,False,True,0.2,112703
+छीन,"[""snatched""]",51,False,False,0.0196078431372549,112703
+छुटकारा,"[""rescues""]",160,False,False,0.00625,112703
+छोड़ना,"[""eschew""]",9,False,False,0.1111111111111111,112703
+जग,"[""world"", ""jag""]",1,True,True,1.0,112703
+जज,"[""judge""]",2,False,True,0.5,112703
+जटिलताओं,"[""complications""]",2,False,True,0.5,112703
+जड़ें,"[""roots""]",1,True,True,1.0,112703
+जनजातियों,"[""tribes""]",1,True,True,1.0,112703
+जन्मजात,"[""congenital""]",1,True,True,1.0,112703
+जन्मदिन,"[""birthday"", ""birthdays""]",1,True,True,1.0,112703
+जन्मस्थान,"[""birthplace""]",1,True,True,1.0,112703
+जमशेदपुर,"[""jamshedpur""]",1,True,True,1.0,112703
+जमैका,"[""jamaica""]",1,True,True,1.0,112703
+जरुरी,"[""necessary""]",2,False,True,0.5,112703
+जलन,"[""inflammatory"", ""jealous"", ""irritation""]",12,False,False,0.08333333333333333,112703
+जलाशय,"[""basin""]",5,False,True,0.2,112703
+जवान,"[""young"", ""jawan""]",4,False,True,0.25,112703
+जश्न,"[""celebration"", ""celebrations"", ""jamboree""]",1,True,True,1.0,112703
+जस्ता,"[""zinc""]",29028,False,False,3.444949703734326e-05,112703
+जहांगीर,"[""jahangir""]",1,True,True,1.0,112703
+ज़रूर,"[""sure""]",4,False,True,0.25,112703
+जादुई,"[""magical""]",1,True,True,1.0,112703
+जादूगर,"[""wizard"", ""magician"", ""magicians""]",1,True,True,1.0,112703
+जानबूझकर,"[""intentional""]",24,False,False,0.041666666666666664,112703
+जामा,"[""jama""]",41,False,False,0.024390243902439025,112703
+जार्ज,"[""george""]",28,False,False,0.03571428571428571,112703
+जावेद,"[""javed"", ""jawed""]",3,False,True,0.3333333333333333,112703
+जासूस,"[""detective"", ""spy"", ""detectives""]",1,True,True,1.0,112703
+जासूसी,"[""spying""]",2,False,True,0.5,112703
+जिज्ञासा,"[""curiosity""]",1,True,True,1.0,112703
+जिन्ना,"[""jinnah""]",20,False,False,0.05,112703
+जीती,"[""won""]",1,True,True,1.0,112703
+जीप,"[""jeep""]",1,True,True,1.0,112703
+जीभ,"[""tongue""]",1,True,True,1.0,112703
+जीवंत,"[""lively"", ""vibrant""]",3,False,True,0.3333333333333333,112703
+जुडी,"[""judy""]",1,True,True,1.0,112703
+जुर्माना,"[""fine"", ""fines""]",3,False,True,0.3333333333333333,112703
+जेरिको,"[""jericho""]",1,True,True,1.0,112703
+जेरी,"[""jerry"", ""jere""]",1,True,True,1.0,112703
+जैकी,"[""jackie"", ""jacky""]",1,True,True,1.0,112703
+जैक्सन,"[""jackson""]",1,True,True,1.0,112703
+जॉर्डन,"[""jordan""]",2,False,True,0.5,112703
+जोएल,"[""joel""]",1,True,True,1.0,112703
+जोड़ना,"[""adding""]",4,False,True,0.25,112703
+जोन,"[""joan""]",166,False,False,0.006024096385542169,112703
+जोनाथन,"[""jonathan""]",2,False,True,0.5,112703
+जोली,"[""jolie""]",91,False,False,0.01098901098901099,112703
+जोश,"[""josh"", ""zeal"", ""furore""]",4,False,True,0.25,112703
+जौ,"[""barley""]",223,False,False,0.004484304932735426,112703
+ज्यामितीय,"[""geometric""]",2,False,True,0.5,112703
+ज्वार,"[""sorghum""]",12974,False,False,7.707723138584863e-05,112703
+ज्वाला,"[""flame""]",2,False,True,0.5,112703
+झंडा,"[""flag""]",1,True,True,1.0,112703
+झटके,"[""shocks""]",2,False,True,0.5,112703
+झरना,"[""falls"", ""waterfall"", ""waterfalls""]",1,True,True,1.0,112703
+टंडन,"[""tandon""]",1,True,True,1.0,112703
+टमाटर,"[""tomatoes"", ""tomato""]",1,True,True,1.0,112703
+टाइपिंग,"[""typing""]",1,True,True,1.0,112703
+टाई,"[""tie""]",154,False,False,0.006493506493506494,112703
+टायर,"[""tire"", ""tires"", ""tyres"", ""tyre""]",1,True,True,1.0,112703
+टायसन,"[""tyson""]",6,False,False,0.16666666666666666,112703
+टिम,"[""tim""]",1,True,True,1.0,112703
+टीकाकरण,"[""vaccination""]",767,False,False,0.001303780964797914,112703
+टीके,"[""vaccines""]",63,False,False,0.015873015873015872,112703
+टीबी,"[""tb""]",1,True,True,1.0,112703
+टीले,"[""dunes""]",8705,False,False,0.00011487650775416428,112703
+टुकड़ा,"[""piece"", ""fragment"", ""slice"", ""blurs""]",1,True,True,1.0,112703
+टूल,"[""tools""]",2,False,True,0.5,112703
+टेरी,"[""terry""]",2,False,True,0.5,112703
+टेल,"[""tail"", ""tale""]",420,False,False,0.002380952380952381,112703
+टैक्सी,"[""cab"", ""taxi"", ""taxis""]",1,True,True,1.0,112703
+टैगोर,"[""tagore""]",10,False,False,0.1,112703
+ट्रम्प,"[""trump""]",1,True,True,1.0,112703
+ट्रेडमार्क,"[""trademark""]",1,True,True,1.0,112703
+ट्विटर,"[""twitter""]",1,True,True,1.0,112703
+ठंड,"[""cold""]",2,False,True,0.5,112703
+डकोटा,"[""dakota""]",1,True,True,1.0,112703
+डगलस,"[""douglas""]",4,False,True,0.25,112703
+डबिंग,"[""dubbing""]",37,False,False,0.02702702702702703,112703
+डाइऑक्साइड,"[""dioxide""]",1,True,True,1.0,112703
+डायरी,"[""diary""]",1,True,True,1.0,112703
+डायोड,"[""diode""]",5,False,True,0.2,112703
+डार्विन,"[""darwin""]",1,True,True,1.0,112703
+डालना,"[""pour""]",8,False,False,0.125,112703
+डालर,"[""dollar""]",1,True,True,1.0,112703
+डिएगो,"[""diego""]",1,True,True,1.0,112703
+डिजाइनर,"[""designer""]",1,True,True,1.0,112703
+डिप्लोमा,"[""diploma""]",1,True,True,1.0,112703
+डिवाइस,"[""device"", ""devices""]",1,True,True,1.0,112703
+डीजल,"[""diesel""]",1,True,True,1.0,112703
+डीडी,"[""dd""]",3,False,True,0.3333333333333333,112703
+डू,"[""doo""]",654,False,False,0.0015290519877675841,112703
+डूब,"[""sinking"", ""drowning""]",1,True,True,1.0,112703
+डेक,"[""deck""]",3,False,True,0.3333333333333333,112703
+डेनियल,"[""daniel"", ""danilo""]",11,False,False,0.09090909090909091,112703
+डेनिस,"[""dennis"", ""denis"", ""denise""]",1,True,True,1.0,112703
+डेविस,"[""davis""]",8,False,False,0.125,112703
+डेस्कटॉप,"[""desktop""]",1,True,True,1.0,112703
+डैनियल,"[""daniel""]",8,False,False,0.125,112703
+डैनी,"[""danny""]",1,True,True,1.0,112703
+डॉग,"[""dog""]",2,False,True,0.5,112703
+डोनाल्ड,"[""donald""]",1,True,True,1.0,112703
+ड्रग,"[""drug""]",1,True,True,1.0,112703
+ड्रीम,"[""dream""]",3,False,True,0.3333333333333333,112703
+ढांचा,"[""structure"", ""frame"", ""frames""]",10,False,False,0.1,112703
+ढेर,"[""piles""]",7,False,False,0.14285714285714285,112703
+तदनुसार,"[""accordingly""]",1,True,True,1.0,112703
+तना,"[""stem"", ""stems""]",50,False,False,0.02,112703
+तांत्रिक,"[""tantric""]",324,False,False,0.0030864197530864196,112703
+तांबे,"[""copper""]",1,True,True,1.0,112703
+ताजिकिस्तान,"[""tajikistan""]",1,True,True,1.0,112703
+ताड़,"[""palm""]",7214,False,False,0.0001386193512614361,112703
+तात्कालिक,"[""immediate"", ""urgent""]",3,False,True,0.3333333333333333,112703
+तालिबान,"[""taliban""]",1,True,True,1.0,112703
+तिरुपति,"[""tirupati""]",1,True,True,1.0,112703
+तिल,"[""sesame""]",16,False,False,0.0625,112703
+तीर,"[""arrow"", ""arrows""]",4,False,True,0.25,112703
+तीर्थंकर,"[""tirthankara""]",184,False,False,0.005434782608695652,112703
+तुम्हारा,"[""yours""]",3,False,True,0.3333333333333333,112703
+तुरन्त,"[""immediately"", ""instantly""]",1,True,True,1.0,112703
+तुर्कमेनिस्तान,"[""turkmenistan""]",1,True,True,1.0,112703
+तूफ़ान,"[""storm"", ""typhoon"", ""storms""]",1,True,True,1.0,112703
+तेरह,"[""thirteen""]",1,True,True,1.0,112703
+तेरी,"[""teri""]",637,False,False,0.0015698587127158557,112703
+तेरे,"[""tere""]",1314,False,False,0.00076103500761035,112703
+तैराकी,"[""swimming""]",1,True,True,1.0,112703
+तोप,"[""cannon""]",26,False,False,0.038461538461538464,112703
+तोमर,"[""tomar""]",5170,False,False,0.00019342359767891682,112703
+त्रिज्या,"[""radius""]",4,False,True,0.25,112703
+त्रिभुज,"[""eagle"", ""triangle""]",3,False,True,0.3333333333333333,112703
+त्वरण,"[""acceleration""]",4,False,True,0.25,112703
+थाली,"[""plate""]",2,False,True,0.5,112703
+थोक,"[""wholesale""]",1,True,True,1.0,112703
+दत्ता,"[""dutta"", ""datta""]",1,True,True,1.0,112703
+दबा,"[""suppresses""]",56,False,False,0.017857142857142856,112703
+दबाने,"[""pressing"", ""suppress""]",1,True,True,1.0,112703
+दयाल,"[""dayal""]",535,False,False,0.001869158878504673,112703
+दरगाह,"[""dargah""]",4,False,True,0.25,112703
+दरभंगा,"[""darbhanga""]",1779,False,False,0.0005621135469364812,112703
+दरवाजा,"[""door""]",3,False,True,0.3333333333333333,112703
+दरार,"[""rift"", ""crack""]",27,False,False,0.037037037037037035,112703
+दरिया,"[""darya""]",3,False,True,0.3333333333333333,112703
+दर्जन,"[""dozen""]",2,False,True,0.5,112703
+दर्शनशास्त्र,"[""philosophy""]",1,True,True,1.0,112703
+दशमलव,"[""decimal""]",2,False,True,0.5,112703
+दांते,"[""dante""]",22,False,False,0.045454545454545456,112703
+दाखिला,"[""enrolling""]",9,False,False,0.1111111111111111,112703
+दादी,"[""grandmother"", ""grandma""]",1,True,True,1.0,112703
+दाने,"[""grains""]",1,True,True,1.0,112703
+दामोदर,"[""damodar""]",1,True,True,1.0,112703
+दायित्वों,"[""obligations""]",1,True,True,1.0,112703
+दारा,"[""darius"", ""dara""]",165,False,False,0.006060606060606061,112703
+दार्जिलिंग,"[""darjeeling""]",1,True,True,1.0,112703
+दार्शनिकों,"[""philosophers""]",1,True,True,1.0,112703
+दिलचस्प,"[""interesting"", ""delightful""]",1,True,True,1.0,112703
+दीप,"[""deep""]",546,False,False,0.0018315018315018315,112703
+दीपावली,"[""diwali""]",1,True,True,1.0,112703
+दीवारें,"[""walls""]",2,False,True,0.5,112703
+दुग्ध,"[""dairy""]",1,True,True,1.0,112703
+दुबे,"[""dubey""]",4,False,True,0.25,112703
+दुर्बल,"[""weak""]",1,True,True,1.0,112703
+दुर्भाग्य,"[""unfortunately"", ""misfortune""]",2,False,True,0.5,112703
+दुल्हन,"[""bride""]",1,True,True,1.0,112703
+दुष्ट,"[""evil"", ""rogue"", ""wicked""]",1,True,True,1.0,112703
+दूरभाष,"[""telephone""]",2,False,True,0.5,112703
+दूषित,"[""corrupted""]",4,False,True,0.25,112703
+दृष्टिगोचर,"[""visible""]",12,False,False,0.08333333333333333,112703
+देखिए,"[""see""]",6,False,False,0.16666666666666666,112703
+देखो,"[""look""]",4,False,True,0.25,112703
+देशभक्ति,"[""patriotism""]",1,True,True,1.0,112703
+देशो,"[""countries""]",12,False,False,0.08333333333333333,112703
+देह,"[""body"", ""deh""]",3,False,True,0.3333333333333333,112703
+दैत्य,"[""giant"", ""monster""]",3,False,True,0.3333333333333333,112703
+दोषों,"[""defects""]",3,False,True,0.3333333333333333,112703
+दोस्ती,"[""friendship""]",1,True,True,1.0,112703
+दोहरा,"[""double"", ""dual""]",27,False,False,0.037037037037037035,112703
+दोहराया,"[""repeated""]",1,True,True,1.0,112703
+द्वारका,"[""dwarka""]",22,False,False,0.045454545454545456,112703
+धड़,"[""torso""]",143,False,False,0.006993006993006993,112703
+धनबाद,"[""dhanbad""]",78,False,False,0.01282051282051282,112703
+धमाके,"[""bang""]",86,False,False,0.011627906976744186,112703
+धर्मनिरपेक्ष,"[""secular""]",2,False,True,0.5,112703
+धर्मशास्त्र,"[""theology""]",1,True,True,1.0,112703
+धवन,"[""dhawan""]",2,False,True,0.5,112703
+धागे,"[""yarn""]",3,False,True,0.3333333333333333,112703
+धीमा,"[""slow"", ""slower""]",1,True,True,1.0,112703
+धुन,"[""tune""]",1,True,True,1.0,112703
+धूम,"[""dhoom""]",155,False,False,0.0064516129032258064,112703
+धोखाधड़ी,"[""fraud""]",1,True,True,1.0,112703
+धोनी,"[""dhoni""]",1,True,True,1.0,112703
+ध्वन्यात्मक,"[""phonetic""]",4,False,True,0.25,112703
+नकद,"[""cash""]",1,True,True,1.0,112703
+नकदी,"[""cash""]",1,True,True,1.0,112703
+नक़ल,"[""copies"", ""copy""]",21439,False,False,4.664396660291991e-05,112703
+नक्काशी,"[""carving"", ""engraving""]",1,True,True,1.0,112703
+नक्शे,"[""maps""]",1,True,True,1.0,112703
+नगण्य,"[""trivial""]",59,False,False,0.01694915254237288,112703
+नगरीय,"[""urban""]",1,True,True,1.0,112703
+नग्न,"[""naked"", ""nude""]",1,True,True,1.0,112703
+नतीजा,"[""fallout""]",165,False,False,0.006060606060606061,112703
+नमस्कार,"[""hello""]",1,True,True,1.0,112703
+नमूनों,"[""specimens""]",151,False,False,0.006622516556291391,112703
+नरम,"[""soft"", ""soften""]",1,True,True,1.0,112703
+नरसंहार,"[""massacre"", ""genocide""]",5,False,True,0.2,112703
+नरसिंह,"[""narasimha""]",248,False,False,0.004032258064516129,112703
+नर्तक,"[""dancer"", ""dancers""]",1,True,True,1.0,112703
+नर्तकी,"[""dancer"", ""ballerina""]",1,True,True,1.0,112703
+नल,"[""null""]",833,False,False,0.0012004801920768306,112703
+नशे,"[""drunk""]",5,False,True,0.2,112703
+नाइट्राइट,"[""nitrite""]",1,True,True,1.0,112703
+नाइट्रेट,"[""nitrate""]",1,True,True,1.0,112703
+नागार्जुन,"[""nagarjuna""]",3,False,True,0.3333333333333333,112703
+नाड़ी,"[""pulse""]",751,False,False,0.0013315579227696406,112703
+नानक,"[""nanak""]",7,False,False,0.14285714285714285,112703
+नाभि,"[""navel""]",1,True,True,1.0,112703
+नामीबिया,"[""namibia""]",1,True,True,1.0,112703
+नारा,"[""slogan""]",1,True,True,1.0,112703
+नाल,"[""horseshoe"", ""naal""]",3,False,True,0.3333333333333333,112703
+नालंदा,"[""nalanda""]",1,True,True,1.0,112703
+नासिक,"[""nashik""]",1,True,True,1.0,112703
+नास्तिक,"[""atheist"", ""atheism"", ""impious""]",1,True,True,1.0,112703
+निकटता,"[""proximity"", ""closeness""]",1,True,True,1.0,112703
+निकालकर,"[""removing""]",2,False,True,0.5,112703
+निकास,"[""exit""]",3,False,True,0.3333333333333333,112703
+निपटान,"[""settlement"", ""disposal""]",3,False,True,0.3333333333333333,112703
+निपुण,"[""master"", ""proficient""]",4,False,True,0.25,112703
+निमंत्रण,"[""invitation"", ""invitations""]",1,True,True,1.0,112703
+निमोनिया,"[""pneumonia""]",1,True,True,1.0,112703
+नियोक्ता,"[""employer"", ""employers""]",1,True,True,1.0,112703
+नियोजित,"[""planned""]",1,True,True,1.0,112703
+निराश,"[""disappointed"", ""frustrated"", ""disgusted""]",1,True,True,1.0,112703
+निराशा,"[""disappointment""]",1,True,True,1.0,112703
+निर्णयों,"[""judgements""]",6,False,False,0.16666666666666666,112703
+निर्देशिका,"[""index"", ""directory"", ""directories""]",1,True,True,1.0,112703
+निर्मल,"[""translucent"", ""serene"", ""nirmal""]",8,False,False,0.125,112703
+निर्वात,"[""vacuum""]",19221,False,False,5.202642942614848e-05,112703
+निलंबित,"[""suspended""]",1,True,True,1.0,112703
+निशाना,"[""target""]",1,True,True,1.0,112703
+निषिद्ध,"[""prohibited"", ""forbidden""]",1,True,True,1.0,112703
+निष्कासन,"[""relegate""]",1461,False,False,0.0006844626967830253,112703
+निष्ठा,"[""dedication"", ""allegiance"", ""devotion"", ""sincerely""]",4,False,True,0.25,112703
+निष्पक्ष,"[""neutral"", ""equitable"", ""impartial""]",7,False,False,0.14285714285714285,112703
+निसान,"[""nissan""]",1,True,True,1.0,112703
+नीतियाँ,"[""policies""]",1,True,True,1.0,112703
+नेट,"[""net"", ""nets""]",1,True,True,1.0,112703
+नेटस्केप,"[""netscape""]",1,True,True,1.0,112703
+नेताजी,"[""netaji""]",22,False,False,0.045454545454545456,112703
+नेल्सन,"[""nelson""]",1,True,True,1.0,112703
+नेहरु,"[""nehru""]",163,False,False,0.006134969325153374,112703
+नैनोट्यूब,"[""nanotube""]",1,True,True,1.0,112703
+नॉन,"[""non""]",2,False,True,0.5,112703
+नोट्स,"[""notes""]",1,True,True,1.0,112703
+नोबल,"[""noble""]",11350,False,False,8.81057268722467e-05,112703
+नौका,"[""boat"", ""yacht""]",2,False,True,0.5,112703
+न्यायपालिका,"[""judiciary""]",1,True,True,1.0,112703
+न्यायाधीशों,"[""judges""]",1,True,True,1.0,112703
+न्यायालयों,"[""courts""]",1,True,True,1.0,112703
+न्यास,"[""foundation""]",27,False,False,0.037037037037037035,112703
+न्यूज,"[""news""]",2,False,True,0.5,112703
+पंकज,"[""pankaj""]",1,True,True,1.0,112703
+पंखों,"[""wings""]",1,True,True,1.0,112703
+पंचांग,"[""calendar"", ""calendars""]",4,False,True,0.25,112703
+पंत,"[""pant""]",147,False,False,0.006802721088435374,112703
+पंद्रह,"[""fifteen""]",1,True,True,1.0,112703
+पंप,"[""pump""]",1,True,True,1.0,112703
+पकड़ा,"[""grabbed""]",2,False,True,0.5,112703
+पटल,"[""panel""]",1,True,True,1.0,112703
+पटियाला,"[""patiala""]",2,False,True,0.5,112703
+पट्टिका,"[""pallet""]",139,False,False,0.007194244604316547,112703
+पड़ाव,"[""milestone"", ""sojourn""]",391,False,False,0.0025575447570332483,112703
+पड़ेगा,"[""gotta""]",78,False,False,0.01282051282051282,112703
+पड़ोस,"[""neighborhood"", ""neighborhoods""]",2,False,True,0.5,112703
+पढ़ना,"[""reading""]",2,False,True,0.5,112703
+पढ़े,"[""read"", ""reads""]",1,True,True,1.0,112703
+पतंजलि,"[""patanjali""]",6,False,False,0.16666666666666666,112703
+पतला,"[""thin"", ""slight"", ""slim"", ""skinny""]",1,True,True,1.0,112703
+पते,"[""addresses""]",1,True,True,1.0,112703
+पत्रकारों,"[""journalists"", ""reporters""]",1,True,True,1.0,112703
+पनीर,"[""cheese""]",1,True,True,1.0,112703
+पम्प,"[""pump""]",1,True,True,1.0,112703
+परतों,"[""layers""]",1,True,True,1.0,112703
+परमार,"[""parmar""]",1,True,True,1.0,112703
+परम्पराओं,"[""traditions""]",1,True,True,1.0,112703
+परवाह,"[""care"", ""cares""]",1,True,True,1.0,112703
+परिणत,"[""transforms""]",7,False,False,0.14285714285714285,112703
+परिधान,"[""dress"", ""costumes"", ""garment"", ""apparel""]",1,True,True,1.0,112703
+परियोजनाएं,"[""projects""]",1,True,True,1.0,112703
+परिशिष्ट,"[""appendix""]",1,True,True,1.0,112703
+परीक्षित,"[""parikshit""]",33919,False,False,2.9482001238244052e-05,112703
+परेड,"[""parade""]",1,True,True,1.0,112703
+परोसा,"[""served""]",4,False,True,0.25,112703
+पर्दे,"[""curtains""]",1,True,True,1.0,112703
+पर्यवेक्षण,"[""supervision""]",3,False,True,0.3333333333333333,112703
+पवित्रता,"[""purity"", ""sanctity"", ""holiness""]",1,True,True,1.0,112703
+पश्च,"[""rear""]",2,False,True,0.5,112703
+पश्तो,"[""pashto""]",1,True,True,1.0,112703
+पहना,"[""wore""]",6,False,False,0.16666666666666666,112703
+पहाड़ियाँ,"[""hills""]",4,False,True,0.25,112703
+पहुँचकर,"[""afflict""]",3080,False,False,0.0003246753246753247,112703
+पहेली,"[""puzzle"", ""puzzles"", ""enigma""]",1,True,True,1.0,112703
+पांडवों,"[""pandavas""]",2,False,True,0.5,112703
+पाइप,"[""pipe"", ""pipes""]",1,True,True,1.0,112703
+पागल,"[""crazy""]",1,True,True,1.0,112703
+पाटिल,"[""patil""]",1,True,True,1.0,112703
+पाण्डवों,"[""pandavas""]",5,False,True,0.2,112703
+पाण्डेय,"[""pandey""]",29,False,False,0.034482758620689655,112703
+पाद,"[""fart""]",592,False,False,0.0016891891891891893,112703
+पापों,"[""sins""]",1,True,True,1.0,112703
+पारदर्शी,"[""transparent"", ""translucent""]",1,True,True,1.0,112703
+पार्टियों,"[""parties""]",1,True,True,1.0,112703
+पालिका,"[""palika""]",8374,False,False,0.00011941724385001195,112703
+पावन,"[""holy""]",2,False,True,0.5,112703
+पाषाण,"[""quarry""]",294,False,False,0.003401360544217687,112703
+पिंक,"[""pink""]",1,True,True,1.0,112703
+पिक्चर,"[""picture"", ""pixar""]",1,True,True,1.0,112703
+पिच,"[""pitch""]",1,True,True,1.0,112703
+पियानो,"[""piano""]",1,True,True,1.0,112703
+पिरामिड,"[""pyramid""]",3,False,True,0.3333333333333333,112703
+पिस्टन,"[""piston""]",2,False,True,0.5,112703
+पीएच,"[""ph""]",1,True,True,1.0,112703
+पीट,"[""pete"", ""piet""]",6,False,False,0.16666666666666666,112703
+पीड़ितों,"[""victims""]",1,True,True,1.0,112703
+पीतल,"[""brass""]",1,True,True,1.0,112703
+पीपी,"[""pp""]",1,True,True,1.0,112703
+पीयूष,"[""piyush""]",1,True,True,1.0,112703
+पीसी,"[""pc""]",1,True,True,1.0,112703
+पुकारा,"[""called""]",20,False,False,0.05,112703
+पुजारी,"[""priest""]",1,True,True,1.0,112703
+पुनरावृत्ति,"[""replay""]",9,False,False,0.1111111111111111,112703
+पुनर्गठन,"[""reorganisation""]",1,True,True,1.0,112703
+पुरातन,"[""antique""]",5,False,True,0.2,112703
+पुरोहित,"[""purohit""]",8152,False,False,0.0001226692836113837,112703
+पुस्तकालयों,"[""library"", ""libraries""]",1,True,True,1.0,112703
+पुस्तिका,"[""booklet""]",1,True,True,1.0,112703
+पूँछ,"[""tail""]",1,True,True,1.0,112703
+पूछताछ,"[""inquiry"", ""inquiries""]",2,False,True,0.5,112703
+पूछे,"[""asked"", ""asking""]",4,False,True,0.25,112703
+पूना,"[""poona""]",1,True,True,1.0,112703
+पूर्णता,"[""completion"", ""perfection""]",2,False,True,0.5,112703
+पेंगुइन,"[""penguin""]",1,True,True,1.0,112703
+पेंटिंग,"[""painting""]",2,False,True,0.5,112703
+पेंशन,"[""pension""]",1,True,True,1.0,112703
+पेरू,"[""peru""]",1,True,True,1.0,112703
+पेशवा,"[""peshwa""]",1,True,True,1.0,112703
+पेशावर,"[""peshawar""]",71,False,False,0.014084507042253521,112703
+पैक,"[""pack"", ""packs""]",1,True,True,1.0,112703
+पैकेजिंग,"[""packaging""]",1,True,True,1.0,112703
+पैकेट,"[""packet""]",1,True,True,1.0,112703
+पैट्रिक,"[""patrick""]",1,True,True,1.0,112703
+पैतृक,"[""paternal""]",103,False,False,0.009708737864077669,112703
+पैरिस,"[""paris""]",8,False,False,0.125,112703
+पॉइंट,"[""point"", ""points""]",4,False,True,0.25,112703
+पोटैशियम,"[""potassium""]",1,True,True,1.0,112703
+पोर्टलैंड,"[""portland""]",1,True,True,1.0,112703
+पोलिश,"[""polish""]",14,False,False,0.07142857142857142,112703
+पोषित,"[""nourish""]",18,False,False,0.05555555555555555,112703
+प्रकोप,"[""wrath"", ""indignation""]",228,False,False,0.0043859649122807015,112703
+प्रक्रम,"[""process""]",2,False,True,0.5,112703
+प्रक्षेप,"[""projection""]",6,False,False,0.16666666666666666,112703
+प्रक्षेपास्त्र,"[""rocket"", ""missile""]",2,False,True,0.5,112703
+प्रचारक,"[""campaigner"", ""promoters""]",2,False,True,0.5,112703
+प्रचारित,"[""promoted""]",8,False,False,0.125,112703
+प्रजापति,"[""prajapati""]",28,False,False,0.03571428571428571,112703
+प्रतिकृति,"[""pattern"", ""replica"", ""replicas""]",1,True,True,1.0,112703
+प्रतिबद्धता,"[""commitment""]",1,True,True,1.0,112703
+प्रतिबिंब,"[""mirror"", ""reflection""]",1,True,True,1.0,112703
+प्रतिभागियों,"[""participants""]",1,True,True,1.0,112703
+प्रतिभाशाली,"[""talented"", ""genius""]",1,True,True,1.0,112703
+प्रतिभूति,"[""securities""]",1,True,True,1.0,112703
+प्रतिमान,"[""pattern"", ""paradigm""]",6,False,False,0.16666666666666666,112703
+प्रतिरोधक,"[""resistor""]",3,False,True,0.3333333333333333,112703
+प्रतीकात्मक,"[""symbolic""]",1,True,True,1.0,112703
+प्रतीकों,"[""symbols""]",1,True,True,1.0,112703
+प्रत्यारोपण,"[""transplant"", ""transplantation"", ""implant""]",1,True,True,1.0,112703
+प्रबंधित,"[""managed""]",1,True,True,1.0,112703
+प्रमाणपत्र,"[""certificate"", ""certificates""]",1,True,True,1.0,112703
+प्रवर्धक,"[""amplifier""]",12,False,False,0.08333333333333333,112703
+प्रविष्टि,"[""entry"", ""listing""]",1,True,True,1.0,112703
+प्रवीण,"[""praveen"", ""pravin""]",32,False,False,0.03125,112703
+प्रवृति,"[""penchant""]",26,False,False,0.038461538461538464,112703
+प्रशस्त,"[""paved""]",970,False,False,0.0010309278350515464,112703
+प्रशस्ति,"[""commendation""]",1,True,True,1.0,112703
+प्रशिक्षक,"[""instructor"", ""trainer""]",1,True,True,1.0,112703
+प्रस्तावना,"[""introduction"", ""prologue"", ""preamble""]",1,True,True,1.0,112703
+प्रागैतिहासिक,"[""prehistoric""]",1,True,True,1.0,112703
+प्रावधानों,"[""provisions""]",1,True,True,1.0,112703
+प्रिंट,"[""print""]",1,True,True,1.0,112703
+प्रिया,"[""priya""]",27,False,False,0.037037037037037035,112703
+प्रीमियम,"[""premium"", ""premiums""]",1,True,True,1.0,112703
+प्रेरक,"[""motivational"", ""inductor""]",6,False,False,0.16666666666666666,112703
+प्रेसीडेंसी,"[""presidency""]",1,True,True,1.0,112703
+प्रोटोटाइप,"[""prototype""]",12,False,False,0.08333333333333333,112703
+प्रोफ़ाइल,"[""profile"", ""profiles""]",2,False,True,0.5,112703
+प्रोफ़ेसर,"[""professor""]",22,False,False,0.045454545454545456,112703
+प्रौढ़,"[""adult""]",1,True,True,1.0,112703
+प्लूटो,"[""pluto""]",2,False,True,0.5,112703
+प्लेटो,"[""plato""]",1,True,True,1.0,112703
+प्लेस,"[""place""]",14,False,False,0.07142857142857142,112703
+प्लैटिनम,"[""platinum""]",1,True,True,1.0,112703
+फतेहपुर,"[""fatehpur""]",1,True,True,1.0,112703
+फर्क,"[""difference"", ""distinguish""]",12226,False,False,8.179290037624735e-05,112703
+फलक,"[""board"", ""panel"", ""boards"", ""pane""]",5,False,True,0.2,112703
+फसलें,"[""crops""]",1,True,True,1.0,112703
+फ़ुट,"[""feet"", ""ft""]",552,False,False,0.0018115942028985507,112703
+फ़्रांसीसी,"[""french""]",43,False,False,0.023255813953488372,112703
+फारस,"[""persia""]",224,False,False,0.004464285714285714,112703
+फास्ट,"[""fast""]",2,False,True,0.5,112703
+फिजी,"[""fiji""]",1,True,True,1.0,112703
+फिनलैंड,"[""finland""]",1,True,True,1.0,112703
+फिल,"[""phil""]",2,False,True,0.5,112703
+फिलाडेल्फिया,"[""philadelphia""]",1,True,True,1.0,112703
+फिलीपींस,"[""philippines""]",2,False,True,0.5,112703
+फिल्मांकन,"[""filming""]",1,True,True,1.0,112703
+फेडरेशन,"[""federation""]",1,True,True,1.0,112703
+फेयर,"[""fair""]",646,False,False,0.0015479876160990713,112703
+फेरारी,"[""ferrari""]",2,False,True,0.5,112703
+फेसबुक,"[""facebook""]",1,True,True,1.0,112703
+फॉर्म,"[""form""]",1,True,True,1.0,112703
+फोकस,"[""focus""]",2,False,True,0.5,112703
+फोटोग्राफी,"[""photography""]",1,True,True,1.0,112703
+फोरम,"[""forum""]",1,True,True,1.0,112703
+फौज,"[""army""]",1,True,True,1.0,112703
+फ्रेमवर्क,"[""framework""]",1,True,True,1.0,112703
+फ्रैंकफर्ट,"[""frankfurt""]",3,False,True,0.3333333333333333,112703
+फ्रैंकलिन,"[""franklin""]",1,True,True,1.0,112703
+फ्लाइट,"[""flight""]",1,True,True,1.0,112703
+बंगला,"[""bangla""]",6,False,False,0.16666666666666666,112703
+बंदर,"[""monkey""]",5,False,True,0.2,112703
+बंदूक,"[""gun""]",1,True,True,1.0,112703
+बंधक,"[""mortgage"", ""hostage""]",1,True,True,1.0,112703
+बकरी,"[""goat""]",1,True,True,1.0,112703
+बगीचे,"[""garden""]",1,True,True,1.0,112703
+बचाया,"[""rescued""]",4,False,True,0.25,112703
+बढ़त,"[""escalation""]",132,False,False,0.007575757575757576,112703
+बढ़ाना,"[""enhancing"", ""exacerbate""]",37,False,False,0.02702702702702703,112703
+बताना,"[""tell""]",1,True,True,1.0,112703
+बदलना,"[""replacement"", ""changing""]",8,False,False,0.125,112703
+बदली,"[""overcast""]",6211,False,False,0.00016100466913540493,112703
+बनर्जी,"[""banerjee""]",1,True,True,1.0,112703
+बमबारी,"[""bomb"", ""bombardment""]",5,False,True,0.2,112703
+बम्बई,"[""bombay""]",3,False,True,0.3333333333333333,112703
+बरसात,"[""rain"", ""rainy"", ""shower""]",1,True,True,1.0,112703
+बराक,"[""barack"", ""barak""]",1,True,True,1.0,112703
+बराबरी,"[""equals""]",5,False,True,0.2,112703
+बरेली,"[""bareilly""]",5,False,True,0.2,112703
+बर्ड,"[""bird""]",5448,False,False,0.00018355359765051394,112703
+बर्बरता,"[""vandalism"", ""barbarism""]",12,False,False,0.08333333333333333,112703
+बर्बाद,"[""waste"", ""wasting""]",5,False,True,0.2,112703
+बलराम,"[""balarama""]",1,True,True,1.0,112703
+बलात्कार,"[""rape""]",1,True,True,1.0,112703
+बसंत,"[""spring""]",1908,False,False,0.0005241090146750524,112703
+बस्तियों,"[""localities""]",100,False,False,0.01,112703
+बहनों,"[""sisters""]",1,True,True,1.0,112703
+बहिष्कार,"[""boycott""]",3,False,True,0.3333333333333333,112703
+बहुराष्ट्रीय,"[""multinational""]",1,True,True,1.0,112703
+बहुवचन,"[""plural""]",2,False,True,0.5,112703
+बहुविकल्पी,"[""disambiguation""]",343,False,False,0.0029154518950437317,112703
+बाँस,"[""bamboo""]",2,False,True,0.5,112703
+बाघों,"[""tigers"", ""tiger""]",1,True,True,1.0,112703
+बाजीराव,"[""bajirao""]",1,True,True,1.0,112703
+बादलों,"[""clouds""]",1,True,True,1.0,112703
+बाधाओं,"[""barriers"", ""obstacles""]",1,True,True,1.0,112703
+बाप,"[""father""]",2,False,True,0.5,112703
+बायर,"[""bayer""]",1,True,True,1.0,112703
+बारूद,"[""gunpowder""]",21,False,False,0.047619047619047616,112703
+बालाजी,"[""balaji""]",1,True,True,1.0,112703
+बालिका,"[""balika""]",1416,False,False,0.0007062146892655367,112703
+बास,"[""bass""]",9,False,False,0.1111111111111111,112703
+बाह,"[""bah""]",867,False,False,0.0011534025374855825,112703
+बिखरे,"[""scattered""]",236,False,False,0.00423728813559322,112703
+बिड़ला,"[""birla""]",1,True,True,1.0,112703
+बिल्ली,"[""cat""]",1,True,True,1.0,112703
+बिशप,"[""bishop""]",1075,False,False,0.0009302325581395349,112703
+बिस्तर,"[""bed""]",1,True,True,1.0,112703
+बीजापुर,"[""bijapur""]",1,True,True,1.0,112703
+बीजिंग,"[""beijing""]",1,True,True,1.0,112703
+बुद्धिमान,"[""intelligent"", ""astute""]",1,True,True,1.0,112703
+बुराई,"[""evil"", ""wickedness""]",1,True,True,1.0,112703
+बेंजामिन,"[""benjamin""]",1,True,True,1.0,112703
+बेकर,"[""baker"", ""becker""]",10,False,False,0.1,112703
+बेखम,"[""beckham""]",9005,False,False,0.0001110494169905608,112703
+बेड़े,"[""fleet""]",2,False,True,0.5,112703
+बेरी,"[""berry"", ""beri""]",1,True,True,1.0,112703
+बेरोजगारी,"[""unemployment""]",1,True,True,1.0,112703
+बेल्ट,"[""belt"", ""belts""]",1,True,True,1.0,112703
+बेसिक,"[""basic""]",1,True,True,1.0,112703
+बेसिन,"[""basin""]",79,False,False,0.012658227848101266,112703
+बैंगनी,"[""purple"", ""violet"", ""violets"", ""eggplant""]",1,True,True,1.0,112703
+बैंगलोर,"[""bangalore""]",2,False,True,0.5,112703
+बैकअप,"[""backup"", ""backups""]",1,True,True,1.0,112703
+बैग,"[""bag"", ""bags""]",1,True,True,1.0,112703
+बैठकों,"[""meetings"", ""sittings""]",1,True,True,1.0,112703
+बैरी,"[""barry"", ""antagonist""]",7,False,False,0.14285714285714285,112703
+बैले,"[""ballet""]",22,False,False,0.045454545454545456,112703
+बॉडी,"[""body""]",1,True,True,1.0,112703
+बॉबी,"[""bobby""]",1,True,True,1.0,112703
+बॉम्बे,"[""bombay""]",1,True,True,1.0,112703
+बोतल,"[""bottle""]",1,True,True,1.0,112703
+बोल्ट,"[""bolt""]",2,False,True,0.5,112703
+ब्रह्मपुत्र,"[""brahmaputra""]",1,True,True,1.0,112703
+ब्राउजर,"[""browser""]",1,True,True,1.0,112703
+ब्रायंट,"[""bryant""]",1,True,True,1.0,112703
+ब्राह्मी,"[""brahmi""]",1,True,True,1.0,112703
+ब्रॉडबैंड,"[""broadband""]",1,True,True,1.0,112703
+ब्लेड,"[""blade"", ""blades""]",1,True,True,1.0,112703
+भटनागर,"[""bhatnagar""]",6,False,False,0.16666666666666666,112703
+भट्टाचार्य,"[""bhattacharya""]",1,True,True,1.0,112703
+भट्टी,"[""furnace""]",1,True,True,1.0,112703
+भट्ठी,"[""furnace""]",12312,False,False,8.122157244964262e-05,112703
+भण्डार,"[""stock""]",64,False,False,0.015625,112703
+भयभीत,"[""afraid"", ""scared""]",6,False,False,0.16666666666666666,112703
+भागीदार,"[""participants"", ""participant""]",4,False,True,0.25,112703
+भारद्वाज,"[""bhardwaj""]",1,True,True,1.0,112703
+भित्ति,"[""mural""]",4,False,True,0.25,112703
+भुजा,"[""arm""]",2576,False,False,0.00038819875776397513,112703
+भुवनेश्वर,"[""bhubaneswar""]",1,True,True,1.0,112703
+भूरा,"[""brown"", ""browns""]",1,True,True,1.0,112703
+भूवैज्ञानिक,"[""geologist""]",2,False,True,0.5,112703
+भेजी,"[""sent""]",1,True,True,1.0,112703
+भैरव,"[""bhairava""]",3,False,True,0.3333333333333333,112703
+भ्रमित,"[""confused""]",1,True,True,1.0,112703
+भ्रष्ट,"[""corrupt"", ""corrupted""]",1,True,True,1.0,112703
+भ्रामक,"[""confusing"", ""misleading""]",3,False,True,0.3333333333333333,112703
+मंडप,"[""mandapa""]",153,False,False,0.006535947712418301,112703
+मंत्रिमंडल,"[""cabinet"", ""ministries""]",10,False,False,0.1,112703
+मकर,"[""capricorn""]",44,False,False,0.022727272727272728,112703
+मक्खन,"[""butter""]",1,True,True,1.0,112703
+मजदूरी,"[""wages"", ""wage""]",1,True,True,1.0,112703
+मजबूती,"[""strength""]",2,False,True,0.5,112703
+मजाक,"[""joke""]",1,True,True,1.0,112703
+मनी,"[""money"", ""mani""]",2,False,True,0.5,112703
+मनीष,"[""manish""]",5,False,True,0.2,112703
+मनोनीत,"[""nominated"", ""nominate""]",1,True,True,1.0,112703
+मनोरंजक,"[""fun"", ""entertaining""]",1,True,True,1.0,112703
+मयूर,"[""mayur""]",8,False,False,0.125,112703
+मर्यादा,"[""dignity""]",2782,False,False,0.0003594536304816679,112703
+मल्होत्रा,"[""malhotra""]",7,False,False,0.14285714285714285,112703
+मसाला,"[""spice"", ""masala""]",1,True,True,1.0,112703
+मसाले,"[""spices""]",1,True,True,1.0,112703
+महंगा,"[""expensive""]",1,True,True,1.0,112703
+महलों,"[""palaces""]",1,True,True,1.0,112703
+महानतम,"[""greatest""]",1,True,True,1.0,112703
+महानदी,"[""mahanadi""]",284,False,False,0.0035211267605633804,112703
+महापौर,"[""mayor""]",1,True,True,1.0,112703
+महासागरीय,"[""oceania""]",25,False,False,0.04,112703
+महीन,"[""finer""]",80,False,False,0.0125,112703
+महेन्द्र,"[""mahendra""]",1,True,True,1.0,112703
+मांसपेशी,"[""muscle""]",1,True,True,1.0,112703
+माइग्रेन,"[""migraine""]",25,False,False,0.04,112703
+माईस्पेस,"[""myspace""]",1,True,True,1.0,112703
+माघ,"[""magh""]",2102,False,False,0.0004757373929590866,112703
+मातृ,"[""maternal""]",1,True,True,1.0,112703
+माथुर,"[""mathur""]",5,False,True,0.2,112703
+माधोपुर,"[""madhopur""]",2,False,True,0.5,112703
+मानकीकरण,"[""standardization""]",1,True,True,1.0,112703
+मानदंड,"[""criterion""]",1,True,True,1.0,112703
+मानविकी,"[""humanities""]",1,True,True,1.0,112703
+मानों,"[""values""]",2,False,True,0.5,112703
+मामा,"[""uncle"", ""mama""]",3,False,True,0.3333333333333333,112703
+मारी,"[""marie"", ""mari""]",177,False,False,0.005649717514124294,112703
+मारुति,"[""maruti""]",4,False,True,0.25,112703
+मार्केटिंग,"[""marketing""]",1,True,True,1.0,112703
+मालवीय,"[""malviya""]",1,True,True,1.0,112703
+मालिश,"[""massage"", ""massages""]",1,True,True,1.0,112703
+माली,"[""mali"", ""maldives"", ""gardener""]",770,False,False,0.0012987012987012987,112703
+मिठाई,"[""sweet"", ""dessert"", ""sweets""]",1,True,True,1.0,112703
+मित्रता,"[""friendship"", ""amity"", ""friendliness""]",1,True,True,1.0,112703
+मिथक,"[""myth""]",1,True,True,1.0,112703
+मिनी,"[""mini""]",1,True,True,1.0,112703
+मिर्ज़ा,"[""mirza"", ""mirzapur""]",1,True,True,1.0,112703
+मिलर,"[""miller""]",3,False,True,0.3333333333333333,112703
+मिशिगन,"[""michigan""]",1,True,True,1.0,112703
+मिसाल,"[""parable""]",6,False,False,0.16666666666666666,112703
+मिसौरी,"[""missouri""]",1,True,True,1.0,112703
+मीणा,"[""meena""]",196,False,False,0.00510204081632653,112703
+मीन,"[""pisces""]",7197,False,False,0.00013894678338196472,112703
+मीना,"[""mina""]",6,False,False,0.16666666666666666,112703
+मुंशी,"[""munshi""]",2,False,True,0.5,112703
+मुकुट,"[""crown""]",6,False,False,0.16666666666666666,112703
+मुक्केबाजी,"[""boxing""]",1,True,True,1.0,112703
+मुजफ्फरपुर,"[""muzaffarpur""]",1,True,True,1.0,112703
+मुद्राओं,"[""poses""]",1516,False,False,0.0006596306068601583,112703
+मुद्रास्फीति,"[""inflation""]",1,True,True,1.0,112703
+मुराद,"[""murad""]",4,False,True,0.25,112703
+मुलाक़ात,"[""hangout""]",75,False,False,0.013333333333333334,112703
+मूक,"[""silent"", ""mute"", ""muted""]",1,True,True,1.0,112703
+मूर्तिकला,"[""sculpture""]",1,True,True,1.0,112703
+मूल्यवान,"[""valuable""]",1,True,True,1.0,112703
+मूसा,"[""moses"", ""musa"", ""moosa""]",4,False,True,0.25,112703
+मेगावाट,"[""mw""]",13,False,False,0.07692307692307693,112703
+मेघालय,"[""meghalaya""]",2,False,True,0.5,112703
+मेनन,"[""menon""]",2,False,True,0.5,112703
+मैक्सिकन,"[""mexican""]",1,True,True,1.0,112703
+मैक्सिको,"[""mexico""]",2,False,True,0.5,112703
+मैगज़ीन,"[""magazines""]",326,False,False,0.003067484662576687,112703
+मैट,"[""matt"", ""matte""]",1,True,True,1.0,112703
+मैट्रिक्स,"[""matrix""]",2,False,True,0.5,112703
+मैडोना,"[""madonna""]",1,True,True,1.0,112703
+मैथ्यू,"[""matthew""]",6,False,False,0.16666666666666666,112703
+मैनहटन,"[""manhattan""]",1,True,True,1.0,112703
+मैनुअल,"[""manual""]",1,True,True,1.0,112703
+मैसाचुसेट्स,"[""massachusetts""]",1,True,True,1.0,112703
+मॉनमाउथ,"[""monmouth""]",1,True,True,1.0,112703
+मॉरिसन,"[""morrison""]",6,False,False,0.16666666666666666,112703
+मॉरीशस,"[""mauritius""]",32,False,False,0.03125,112703
+मोटरसाइकिल,"[""motorcycle"", ""motorcycles""]",1,True,True,1.0,112703
+मोटर्स,"[""motors""]",1,True,True,1.0,112703
+मोह,"[""moh""]",11256,False,False,8.884150675195451e-05,112703
+मोहित,"[""mohit""]",877,False,False,0.0011402508551881414,112703
+मौजूदगी,"[""presence""]",2,False,True,0.5,112703
+मौद्रिक,"[""monetary""]",1,True,True,1.0,112703
+मौन,"[""silence"", ""mute"", ""muted"", ""silenced"", ""tacit""]",3,False,True,0.3333333333333333,112703
+मौलाना,"[""maulana""]",1,True,True,1.0,112703
+मौसमी,"[""seasonal""]",1,True,True,1.0,112703
+म्यूनिख,"[""munich""]",1,True,True,1.0,112703
+यथार्थवाद,"[""realism""]",1,True,True,1.0,112703
+यथार्थवादी,"[""realistic""]",2,False,True,0.5,112703
+यन्त्र,"[""yantra""]",17238,False,False,5.8011370228564796e-05,112703
+याचिका,"[""petition""]",1,True,True,1.0,112703
+यादगार,"[""memorable"", ""keepsake""]",1,True,True,1.0,112703
+यादृच्छिक,"[""random""]",1,True,True,1.0,112703
+यीशु,"[""jesus""]",1,True,True,1.0,112703
+युगों,"[""yuga""]",365,False,False,0.0027397260273972603,112703
+युग्म,"[""paired""]",147,False,False,0.006802721088435374,112703
+युवराज,"[""yuvraj""]",1,True,True,1.0,112703
+युवावस्था,"[""youth""]",3,False,True,0.3333333333333333,112703
+यूएसए,"[""usa""]",2,False,True,0.5,112703
+यूक्रेन,"[""ukraine""]",1,True,True,1.0,112703
+यूट्यूब,"[""youtube""]",1,True,True,1.0,112703
+यूनिक्स,"[""unix""]",1,True,True,1.0,112703
+यूनिवर्सल,"[""universal""]",1,True,True,1.0,112703
+यूरेनियम,"[""uranium""]",1,True,True,1.0,112703
+यों,"[""plank""]",65214,False,False,1.5334130708130157e-05,112703
+रक्तस्राव,"[""haemorrhage""]",6,False,False,0.16666666666666666,112703
+रघुनाथ,"[""raghunath""]",1,True,True,1.0,112703
+रचनाकार,"[""writer""]",8,False,False,0.125,112703
+रज़ा,"[""raza""]",78,False,False,0.01282051282051282,112703
+रजिस्टर,"[""register"", ""registers""]",1,True,True,1.0,112703
+रणनीतिक,"[""strategic"", ""tactical"", ""strategically""]",1,True,True,1.0,112703
+रणवीर,"[""ranvir""]",1,True,True,1.0,112703
+रतन,"[""ratan"", ""rattan""]",1,True,True,1.0,112703
+रनों,"[""runs""]",2,False,True,0.5,112703
+रमन,"[""raman""]",10,False,False,0.1,112703
+रवीन्द्र,"[""ravindra""]",3,False,True,0.3333333333333333,112703
+रस्सी,"[""rope""]",1,True,True,1.0,112703
+रहस्यमय,"[""mysterious""]",1,True,True,1.0,112703
+रहीम,"[""rahim""]",495,False,False,0.00202020202020202,112703
+रा,"[""ra""]",3,False,True,0.3333333333333333,112703
+राँची,"[""ranchi""]",3,False,True,0.3333333333333333,112703
+रांची,"[""ranchi""]",1,True,True,1.0,112703
+राउंड,"[""round""]",2,False,True,0.5,112703
+राख,"[""ash"", ""ashes""]",2,False,True,0.5,112703
+राखी,"[""rakhi""]",1,True,True,1.0,112703
+राजन,"[""rajan""]",184,False,False,0.005434782608695652,112703
+राजपूतों,"[""rajputs""]",12,False,False,0.08333333333333333,112703
+राजी,"[""persuade"", ""raji""]",481,False,False,0.002079002079002079,112703
+राजेंद्र,"[""rajendra""]",2,False,True,0.5,112703
+राज्याभिषेक,"[""coronation""]",20,False,False,0.05,112703
+रामचंद्र,"[""ramachandra"", ""ramchandra""]",1,True,True,1.0,112703
+रामचन्द्र,"[""ramachandra"", ""ramchandra""]",1,True,True,1.0,112703
+रास,"[""ras"", ""weasel""]",5,False,True,0.2,112703
+रिटर्न,"[""return"", ""returns""]",1,True,True,1.0,112703
+रिलायंस,"[""reliance""]",1490,False,False,0.0006711409395973154,112703
+रिसाव,"[""leak"", ""leaks""]",372,False,False,0.002688172043010753,112703
+रीड,"[""reed""]",76,False,False,0.013157894736842105,112703
+रीडर,"[""reader""]",171,False,False,0.005847953216374269,112703
+रुकावट,"[""obstruction"", ""blockage""]",29,False,False,0.034482758620689655,112703
+रुझान,"[""trend"", ""trends"", ""trending""]",1,True,True,1.0,112703
+रुद्र,"[""rudra""]",1,True,True,1.0,112703
+रुपया,"[""rupee""]",1,True,True,1.0,112703
+रूपक,"[""metaphor""]",285,False,False,0.0035087719298245615,112703
+रूपांतर,"[""variant""]",117,False,False,0.008547008547008548,112703
+रूम,"[""room"", ""rooms""]",1,True,True,1.0,112703
+रेखीय,"[""linear""]",3,False,True,0.3333333333333333,112703
+रेड्डी,"[""reddy""]",64,False,False,0.015625,112703
+रेलगाड़ी,"[""train""]",8,False,False,0.125,112703
+रेलमार्ग,"[""railroad""]",1,True,True,1.0,112703
+रेशे,"[""silk"", ""fibers"", ""fibres""]",236,False,False,0.00423728813559322,112703
+रेसलमेनिया,"[""wrestlemania""]",2,False,True,0.5,112703
+रैली,"[""rally"", ""jamboree""]",1,True,True,1.0,112703
+रॉन,"[""ron""]",2,False,True,0.5,112703
+रॉबर्ट्स,"[""roberts""]",1,True,True,1.0,112703
+रॉबिन,"[""robin""]",2,False,True,0.5,112703
+रॉस,"[""ross""]",1,True,True,1.0,112703
+रो,"[""crying"", ""rho""]",3,False,True,0.3333333333333333,112703
+रोकता,"[""prevents""]",15,False,False,0.06666666666666667,112703
+रोचेस्टर,"[""rochester""]",1,True,True,1.0,112703
+रोमांचक,"[""exciting"", ""thrilling""]",1,True,True,1.0,112703
+रोमांटिक,"[""romantic""]",1,True,True,1.0,112703
+रोमांस,"[""romance""]",1,True,True,1.0,112703
+रोमानिया,"[""romania""]",1,True,True,1.0,112703
+रोलिंग,"[""rolling"", ""rowling""]",1,True,True,1.0,112703
+रोहिणी,"[""rohini""]",1,True,True,1.0,112703
+लड़का,"[""boy""]",2,False,True,0.5,112703
+लड़ा,"[""fought""]",7,False,False,0.14285714285714285,112703
+लड़ाकू,"[""fighter""]",1,True,True,1.0,112703
+लत,"[""addiction""]",1,True,True,1.0,112703
+ललिता,"[""lalita"", ""lalitha""]",1,True,True,1.0,112703
+लहरों,"[""waves""]",1,True,True,1.0,112703
+लाइनों,"[""lines""]",1,True,True,1.0,112703
+लाभप्रद,"[""profitable""]",6,False,False,0.16666666666666666,112703
+लाभांश,"[""dividend""]",1,True,True,1.0,112703
+लावा,"[""lava""]",1,True,True,1.0,112703
+लियोन,"[""leon""]",5,False,True,0.2,112703
+लिवरपूल,"[""liverpool""]",2,False,True,0.5,112703
+लीड,"[""lead"", ""leads""]",1,True,True,1.0,112703
+लीन,"[""lyn""]",512,False,False,0.001953125,112703
+लुइस,"[""luis""]",4,False,True,0.25,112703
+लूट,"[""loot""]",4,False,True,0.25,112703
+लेआउट,"[""layout""]",1,True,True,1.0,112703
+लेग,"[""leg""]",740,False,False,0.0013513513513513514,112703
+लेट,"[""late""]",1,True,True,1.0,112703
+लेनी,"[""leni""]",1163,False,False,0.0008598452278589854,112703
+लेफ्टिनेंट,"[""lieutenant""]",1,True,True,1.0,112703
+लेबनान,"[""lebanon""]",1,True,True,1.0,112703
+लैंड,"[""land""]",10,False,False,0.1,112703
+लैस,"[""lacy""]",1695,False,False,0.0005899705014749262,112703
+लॉग,"[""log"", ""logs""]",1,True,True,1.0,112703
+लोकगीत,"[""folklore""]",16,False,False,0.0625,112703
+लोकमान्य,"[""lokmanya""]",75,False,False,0.013333333333333334,112703
+लोहिया,"[""lohia""]",84,False,False,0.011904761904761904,112703
+लौटे,"[""returned""]",1,True,True,1.0,112703
+वंशावली,"[""genealogy""]",1,True,True,1.0,112703
+वन्यजीव,"[""wildlife""]",1,True,True,1.0,112703
+वर्चस्व,"[""dominated""]",15,False,False,0.06666666666666667,112703
+वर्जित,"[""forbidden""]",2,False,True,0.5,112703
+वसूली,"[""recovery""]",1,True,True,1.0,112703
+वाइन,"[""wine""]",1,True,True,1.0,112703
+वाइल्ड,"[""wilde""]",1,True,True,1.0,112703
+वाइस,"[""vice""]",913,False,False,0.001095290251916758,112703
+वाट,"[""watt"", ""wat""]",426,False,False,0.002347417840375587,112703
+वान,"[""van""]",6,False,False,0.16666666666666666,112703
+वायरलेस,"[""wireless""]",1,True,True,1.0,112703
+वायुमंडलीय,"[""atmospheric""]",1,True,True,1.0,112703
+वार्तालाप,"[""conversation"", ""conversations""]",1,True,True,1.0,112703
+वार्नर,"[""warner""]",27,False,False,0.037037037037037035,112703
+वासुदेव,"[""vasudev""]",2,False,True,0.5,112703
+विकलांग,"[""disabled"", ""handicapped""]",1,True,True,1.0,112703
+विकलांगता,"[""disability""]",1,True,True,1.0,112703
+विक्टर,"[""victor""]",17,False,False,0.058823529411764705,112703
+विक्रेताओं,"[""sellers""]",1,True,True,1.0,112703
+विचलन,"[""deviation""]",1,True,True,1.0,112703
+विचारकों,"[""thinkers""]",1,True,True,1.0,112703
+विदेशियों,"[""foreigners""]",1,True,True,1.0,112703
+विद्रोहियों,"[""rebels""]",1,True,True,1.0,112703
+विधवा,"[""widow"", ""widowed""]",1,True,True,1.0,112703
+विधायिका,"[""legislature""]",3,False,True,0.3333333333333333,112703
+विधिक,"[""legal""]",3,False,True,0.3333333333333333,112703
+विधियां,"[""methods""]",1,True,True,1.0,112703
+विनय,"[""vinay""]",17,False,False,0.058823529411764705,112703
+विनाशकारी,"[""devastating"", ""disastrous""]",2,False,True,0.5,112703
+विनियमित,"[""regulate""]",9,False,False,0.1111111111111111,112703
+विपक्षी,"[""antagonist""]",11,False,False,0.09090909090909091,112703
+विमानन,"[""aviation""]",2,False,True,0.5,112703
+वियना,"[""vienna""]",4,False,True,0.25,112703
+विराट,"[""virat""]",113,False,False,0.008849557522123894,112703
+विरोधियों,"[""opponents"", ""rivals""]",1,True,True,1.0,112703
+विलास,"[""vilas""]",274,False,False,0.0036496350364963502,112703
+विवेकानन्द,"[""vivekananda""]",1,True,True,1.0,112703
+विशालकाय,"[""palatial""]",1689,False,False,0.0005920663114268798,112703
+विशेषाधिकार,"[""privilege"", ""privileged"", ""prerogative""]",1,True,True,1.0,112703
+विश्लेषणात्मक,"[""analytical""]",1,True,True,1.0,112703
+विश्वकर्मा,"[""vishwakarma""]",1,True,True,1.0,112703
+विश्वव्यापी,"[""worldwide""]",4,False,True,0.25,112703
+विश्वसनीयता,"[""reliability"", ""credibility""]",1,True,True,1.0,112703
+विषाक्त,"[""toxic""]",2,False,True,0.5,112703
+विषाक्तता,"[""poisoning""]",2,False,True,0.5,112703
+विस्थापन,"[""displacement""]",3,False,True,0.3333333333333333,112703
+विस्थापित,"[""displaced""]",1,True,True,1.0,112703
+वीणा,"[""veena""]",1638,False,False,0.0006105006105006105,112703
+वृंदावन,"[""vrindavan""]",39,False,False,0.02564102564102564,112703
+वृद्ध,"[""old"", ""older""]",6,False,False,0.16666666666666666,112703
+वृन्दावन,"[""vrindavan""]",23,False,False,0.043478260869565216,112703
+वेदव्यास,"[""vyasa""]",52,False,False,0.019230769230769232,112703
+वेदांत,"[""vedanta""]",7,False,False,0.14285714285714285,112703
+वेदान्त,"[""vedanta""]",12,False,False,0.08333333333333333,112703
+वेधशाला,"[""observatory""]",19,False,False,0.05263157894736842,112703
+वेबसाईट,"[""websites""]",3,False,True,0.3333333333333333,112703
+वेशभूषा,"[""costume"", ""costumes""]",3,False,True,0.3333333333333333,112703
+वेस्टमिंस्टर,"[""westminster""]",1,True,True,1.0,112703
+वैचारिक,"[""ideological""]",1,True,True,1.0,112703
+वैद्य,"[""vaidya""]",384,False,False,0.0026041666666666665,112703
+वैधता,"[""validity"", ""legality""]",1,True,True,1.0,112703
+वैभव,"[""grandeur""]",12,False,False,0.08333333333333333,112703
+वैली,"[""wally""]",137,False,False,0.0072992700729927005,112703
+वैवाहिक,"[""marital"", ""matrimonial""]",1,True,True,1.0,112703
+वैश्वीकरण,"[""globalization""]",97,False,False,0.010309278350515464,112703
+वॉकर,"[""walker""]",1,True,True,1.0,112703
+वॉल्ट,"[""walt"", ""vault""]",1,True,True,1.0,112703
+वोल्ट,"[""volt""]",70,False,False,0.014285714285714285,112703
+व्यवसायिक,"[""profession""]",36,False,False,0.027777777777777776,112703
+व्यवसायी,"[""businessman""]",2,False,True,0.5,112703
+व्यू,"[""doorman""]",29869,False,False,3.347952726907496e-05,112703
+शंकु,"[""cone"", ""conic""]",310,False,False,0.0032258064516129032,112703
+शंख,"[""shankha""]",1612,False,False,0.0006203473945409429,112703
+शंघाई,"[""shanghai""]",3,False,True,0.3333333333333333,112703
+शक्तियाँ,"[""powers""]",1,True,True,1.0,112703
+शक्तियां,"[""forces"", ""powers""]",1,True,True,1.0,112703
+शतरंज,"[""chess""]",1,True,True,1.0,112703
+शत्रुओं,"[""haters""]",9,False,False,0.1111111111111111,112703
+शरीफ,"[""sharif""]",2,False,True,0.5,112703
+शर्ट,"[""shirt"", ""shirts""]",1,True,True,1.0,112703
+शहद,"[""honey""]",1,True,True,1.0,112703
+शाखाएं,"[""branches""]",1,True,True,1.0,112703
+शाप,"[""curse"", ""darn""]",1,True,True,1.0,112703
+शारदा,"[""sarada""]",3,False,True,0.3333333333333333,112703
+शाश्वत,"[""eternity""]",13,False,False,0.07692307692307693,112703
+शाहजहाँ,"[""shahjahan""]",1,True,True,1.0,112703
+शिला,"[""shillong""]",3588,False,False,0.0002787068004459309,112703
+शिशुओं,"[""babies""]",1,True,True,1.0,112703
+शीट,"[""sheet"", ""sheets""]",1,True,True,1.0,112703
+शुक्ला,"[""shukla""]",1,True,True,1.0,112703
+शुद्धता,"[""accuracy"", ""chastity""]",2,False,True,0.5,112703
+शुभारंभ,"[""launching""]",1,True,True,1.0,112703
+शेंगेन,"[""schengen""]",1,True,True,1.0,112703
+शेन,"[""shane""]",14,False,False,0.07142857142857142,112703
+शेफ़ील्ड,"[""sheffield""]",1,True,True,1.0,112703
+शेयरधारकों,"[""shareholders""]",1,True,True,1.0,112703
+शैतान,"[""devil"", ""satan""]",1,True,True,1.0,112703
+शैवाल,"[""algae""]",640,False,False,0.0015625,112703
+शॉपिंग,"[""shopping""]",1,True,True,1.0,112703
+शोक,"[""mourning""]",4,False,True,0.25,112703
+शोधकर्ता,"[""researcher""]",1,True,True,1.0,112703
+शोधन,"[""refining""]",206,False,False,0.0048543689320388345,112703
+शौकिया,"[""amateur""]",1,True,True,1.0,112703
+श्रद्धांजलि,"[""tribute"", ""tributes""]",4,False,True,0.25,112703
+श्रीनिवास,"[""srinivasa""]",2,False,True,0.5,112703
+श्रुति,"[""revelation"", ""shruti""]",1,True,True,1.0,112703
+श्रृंगार,"[""makeup""]",1,True,True,1.0,112703
+श्रेष्ठता,"[""superiority""]",1,True,True,1.0,112703
+श्लोकों,"[""slokas""]",1031,False,False,0.0009699321047526673,112703
+षड्यंत्र,"[""conspiracy""]",1,True,True,1.0,112703
+संकीर्ण,"[""narrow""]",1,True,True,1.0,112703
+संकुचन,"[""compression"", ""contraction""]",1,True,True,1.0,112703
+संकोच,"[""hesitate""]",90,False,False,0.011111111111111112,112703
+संगीतकारों,"[""musicians""]",1,True,True,1.0,112703
+संग्रहीत,"[""archived""]",3,False,True,0.3333333333333333,112703
+संचय,"[""cache""]",678,False,False,0.0014749262536873156,112703
+संचिका,"[""file"", ""files""]",2,False,True,0.5,112703
+संतुष्टि,"[""satisfaction""]",1,True,True,1.0,112703
+संतृप्त,"[""saturated"", ""saturation""]",1,True,True,1.0,112703
+संतोष,"[""satisfaction"", ""santosh"", ""contentment""]",1,True,True,1.0,112703
+संभाल,"[""handle""]",1,True,True,1.0,112703
+संभावनाओं,"[""possibilities""]",1,True,True,1.0,112703
+संयम,"[""restraint"", ""sobriety""]",1,True,True,1.0,112703
+संयोजित,"[""combined""]",2,False,True,0.5,112703
+संविदा,"[""contract"", ""pact""]",1,True,True,1.0,112703
+संवेग,"[""momentum""]",73,False,False,0.0136986301369863,112703
+संवेदना,"[""condolences""]",541,False,False,0.0018484288354898336,112703
+संस्थागत,"[""institutional""]",1,True,True,1.0,112703
+संस्मरण,"[""memoir""]",4,False,True,0.25,112703
+सउदी,"[""saudis""]",2,False,True,0.5,112703
+सचमुच,"[""really"", ""literally""]",9,False,False,0.1111111111111111,112703
+सचिवालय,"[""secretariat""]",1,True,True,1.0,112703
+सच्चा,"[""true""]",3,False,True,0.3333333333333333,112703
+सजाया,"[""decorated""]",168,False,False,0.005952380952380952,112703
+सजावट,"[""decoration"", ""decorations""]",1,True,True,1.0,112703
+सड़कें,"[""streets"", ""roads""]",1,True,True,1.0,112703
+सतही,"[""superficial""]",1,True,True,1.0,112703
+सदाबहार,"[""evergreen""]",2,False,True,0.5,112703
+सदिश,"[""vector"", ""vectors""]",103749,False,False,9.638647119490309e-06,112703
+सन्धि,"[""treaty""]",2,False,True,0.5,112703
+सपाट,"[""flat""]",1,True,True,1.0,112703
+सब्जियों,"[""vegetables""]",1,True,True,1.0,112703
+सभ्य,"[""decent""]",2,False,True,0.5,112703
+सभ्यताओं,"[""civilizations""]",1,True,True,1.0,112703
+समझाया,"[""explained""]",1,True,True,1.0,112703
+समझी,"[""considered""]",94,False,False,0.010638297872340425,112703
+समता,"[""equality"", ""parity""]",1,True,True,1.0,112703
+समतुल्य,"[""equivalent""]",15,False,False,0.06666666666666667,112703
+समन्वित,"[""coordinated""]",4,False,True,0.25,112703
+समस्याएँ,"[""issues"", ""problems""]",2,False,True,0.5,112703
+समाविष्ट,"[""embodied""]",276,False,False,0.0036231884057971015,112703
+समितियों,"[""committees""]",1,True,True,1.0,112703
+समीक्षक,"[""reviewer""]",1,True,True,1.0,112703
+समीर,"[""samir""]",1,True,True,1.0,112703
+सम्मेलनों,"[""conferences""]",1,True,True,1.0,112703
+सरसों,"[""mustard""]",2,False,True,0.5,112703
+सर्जन,"[""surgeon""]",1,True,True,1.0,112703
+सर्पिल,"[""spiral""]",14,False,False,0.07142857142857142,112703
+सर्बिया,"[""serbia""]",1,True,True,1.0,112703
+सलाद,"[""salad"", ""lettuce"", ""salads""]",1,True,True,1.0,112703
+सलीम,"[""salim""]",1,True,True,1.0,112703
+सस्ता,"[""cheap"", ""cheaper"", ""shoddy""]",1,True,True,1.0,112703
+सस्ती,"[""affordable"", ""cheap""]",1,True,True,1.0,112703
+सहभागिता,"[""engagement"", ""interaction""]",14,False,False,0.07142857142857142,112703
+सहानुभूति,"[""sympathy"", ""compassion"", ""empathy""]",1,True,True,1.0,112703
+सहाय,"[""sahay""]",679,False,False,0.0014727540500736377,112703
+सहारनपुर,"[""saharanpur""]",1,True,True,1.0,112703
+साँप,"[""snake""]",1,True,True,1.0,112703
+साँस,"[""breathing"", ""breath"", ""breathe""]",1,True,True,1.0,112703
+सांकेतिक,"[""symbolic""]",1,True,True,1.0,112703
+सांचे,"[""mould""]",8936,False,False,0.00011190689346463742,112703
+सांप,"[""snake"", ""snakes""]",1,True,True,1.0,112703
+सांसारिक,"[""worldly""]",2,False,True,0.5,112703
+साइमन,"[""simon""]",6,False,False,0.16666666666666666,112703
+साईट,"[""site""]",1,True,True,1.0,112703
+साउंडट्रैक,"[""soundtrack""]",1,True,True,1.0,112703
+साख,"[""goodwill""]",63,False,False,0.015873015873015872,112703
+साठ,"[""sixty""]",3,False,True,0.3333333333333333,112703
+सान,"[""san""]",12,False,False,0.08333333333333333,112703
+सामंजस्य,"[""harmony""]",4,False,True,0.25,112703
+सामंत,"[""samanta""]",3,False,True,0.3333333333333333,112703
+सामयिक,"[""timely""]",3,False,True,0.3333333333333333,112703
+सामर्थ्य,"[""potential"", ""strength"", ""capabilities""]",9,False,False,0.1111111111111111,112703
+सामी,"[""sami""]",591,False,False,0.001692047377326565,112703
+साम्राज्यवाद,"[""imperialism""]",1,True,True,1.0,112703
+सावरकर,"[""savarkar""]",1,True,True,1.0,112703
+सावित्री,"[""savitri""]",75,False,False,0.013333333333333334,112703
+साहनी,"[""sahni""]",134,False,False,0.007462686567164179,112703
+सिंगल,"[""single""]",1,True,True,1.0,112703
+सिंधी,"[""sindhi""]",1,True,True,1.0,112703
+सिएटल,"[""seattle""]",2,False,True,0.5,112703
+सिकन्दर,"[""sikander""]",1,True,True,1.0,112703
+सिक्का,"[""coin""]",1,True,True,1.0,112703
+सिखों,"[""sikh"", ""sikhs""]",5,False,True,0.2,112703
+सिगार,"[""cigar""]",4,False,True,0.25,112703
+सितारे,"[""stars""]",1,True,True,1.0,112703
+सितारों,"[""stars""]",1,True,True,1.0,112703
+सिरदर्द,"[""headache""]",1,True,True,1.0,112703
+सिलसिले,"[""silas""]",200,False,False,0.005,112703
+सिलिकॉन,"[""silicon""]",2,False,True,0.5,112703
+सिलेंडर,"[""cylinders""]",2,False,True,0.5,112703
+सिस्टम्स,"[""systems""]",3,False,True,0.3333333333333333,112703
+सींग,"[""horn""]",75,False,False,0.013333333333333334,112703
+सीकर,"[""sikar""]",1,True,True,1.0,112703
+सीखा,"[""learned""]",2,False,True,0.5,112703
+सीटी,"[""ct"", ""whistle""]",3,False,True,0.3333333333333333,112703
+सीढ़ी,"[""ladder""]",6,False,False,0.16666666666666666,112703
+सीना,"[""cena""]",7965,False,False,0.00012554927809165097,112703
+सीनियर,"[""sr"", ""seniors""]",3,False,True,0.3333333333333333,112703
+सीने,"[""chest""]",1,True,True,1.0,112703
+सीनेट,"[""senate""]",1,True,True,1.0,112703
+सीबीआई,"[""cbi""]",1,True,True,1.0,112703
+सीमांत,"[""border"", ""marginal""]",5,False,True,0.2,112703
+सीमाएं,"[""limitations""]",9,False,False,0.1111111111111111,112703
+सील,"[""seal""]",1,True,True,1.0,112703
+सीसा,"[""lead""]",10511,False,False,9.513842641042717e-05,112703
+सुखद,"[""pleasant"", ""enjoyable""]",1,True,True,1.0,112703
+सुदर्शन,"[""sudarshan""]",1,True,True,1.0,112703
+सुधारक,"[""reformer""]",1,True,True,1.0,112703
+सुधीर,"[""sudhir""]",1,True,True,1.0,112703
+सुनाया,"[""pronounced""]",85,False,False,0.011764705882352941,112703
+सुन्नी,"[""sunni""]",1198,False,False,0.0008347245409015025,112703
+सुमन,"[""suman""]",2,False,True,0.5,112703
+सुर,"[""sur""]",452,False,False,0.0022123893805309734,112703
+सुविधाजनक,"[""convenient""]",1,True,True,1.0,112703
+सूखा,"[""dry"", ""drought""]",2,False,True,0.5,112703
+सूचियाँ,"[""lists""]",1,True,True,1.0,112703
+सूत,"[""cotton"", ""yarn""]",3,False,True,0.3333333333333333,112703
+सूप,"[""soup""]",1,True,True,1.0,112703
+सूफी,"[""sufi""]",1,True,True,1.0,112703
+सूरा,"[""chapter"", ""surah"", ""sura""]",6,False,False,0.16666666666666666,112703
+सूर्यवंशी,"[""suryavanshi""]",1,True,True,1.0,112703
+सूर्योदय,"[""sunrise""]",1,True,True,1.0,112703
+सेंटीमीटर,"[""centimeters"", ""centimetres"", ""centimetre""]",1,True,True,1.0,112703
+सेंसर,"[""sensor"", ""sensors""]",1,True,True,1.0,112703
+सेकेंड,"[""second"", ""seconds""]",1,True,True,1.0,112703
+सेक्टर,"[""sector"", ""sectors""]",1,True,True,1.0,112703
+सेठी,"[""sethi""]",1,True,True,1.0,112703
+सेब,"[""apple""]",1,True,True,1.0,112703
+सेम,"[""beans"", ""bean"", ""sem""]",179,False,False,0.00558659217877095,112703
+सेवानिवृत्ति,"[""retirement""]",1,True,True,1.0,112703
+सैंडविच,"[""sandwich"", ""sandwiches""]",1,True,True,1.0,112703
+सैर,"[""walk"", ""walks"", ""promenade""]",10,False,False,0.1,112703
+सॉफ़्टवेयर,"[""software""]",1,True,True,1.0,112703
+सॉसेज,"[""sausage""]",1,True,True,1.0,112703
+सोनिया,"[""sonia""]",1,True,True,1.0,112703
+सौभाग्य,"[""fortune"", ""fortunes"", ""fortunately""]",6,False,False,0.16666666666666666,112703
+सौरभ,"[""saurabh""]",30,False,False,0.03333333333333333,112703
+स्केल,"[""scale""]",3,False,True,0.3333333333333333,112703
+स्क्रिप्ट,"[""script"", ""scripts""]",1,True,True,1.0,112703
+स्टाइल,"[""style""]",4,False,True,0.25,112703
+स्टारबक्स,"[""starbucks""]",1,True,True,1.0,112703
+स्टीवन,"[""steven""]",2,False,True,0.5,112703
+स्टेज,"[""stage"", ""stages""]",1,True,True,1.0,112703
+स्टेम,"[""stem""]",43,False,False,0.023255813953488372,112703
+स्टैंड,"[""stand"", ""stands""]",1,True,True,1.0,112703
+स्तंभों,"[""pillars""]",2,False,True,0.5,112703
+स्तुति,"[""praise""]",1,True,True,1.0,112703
+स्त्रियाँ,"[""women""]",2,False,True,0.5,112703
+स्थगित,"[""postponed"", ""pending"", ""suspend""]",1,True,True,1.0,112703
+स्थूल,"[""fat""]",870,False,False,0.0011494252873563218,112703
+स्नेह,"[""affection""]",12,False,False,0.08333333333333333,112703
+स्पष्टीकरण,"[""explanation"", ""explanations"", ""clarification""]",1,True,True,1.0,112703
+स्पाइवेयर,"[""spyware""]",1,True,True,1.0,112703
+स्पिन,"[""spin"", ""pints""]",2,False,True,0.5,112703
+स्पीकर,"[""speaker""]",1,True,True,1.0,112703
+स्पेंसर,"[""spencer""]",1,True,True,1.0,112703
+स्पैनिश,"[""spanish""]",1,True,True,1.0,112703
+स्प्रिंगस्टीन,"[""springsteen""]",2,False,True,0.5,112703
+स्मार्ट,"[""smart""]",1,True,True,1.0,112703
+स्याही,"[""ink""]",241,False,False,0.004149377593360996,112703
+स्वच्छता,"[""sanitation"", ""cleanliness""]",1,True,True,1.0,112703
+स्वराज,"[""swaraj""]",1,True,True,1.0,112703
+स्वर्गीय,"[""heavenly""]",1,True,True,1.0,112703
+स्वादिष्ट,"[""delicious"", ""yummy"", ""tasty""]",1,True,True,1.0,112703
+स्विट्जरलैंड,"[""switzerland""]",1,True,True,1.0,112703
+स्विट्ज़रलैंड,"[""switzerland""]",1,True,True,1.0,112703
+स्विफ्ट,"[""swift""]",39,False,False,0.02564102564102564,112703
+स्वीडिश,"[""swedish"", ""sweden""]",1,True,True,1.0,112703
+स्वैच्छिक,"[""voluntary""]",1,True,True,1.0,112703
+हक,"[""haq"", ""haque"", ""huck""]",4,False,True,0.25,112703
+हब,"[""hub""]",138,False,False,0.007246376811594203,112703
+हमीरपुर,"[""hamirpur""]",1,True,True,1.0,112703
+हमे,"[""us""]",2,False,True,0.5,112703
+हर्ष,"[""harsh""]",33333,False,False,3.000030000300003e-05,112703
+हलके,"[""lightly""]",4,False,True,0.25,112703
+हल्दी,"[""turmeric""]",109,False,False,0.009174311926605505,112703
+हवाओं,"[""winds""]",2,False,True,0.5,112703
+हस्त,"[""handmade"", ""hasta""]",12,False,False,0.08333333333333333,112703
+हा,"[""ha""]",4,False,True,0.25,112703
+हाइब्रिड,"[""hybrid"", ""hybrids""]",2,False,True,0.5,112703
+हाथियों,"[""elephants""]",2,False,True,0.5,112703
+हिब्रू,"[""hebrew""]",1,True,True,1.0,112703
+हिमनद,"[""glacier""]",3678,False,False,0.0002718868950516585,112703
+हिम्मत,"[""courage"", ""dare""]",1,True,True,1.0,112703
+हिल्स,"[""hills""]",2,False,True,0.5,112703
+हिसार,"[""hisar"", ""hissar""]",8,False,False,0.125,112703
+हीन,"[""minor""]",2978,False,False,0.000335795836131632,112703
+हीमोग्लोबिन,"[""hemoglobin""]",1,True,True,1.0,112703
+हीरे,"[""diamonds""]",19,False,False,0.05263157894736842,112703
+हुक,"[""hook""]",1,True,True,1.0,112703
+हुक्म,"[""nod""]",5643,False,False,0.000177210703526493,112703
+हॉप,"[""hop""]",5,False,True,0.2,112703
+होनेवाली,"[""fleeting""]",1233,False,False,0.0008110300081103001,112703
+होस्ट,"[""host"", ""hosts""]",1,True,True,1.0,112703
