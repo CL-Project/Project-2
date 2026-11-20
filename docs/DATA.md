@@ -122,19 +122,40 @@ gensim default). The four runs were sequential, never in parallel. Tokens are ca
 | w2v | en | 1,763,685 | 147,988 | 336.9 s |
 | ft | en | 1,763,685 | 147,988 | 544.5 s |
 
-Nearest-neighbour spot check (top 5):
+Nearest-neighbour spot check, 10 frequent words per language as PLAN S19 requires (top 5;
+reproduce with `uv run python scripts/train_static.py --system <s> --lang <l> --sanity`):
 
 | Query | w2v | ft |
 |---|---|---|
 | भारत | अरूणाचल, बांलादेश, चेंगलपट्टु, आंध्रा, मुख्यमन्त्रियों | भारतहै, भारतमें, पंपभारत, भारतके, भारतात |
 | दिल्ली | दरियागंज, महरौली, 110001, चाणक्यपुरी, फरीदाबाद | दिल्लगी, चंडीगढ़, चाणक्यपुरी, गाजियाबाद, सिकन्दराबाद |
+| पानी | जल, सोतों, भूजल, आर्टेसियन, टपकते | जल, गरमपानी, खारे, जपानी, मलजल |
+| सरकार | सरकारों, सर्कार, जनतान्त्रिक, मंत्रिमण्डल, मंत्रिमंडलों | सरकारे, सरकारने, सरकारो, सरकारों, सरकारिया |
+| फ़िल्म | फिल्म, फ़िल्मों, चलचित्र, फिल्मों, इश्किया | फ़िल्मस, फिल्म, फ़िल्मे, फ़िल्मो, फ़िल्मकार |
+| किताब | पुस्तक, किताबों, क़िताब, कु़रान, सैटेनिक | किताबी, किताबो, किताबे, पुस्तक, किताबघर |
+| साल | वर्ष, महीने, सालों, वर्षों, वषों | वर्ष, महीने, सालों, वर्षों, सालो |
+| शहर | नगर, शहरों, दम्माम, वेस्टचेस्टर, कोरदोबा | नगर, बूशहर, महानगरी, शहरो, शहरों |
+| माँ | मां, माता, दादी, मौसी, चाची | मां, माता, दादी, मातारानी, चाची |
+| सड़क | सड़कों, सडक, सड़को, राजमार्ग, सडकों | सड़को, सड़के, सड़कछाप, सड़कमार्ग, सड़कों |
 | india | pakistan, nepal, sikkim, bangladesh, odisha | hindia, scindia, ndia, indias, nepal |
 | delhi | mumbai, chandigarh, lucknow, bangalore, kanpur | gandhinagar, tezpur, mumbai, anantapur, chandigarh |
+| water | groundwater, sewage, potable, artesian, wastewater | seawater, bowater, watering, drinkwater, stormwater |
+| government | governments, authorities, jakim, undersecretariat, governmental | governments, governmental, nongovernmental, authorities, intergovernmental |
+| film | films, movie, movies, blackkklansman, screenplay | film4, movie, ifilm, films, filmfest |
+| book | books, novel, chapbook, memoir, prefaces | chapbook, books, boobook, chapbooks, factbook |
+| year | month, week, decade, years, marwell | month, yearn, yearlong, years, week |
+| city | town, ameristar, peconic, tulum, cities | cityu, town, citywalk, cities, hopetown |
+| mother | father, grandmother, parents, stepfather, aunt | smother, godmother, grandmother, father, stepmother |
+| road | highway, motorway, gempol, roads, route | roadgap, roads, rahway, roadtrip, highway |
 
-`w2v` returns semantic neighbours; `ft` returns many orthographic/subword neighbours
-(`सरकार` → `सरकारे`, `सरकारने`; `india` → `hindia`, `scindia`). That is the expected effect of
-character n-grams on a corpus where Hindi inflectional endings are often written attached,
-and it is relevant to H2's fastText clause.
+`w2v` returns semantic neighbours (`पानी` → `जल`, `किताब` → `पुस्तक`, `साल` → `वर्ष`,
+`शहर` → `नगर`, `माँ` → `माता`; `mother` → `father`/`grandmother`, `road` →
+`highway`). `ft` returns many orthographic/subword neighbours (`सरकार` → `सरकारे`,
+`सरकारने`; `india` → `hindia`, `scindia`). That is the expected effect of character
+n-grams on a corpus where Hindi inflectional endings are often written attached, and it is
+relevant to H2's fastText clause. It is also a caution: `ft`'s neighbours are *inflectionally*
+close rather than *translationally* close, so the subword advantage has to be shown on the
+H2 inflected subset (S36), not read off this table.
 
 ## Shared candidate vocabularies (S20)
 

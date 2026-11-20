@@ -166,6 +166,16 @@ Acc@1 = 0.451 [0.431, 0.472], `ft` 0.417 [0.395, 0.440].
   expected; that comparison is a corpus-size effect at least as much as a
   subword effect, and must be described that way.
 
+### Scope review against the pre-registered cut list (Appendix C)
+
+Every step in the "never cut" list is complete or on track: T1 to T3 for `w2v`, `ft`,
+`labse`, `me5` and `bm25_mt` (T3 pending S27 to S31, which is next), the failure taxonomy
+(S43 to S45), the H1 gap analysis (S34) and the H3 shuffling analysis (S39) all remain in
+scope. Nothing has been cut yet. The optional items still open are `ft_cc`, S33 MIRACL,
+S42 A7 and the chunked-LaBSE ablation; none is blocking. `S24` — the item the cut list
+would drop fourth — was completed, so H2's frequent-word clause uses the real
+cross-validated band rather than the top-tercile fallback.
+
 ### Reproduce
 
 ```

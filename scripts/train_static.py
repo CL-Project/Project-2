@@ -28,8 +28,8 @@ from src.seeding import set_global_seed
 LOGGER = logging.getLogger("train_static")
 
 SANITY_WORDS = {
-    "hi": ["भारत", "दिल्ली", "पानी", "सरकार", "फिल्म", "किताब", "साल", "शहर"],
-    "en": ["india", "delhi", "water", "government", "film", "book", "year", "city"],
+    "hi": ["भारत", "दिल्ली", "पानी", "सरकार", "फ़िल्म", "किताब", "साल", "शहर", "माँ", "सड़क"],
+    "en": ["india", "delhi", "water", "government", "film", "book", "year", "city", "mother", "road"],
 }
 
 
