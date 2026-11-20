@@ -119,3 +119,47 @@ def test_fit_pc_rejects_degenerate_input():
     """An all-zero matrix has no meaningful principal component."""
     with pytest.raises(ValueError, match="non-zero rows"):
         fit_pc(np.zeros((5, DIM), dtype=np.float32))
+
+
+def test_sample_fit_paragraphs_takes_whole_paragraphs_from_the_fit_shard(tmp_path):
+    """T3 fits its own component on paragraphs, never on the training shard."""
+    from src.embeddings.sentence_vectors import sample_fit_paragraphs
+
+    path = tmp_path / "wiki.en.para.tsv"
+    rows = [
+        f"train\t1\tt\t0\tfirst train paragraph that is long enough",
+        f"fit\t2\tt\t0\tfirst fit paragraph with a danda। second fit sentence here",
+        f"distractor\t3\tt\t0\tdistractor paragraph",
+        f"fit\t4\tt\t0\tsecond fit paragraph text",
+    ]
+    path.write_text("\n".join(rows) + "\n", encoding="utf-8")
+
+    paragraphs = sample_fit_paragraphs(path, shard="fit", limit=10, seed=42)
+
+    assert sorted(paragraphs) == sorted(
+        ["first fit paragraph with a danda। second fit sentence here", "second fit paragraph text"]
+    )
+    assert all("train" not in paragraph and "distractor" not in paragraph for paragraph in paragraphs)
+
+
+def test_sample_fit_paragraphs_is_deterministic(tmp_path):
+    from src.embeddings.sentence_vectors import sample_fit_paragraphs
+
+    path = tmp_path / "wiki.en.para.tsv"
+    rows = [f"fit\t{index}\tt\t0\tparagraph number {index} with words" for index in range(50)]
+    path.write_text("\n".join(rows) + "\n", encoding="utf-8")
+
+    first = sample_fit_paragraphs(path, shard="fit", limit=10, seed=42)
+    second = sample_fit_paragraphs(path, shard="fit", limit=10, seed=42)
+
+    assert first == second
+    assert len(first) == 10
+
+
+def test_sample_fit_paragraphs_rejects_an_empty_shard(tmp_path):
+    from src.embeddings.sentence_vectors import sample_fit_paragraphs
+
+    path = tmp_path / "wiki.en.para.tsv"
+    path.write_text("train\t1\tt\t0\tonly training text here\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="no fit-shard paragraphs"):
+        sample_fit_paragraphs(path, shard="fit")

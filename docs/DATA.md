@@ -38,6 +38,18 @@ No data files are committed (`AGENTS.md` §12).
 | en train/distractor shards disjoint by article id | pass |  |
 | en train/fit shards disjoint by article id | pass |  |
 | en distractor/fit shards disjoint by article id | pass |  |
+| S19 w2v.hi is trained with seed 42 | pass |  |
+| S19 w2v.en is trained with seed 42 | pass |  |
+| S19 ft.hi is trained with seed 42 | pass |  |
+| S19 ft.en is trained with seed 42 | pass |  |
+| S20 hi candidate list exists | pass |  |
+| S20 en candidate list exists | pass |  |
+| T3 hi pool has all 240 XQuAD paragraphs | pass |  |
+| T3 hi pool has no shortfall | pass |  |
+| T3 hi pool file exists | pass |  |
+| T3 en pool has all 240 XQuAD paragraphs | pass |  |
+| T3 en pool has no shortfall | pass |  |
+| T3 en pool file exists | pass |  |
 
 ## FLORES-200
 
@@ -92,7 +104,7 @@ Examples (Hindi question / English question):
 
 Dump date: **20231101**; Hindi files: **2**, 0.24 GB.
 
-`data/raw/MANIFEST.json` records **19** files.
+`data/raw/MANIFEST.json` records **23** files.
 
 ## Wikipedia training corpora (S12)
 
@@ -107,23 +119,47 @@ Equal-size rule: English train tokens are **0.000%** away from the Hindi total (
 
 `wiki.en.para.tsv`: **699466** paragraph rows, all shards, disjoint by article id.
 
+## Contamination filter and shard sizes (S13)
+
+Exact-match filter: a `train` sentence is dropped when, after normalization, it equals a FLORES dev/devtest sentence or an XQuAD context/question/answer of the same language.
+
+| Language | Sentences seen | Removed by filter | Kept | Dropped as too short |
+|---|---|---|---|---|
+| hi | 1904885 | 2 | 1842478 | 62405 |
+| en | 1912291 | 20 | 1763685 | 148586 |
+
+Removed sentences (hi), first 1 distinct filter matches:
+
+- - लगभग 1000 ई
+
+Removed sentences (en), first 6 distinct filter matches:
+
+- President George W
+- The John W
+- president George W
+- In 1977, Dr
+- The Black Death ravaged much of the Islamic world
+- Plague was present in at least one location in the Islamic world virtually every year between 1500 and 1850. Plague repeatedly struck the cities of North Africa
+
+Matches are exact after tokenization, so a Wikipedia sentence is only removed when it is word-for-word identical to an evaluation sentence. The low counts are therefore expected: FLORES is news text that rarely appears verbatim in the dump, and the English training shard is a seeded sample of the dump, so most XQuAD source articles are not in it at all.
+
+Full per-language counters, including paragraph-level drops, are in `data/processed/wiki.<lang>.stats.json`.
+
 ## Static word vectors (S19)
 
-Trained by `scripts/train_static.py --all` on `wiki.<lang>.tok.txt` with the settings in
-`configs/models.yaml` (skip-gram, 300-d, window 5, min_count 5, negative 10, 5 epochs,
-`workers=8`, seed 42; fastText char n-grams 3 to 6, explicitly `bucket=2000000`, which is the
-gensim default). The four runs were sequential, never in parallel. Tokens are capped at
-200,000 types with gensim's `max_final_vocab`, so only the most frequent types are kept.
+Trained by `scripts/train_static.py --all` on `wiki.<lang>.tok.txt` with the settings in `configs/models.yaml` (skip-gram, 300-d, window 5, min_count 5, negative 10, 5 epochs, `workers=8`, seed 42; fastText char n-grams 3 to 6, explicitly `bucket=2000000`, which is the gensim default). The four runs were sequential, never in parallel. Tokens are capped at 200,000 types with gensim's `max_final_vocab`, so only the most frequent types are kept.
 
 | System | Language | Train lines | Vocabulary | Wall time |
 |---|---|---|---|---|
-| w2v | hi | 1,842,478 | 140,590 | 344.5 s |
-| ft | hi | 1,842,478 | 140,590 | 508.1 s |
-| w2v | en | 1,763,685 | 147,988 | 336.9 s |
-| ft | en | 1,763,685 | 147,988 | 544.5 s |
+| w2v | hi | 1,842,478 | 140,590 | 350.04 s |
+| w2v | en | 1,763,685 | 147,988 | 358.57 s |
+| ft | hi | 1,842,478 | 140,590 | 523.32 s |
+| ft | en | 1,763,685 | 147,988 | 603.13 s |
 
 Nearest-neighbour spot check, 10 frequent words per language as PLAN S19 requires (top 5;
-reproduce with `uv run python scripts/train_static.py --system <s> --lang <l> --sanity`):
+reproduce with `uv run python scripts/train_static.py --system <s> --lang <l> --sanity`).
+The table below is from the 2026-11-19 run; the 2026-11-20 rebuild reproduced the same
+vocabularies and the same neighbour structure, with `workers=8` (D09, not bit-exact):
 
 | Query | w2v | ft |
 |---|---|---|
@@ -159,46 +195,44 @@ H2 inflected subset (S36), not read off this table.
 
 ## Shared candidate vocabularies (S20)
 
-Built by `scripts/build_candidates.py` from `wordcounts_<lang>.tsv`: tokens containing at
-least one letter (Hindi also at least one Devanagari letter), top 200,000 by count, then
-intersected with the vocabulary of `w2v`, `ft` and the first 200,000 lines of the pretrained
-aligned fastText file, so the same pool is used by every system in T1.
+Built by `scripts/build_candidates.py` from `wordcounts_<lang>.tsv`: tokens containing at least one letter (Hindi also at least one Devanagari letter), top 200,000 by count, then intersected with the vocabulary of `w2v`, `ft` and the first 200,000 lines of the pretrained aligned fastText file, so the same pool is used by every system in T1.
 
 | Language | Tokens | With a letter | Top | Shared candidates | `w2v`/`ft` vocab | `ft_ref` vocab |
 |---|---|---|---|---|---|---|
 | hi | 812,905 | 697,817 | 200,000 | **98,069** | 140,590 | 158,016 |
 | en | 597,933 | 584,301 | 200,000 | **112,703** | 147,988 | 200,000 |
 
-Words dropped from the top-200k list by the intersection: Hindi 72,886 (`w2v`/`ft`) and
-93,077 (`ft_ref`); English 54,463 (`w2v`/`ft`) and 67,126 (`ft_ref`). The Hindi Wikipedia
-corpus is small, so its vocabulary (140,590 words) limits the pool to 98,069 words; the
-per-language JSON sidecars record the same counters.
+Words dropped from the top-200k list by the intersection: Hindi 72,886 (`w2v`/`ft`) and 93,077 (`ft_ref`); English 54,463 (`w2v`/`ft`) and 67,126 (`ft_ref`). The Hindi Wikipedia corpus is small, so its vocabulary limits the pool; the per-language JSON sidecars record the same counters.
 
-## Contamination filter and shard sizes (S13)
+## T3 paragraph pools (S27, S28)
 
-Exact-match filter: a `train` sentence is dropped when, after normalization, it equals a FLORES dev/devtest sentence or an XQuAD context/question/answer of the same language.
+Pool = 240 XQuAD paragraphs + distractors sampled from the `distractor` shard only (disjoint from the static training shard by article id, D04). Settings: 40 to 250 whitespace tokens, deduplicated, seed 42; English distractors sharing an 8-token shingle with any XQuAD English paragraph are dropped (D05).
 
-| Language | Sentences seen | Removed by filter | Kept | Dropped as too short |
-|---|---|---|---|---|
-| hi | 1904885 | 2 | 1842478 | 62405 |
-| en | 1912291 | 20 | 1763685 | 148586 |
+| Language | Gold | Distractors | Pool | Eligible | Dropped by shingle filter | Shortfall |
+|---|---|---|---|---|---|---|
+| hi | 240 | 10000 | 10240 | 17081 | 0 | 0 |
+| en | 240 | 10000 | 10240 | 17218 | 2 | 0 |
 
-Removed sentences (hi), first 1 distinct filter matches:
+Paragraph length in whitespace tokens (gold vs distractor).
 
-- - लगभग 1000 ई
+| Language | Group | n | mean | median | p10 | p90 | min | max |
+|---|---|---|---|---|---|---|---|---|
+| hi | gold | 240 | 141.04 | 125.5 | 88.9 | 213.1 | 28 | 575 |
+| hi | distractor | 10000 | 91.94 | 79.0 | 46.0 | 159.0 | 40 | 250 |
+| en | gold | 240 | 123.85 | 109.5 | 76.0 | 186.5 | 25 | 509 |
+| en | distractor | 10000 | 84.42 | 73.0 | 45.0 | 142.0 | 40 | 250 |
 
-Removed sentences (en), first 6 distinct filter matches:
+Gold paragraphs are longer than distractors on average (XQuAD paragraphs are full Wikipedia paragraphs, the distractor cap is 250 tokens). Length is therefore a potential shortcut and is reported here rather than hidden; the settings were fixed before any T3 number was produced (D05).
 
-- President George W
-- The John W
-- president George W
-- In 1977, Dr
-- The Black Death ravaged much of the Islamic world
-- Plague was present in at least one location in the Islamic world virtually every year between 1500 and 1850. Plague repeatedly struck the cities of North Africa
+## MIRACL-hi (S33, optional)
 
-Matches are exact after tokenization, so a Wikipedia sentence is only removed when it is word-for-word identical to an evaluation sentence. The low counts are therefore expected: FLORES is news text that rarely appears verbatim in the dump, and the English training shard is a seeded sample of the dump, so most XQuAD source articles are not in it at all.
+Source: Hugging Face `miracl/miracl` and `miracl/miracl-corpus`, language `hi`, split `dev`.
 
-Full per-language counters, including paragraph-level drops, are in `data/processed/wiki.<lang>.stats.json`.
+- topics: **350** dev queries
+- qrels: **752** relevant judgments over **350** queries
+- corpus: **2** gzipped shards, 96.8 MB
+
+The T3b pool keeps every judged-relevant passage of the dev queries plus a seeded sample of 20,000 further passages; the remaining corpus is not searched and the report says so.
 
 ## Licences
 

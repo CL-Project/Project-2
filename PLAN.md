@@ -33,13 +33,13 @@ Legend: **Owner** A / B is a *suggested* split of the two members (the humans de
 - [x] S24 T1 cross-validated very-frequent band
 - [x] S25 Sentence vectors (SIF) and T2 for static systems
 - [x] S26 Checkpoint 2: results table v1
-- [ ] S27 T3 data: XQuAD loading and alignment
-- [ ] S28 T3 distractors and overlap filter
-- [ ] S29 T3 BM25 baselines
-- [ ] S30 T3 encoders
-- [ ] S31 T3 static systems
-- [ ] S32 Checkpoint 3: freeze experiments
-- [ ] S33 (optional) T3b MIRACL-hi
+- [x] S27 T3 data: XQuAD loading and alignment
+- [x] S28 T3 distractors and overlap filter
+- [x] S29 T3 BM25 baselines
+- [x] S30 T3 encoders
+- [x] S31 T3 static systems
+- [x] S32 Checkpoint 3: freeze experiments
+- [x] S33 (optional) T3b MIRACL-hi
 - [ ] S34 Gap analysis (H1)
 - [ ] S35 A2 frequency and OOV bins
 - [ ] S36 A1 morphology with Stanza

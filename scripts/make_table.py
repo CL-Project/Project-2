@@ -78,7 +78,10 @@ def format_cell(value: Any, ci_low: Any = "", ci_high: Any = "") -> str:
 def build_table(frame: pd.DataFrame, *, metrics: Sequence[str]) -> str:
     """Render a markdown table: one row per system, one column per setting x metric."""
     metric_list = list(metrics)
-    settings = _ordered(frame["setting"].tolist(), ["hi-en", "en-hi", "hi-hi", "en-en", "hi-en_cvfreq"])
+    settings = _ordered(
+        frame["setting"].tolist(),
+        ["hi-en", "en-hi", "hi-hi", "en-en", "hi-en_cvfreq"],
+    )
     systems = _ordered(frame["system"].tolist(), SYSTEM_ORDER)
 
     header = ["system"]
@@ -134,7 +137,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
 def _default_metrics(frame: pd.DataFrame) -> list[str]:
     """Return metrics in the canonical order for the task, then any extras."""
-    canonical = ["P@1", "P@5", "Acc@1", "MRR", "Recall@1", "Recall@5"]
+    canonical = ["P@1", "P@5", "Acc@1", "MRR", "Recall@1", "Recall@5", "MRR@10", "Recall@10"]
     return _ordered(frame["metric"].tolist(), canonical)
 
 

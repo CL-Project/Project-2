@@ -13,3 +13,6 @@ t3_xquad:
 t3b_miracl:                                # optional, S33 only
   metrics: [MRR@10, Recall@10]
   settings: [hi-hi]
+  pools:
+    max_random_passages: 20000   # random Hindi passages added to all judged-relevant ones
+    seed: 42

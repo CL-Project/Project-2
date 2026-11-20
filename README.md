@@ -16,6 +16,7 @@ Pre-stated hypotheses:
 - T1 Bilingual lexicon induction (MUSE en-hi)
 - T2 Parallel sentence retrieval (FLORES-200)
 - T3 Hindi question to English paragraph retrieval (XQuAD)
+- T3b Monolingual Hindi passage retrieval (MIRACL-hi dev, optional)
 
 ## Setup (Fedora, uv)
 1. NVIDIA driver from RPM Fusion; `sudo dnf install gcc make git`
@@ -59,10 +60,28 @@ uv run python scripts/run_eval.py --task t1_bli --system w2v --coverage-only  # 
 uv run python scripts/run_eval.py --task t1_bli --system w2v --cvfreq         # S24 band
 uv run python scripts/make_table.py --task t1_bli --settings hi-en en-hi hi-en_cvfreq \
     --metrics P@1 P@5
+
+# 5. T3 paragraph retrieval (S27-S31): pools, baselines, encoders, static systems
+uv run python scripts/build_t3_pool.py                # 240 XQuAD + 10,000 distractors per language
+uv run python scripts/run_eval.py --task t3_xquad --system bm25 --settings en-en hi-hi
+uv run python scripts/run_eval.py --task t3_xquad --system bm25_mt --settings hi-en
+for s in labse me5 muril w2v ft ft_ref; do
+    uv run python scripts/run_eval.py --task t3_xquad --system "$s"
+done
+uv run python scripts/run_eval.py --task t3_xquad --system w2v --settings hi-en --ablation
+uv run python scripts/make_table.py --task t3_xquad
+
+# 6. T3b MIRACL-hi, monolingual Hindi (S33, optional)
+uv run python scripts/download_data.py --groups miracl --skip-models
+for s in bm25 labse me5 muril w2v ft; do
+    uv run python scripts/run_eval.py --task t3b_miracl --system "$s"
+done
+uv run python scripts/make_table.py --task t3b_miracl
 ```
 
 Encoded vectors are cached under `data/vectors/embeddings/`; pass `--force` to re-encode.
-Machine translations for `bm25_mt` are cached in `data/processed/flores_hi2en.tsv`.
+Machine translations for `bm25_mt` are cached in `data/processed/flores_hi2en.tsv`
+(T2) and `data/processed/xquad_hi2en.tsv` (T3).
 Raw data, vectors and cached embeddings are git-ignored (`AGENTS.md` §12).
 
 ## Results
@@ -74,6 +93,12 @@ Acc@1):** LaBSE 1.000, mE5 0.999, MuRIL 0.971, BM25+MT 0.958, and the static SIF
 `w2v` 0.893 / `ft` 0.892 for `hi-en`. T2 is close to ceiling for the sentence-trained
 encoders, so it leaves little room to observe a static-vs-pretrained gap; that is reported
 rather than hidden.
+
+**Checkpoint 3 (T3, XQuAD, 1,190 questions over 10,240 paragraphs, Recall@1):** `hi-en`
+mE5 0.597, BM25+MT 0.399, `ft_ref` 0.244, `w2v` 0.234, LaBSE 0.231, MuRIL 0.098.
+**T3b (MIRACL-hi dev, MRR@10):** mE5 0.867, BM25 0.662, `ft` 0.527, `w2v` 0.507, LaBSE
+0.416, MuRIL 0.296. LaBSE's paragraph-level result was checked against gold-only retrieval
+and shuffled-gold controls before being logged (see `docs/DECISIONS.md` D37).
 
 ## Repository layout
 - `configs/` dataset, model and task settings

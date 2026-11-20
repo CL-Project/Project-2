@@ -38,6 +38,13 @@ Suggested workstreams (`PLAN.md` Appendix D) — the humans decide who is A and 
 | S24 | Cross-validated frequent band | A | `run_eval.py --cvfreq`; 5-fold cross-validation over the MUSE train words, pooled n = 4,883 |
 | S25 | SIF sentence vectors and static T2 | A | `src/embeddings/sentence_vectors.py`, `tests/test_sentence_vectors.py`; PC fitted on the held-out `fit` shard, plain-average ablation; static T2 checked against three leak controls (D29) |
 | S26 | Checkpoint 2 | A | Checkpoint 2 tables and caveats in `docs/RESULTS.md`; D28–D30 in `docs/DECISIONS.md`; H1 verdict deferred to S34 |
+| S27 | T3 XQuAD loading and alignment | B | `src/tasks/xquad.py` (loading, id-based paragraph alignment, pool construction, per-item frame), `tests/test_xquad.py` (17 tests) |
+| S28 | T3 distractors and overlap filter | B | `scripts/build_t3_pool.py`, `tests/test_t3_pool.py` (10 tests); 10,240-paragraph pools per language, English 8-token shingle filter, pool statistics in `data/processed/t3_pool_stats.json` and `docs/DATA.md` |
+| S29 | T3 BM25 baselines | B | `run_eval.py --task t3_xquad` BM25 path (`bm25` en-en/hi-hi, `bm25_mt` hi-en), `tests/test_run_eval_t3.py`; `en-en` Recall@5 = 0.924 clears the sanity bar |
+| S30 | T3 encoders | B | T3 encoder path (query/passage kinds, per-pool truncation counts); LaBSE weak result investigated and recorded as D37 |
+| S31 | T3 static systems | A | Paragraph-level SIF PC (20,000 `fit`-shard paragraphs, D35), query-side mapping (D36), four settings for `w2v`/`ft`/`ft_ref` plus the plain-average ablation |
+| S32 | Checkpoint 3 | A | Checkpoint 3 tables in `docs/RESULTS.md`, freeze recorded as D40, experiment set frozen |
+| S33 | T3b MIRACL-hi (optional) | B | `src/tasks/miracl.py`, `tests/test_miracl.py` (13 tests), MIRACL download group, T3b runner; pool of 734 relevant + 20,000 sampled passages, MRR@10/Recall@10 for six systems |
 
 ## Statement for the report
 

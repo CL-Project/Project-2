@@ -53,9 +53,13 @@ fasttext_pretrained:
 kaikki:
   dir: data/raw/kaikki
   hi_jsonl: kaikki.org-dictionary-Hindi.jsonl
-miracl:                     # optional, S33 only; check access terms first
+miracl:                     # optional, S33 only; check access terms first (AGENTS.md §14)
   dir: data/raw/miracl
   language: hi
   hf_dataset: miracl/miracl
+  corpus_hf_dataset: miracl/miracl-corpus
   split: dev
   max_random_passages: 20000
+  # Pool = every judged-relevant passage of the dev queries + random passages
+  # sampled from the full Hindi corpus (about 500k passages, sampled to fit the
+  # laptop; PLAN S33). Monolingual Hindi, so no alignment is involved.

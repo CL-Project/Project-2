@@ -194,3 +194,119 @@ uv run python scripts/run_eval.py --task t2_flores --system w2v --ablation     #
 uv run python scripts/make_table.py --task t1_bli --settings hi-en en-hi hi-en_cvfreq --metrics P@1 P@5
 ```
 
+## Checkpoint 3 (S32): T3 and T3b, all systems
+
+T3 is Hindi question to English paragraph retrieval on XQuAD: 1,190 questions
+over a pool of **240 XQuAD paragraphs plus 10,000 Wikipedia distractors** from
+the disjoint `distractor` shard (10,240 candidates). Paragraphs are scored by
+cosine on L2-normalized vectors. `pool_hi` and `pool_en` are the same design in
+each language, and a gold paragraph keeps the same `pid` in both, which is what
+lets a Hindi question be scored against English paragraphs.
+
+Common pool size means chance Recall@1 is 1/10,240 ≈ 0.0001 for every system.
+Metrics are Recall@1, Recall@5 and MRR with 95% bootstrap CIs (1,190 queries).
+
+### T3 XQuAD (recall@1 / recall@5 / MRR)
+
+| system | hi-en R@1 | hi-en R@5 | hi-en MRR | hi-hi R@1 | hi-hi R@5 | en-hi R@1 | en-hi R@5 | en-en R@1 | en-en R@5 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| bm25 | - | - | - | 0.804 | 0.908 | - | - | 0.835 | 0.924 |
+| bm25_mt | 0.399 | 0.550 | 0.471 | - | - | - | - | - | - |
+| w2v | 0.234 | 0.386 | 0.311 | 0.421 | 0.605 | 0.139 | 0.267 | 0.499 | 0.697 |
+| ft | 0.216 | 0.386 | 0.301 | 0.426 | 0.613 | 0.129 | 0.262 | 0.523 | 0.702 |
+| ft_ref (control) | 0.244 | 0.456 | 0.345 | 0.508 | 0.697 | 0.277 | 0.478 | 0.564 | 0.743 |
+| labse | 0.231 | 0.369 | 0.299 | 0.445 | 0.630 | 0.480 | 0.655 | 0.485 | 0.668 |
+| me5 | **0.597** | **0.776** | **0.680** | **0.801** | **0.918** | **0.736** | **0.898** | **0.913** | **0.974** |
+| muril (control) | 0.098 | 0.192 | 0.151 | 0.229 | 0.414 | 0.004 | 0.024 | 0.295 | 0.486 |
+
+Every cell has a CI in `results/results.csv`; the widest is ±0.03 at these n.
+Full CIs: `uv run python scripts/make_table.py --task t3_xquad`.
+
+Plain-average ablation on `hi-en` (no SIF weights, no PC removal): `w2v`
+R@1 = 0.089 [0.073, 0.106], `ft` 0.077 [0.062, 0.092] — the SIF composition is
+doing real work (0.234 / 0.216 vs 0.089 / 0.077).
+
+### T3b MIRACL-hi dev (optional, S33): monolingual Hindi
+
+Pool: all 734 judged-relevant passages of the 350 dev queries plus a seeded
+sample of 20,000 passages from the 506,264-passage Hindi corpus (20,734
+candidates). Monolingual, so no Procrustes mapping is involved. MRR@10 and
+Recall@10 are the MIRACL cut-offs; a rank below 10 contributes 0 to MRR@10.
+
+| system | MRR@10 | Recall@10 |
+| --- | ---: | ---: |
+| bm25 | 0.662 [0.618, 0.704] | 0.834 [0.791, 0.871] |
+| w2v | 0.507 [0.464, 0.553] | 0.731 [0.680, 0.777] |
+| ft | 0.527 [0.483, 0.571] | 0.754 [0.709, 0.797] |
+| labse | 0.416 [0.373, 0.461] | 0.666 [0.617, 0.717] |
+| me5 | **0.867** [0.836, 0.895] | **0.980** [0.963, 0.994] |
+| muril (control) | 0.296 [0.254, 0.337] | 0.477 [0.420, 0.529] |
+
+### What these numbers show, and what they do not
+
+- **mE5 is the strongest system at paragraph granularity, in every T3 setting
+  and on MIRACL.** Its `en-en` Recall@5 = 0.974 clears the S30 sanity bar
+  (0.85) comfortably, and `hi-en` (0.776) is below `en-en` as the plan expected.
+  `hi-hi` at 0.918 is essentially at the monolingual BM25 level (0.908).
+- **LaBSE collapses on paragraph retrieval but not because of an indexing bug.**
+  On the 240 gold paragraphs alone, LaBSE `en-en` Recall@1 is 0.730 — it ranks
+  correctly. With 10,000 distractors it drops to 0.485. The reason is the
+  similarity structure, not misalignment: its mean cosine to the best gold
+  paragraph is 0.386 versus 0.112 to sampled distractors, but the whole score
+  matrix sits in a narrow band (mean 0.103, sd 0.073) with a top-1 margin of
+  0.041, so a distractor that happens to be topically close overtakes the gold.
+  A shuffled-gold control on the same vectors gives Recall@1 = 0.0008 against a
+  chance level of 0.0001, which rules out a row-alignment error. LaBSE was
+  trained for sentence translation; a Wikipedia paragraph is far outside that.
+- **The static systems are weak at paragraph level, as the plan anticipated.**
+  `w2v` `hi-en` Recall@1 is 0.234 and `ft` 0.216, below `bm25_mt` (0.399), while
+  the same vectors reach 0.893 / 0.892 Acc@1 on T2 sentences. Long-paragraph
+  averaging dilutes the signal; that is a finding, and the plain-average
+  ablation shows the SIF composition is still worth 0.15 Recall@1 rather than
+  nothing.
+- **Truncation is a real, measured confound for LaBSE on T3.** With the 256-token
+  LaBSE limit, 7.26% of Hindi pool paragraphs are truncated versus 3.11% of
+  English ones (mE5 at 512 tokens truncates 0.06%; MuRIL 0.06%). Hindi
+  tokenizes into more pieces than English, so the Hindi pool is cut more often —
+  exactly the effect `AGENTS.md` §10.3 asks to be measured and discussed. LaBSE
+  `hi-hi` (0.445) still beats `hi-en` (0.231), so truncation alone does not
+  explain the cross-lingual result, but it cannot be separated from it here.
+- **`muril` is a control and behaves like one.** It was not trained for
+  retrieval; `en-hi` at 0.004 Recall@1 is near chance and its mean-pooled
+  vectors are nearly collinear across the pool (mean pairwise cosine 0.993).
+  It is never eligible to be "best pretrained" (D07).
+- **MIRACL vs XQuAD disagree about the static systems, in the same direction as
+  the competence story.** On monolingual Hindi MIRACL, `w2v` (0.507) and `ft`
+  (0.527) beat LaBSE (0.416) and come close to BM25 (0.662) — Hindi-in-Hindi
+  retrieval needs no cross-lingual alignment, so the aligned static vectors are
+  not handicapped by a Procrustes map. LaBSE again underperforms on passages.
+- **mE5 has seen MIRACL training data** (the plan's caveat, `AGENTS.md` §9.6):
+  its T3b number may be optimistic and must be reported with that caveat, not
+  as evidence of a general advantage.
+
+### Freeze (S32)
+
+From this checkpoint on: **no new systems and no re-runs except bug fixes
+recorded in `docs/DECISIONS.md`.** The T1, T2, T3 and T3b numbers above are the
+experiment set the analyses (S34 to S45) read. `ft_cc`, the chunked-LaBSE
+ablation and S42 A7 remain optional and are not run before the freeze.
+
+### Reproduce
+
+```
+uv run python scripts/build_t3_pool.py                          # S28 pools
+uv run python scripts/run_eval.py --task t3_xquad --system bm25 --settings en-en hi-hi
+uv run python scripts/run_eval.py --task t3_xquad --system bm25_mt --settings hi-en
+uv run python scripts/run_eval.py --task t3_xquad --system labse      # all four settings
+uv run python scripts/run_eval.py --task t3_xquad --system me5
+uv run python scripts/run_eval.py --task t3_xquad --system muril
+uv run python scripts/run_eval.py --task t3_xquad --system w2v
+uv run python scripts/run_eval.py --task t3_xquad --system ft
+uv run python scripts/run_eval.py --task t3_xquad --system ft_ref
+uv run python scripts/run_eval.py --task t3_xquad --system w2v --settings hi-en --ablation
+uv run python scripts/download_data.py --groups miracl          # S33
+uv run python scripts/run_eval.py --task t3b_miracl --system me5
+uv run python scripts/make_table.py --task t3_xquad
+uv run python scripts/make_table.py --task t3b_miracl
+```
+

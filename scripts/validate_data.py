@@ -481,6 +481,231 @@ def check_processed_corpora(config: dict[str, Any], report: Report) -> None:
     )
 
 
+def check_t3_pools(config: dict[str, Any], report: Report) -> None:
+    """Report the S28 paragraph pools: sizes, gold/distractor split and lengths.
+
+    Everything is read from ``data/processed/t3_pool_stats.json`` and the pool
+    files, so the numbers in the data card always match the run that built them.
+    A missing pool is reported, not invented.
+    """
+    processed = REPO_ROOT / "data" / "processed"
+    stats_path = processed / "t3_pool_stats.json"
+    section = "T3 paragraph pools (S27, S28)"
+    report.add(section, "")
+    report.add(
+        section,
+        "Pool = 240 XQuAD paragraphs + distractors sampled from the `distractor` shard only "
+        "(disjoint from the static training shard by article id, D04). "
+        "Settings: 40 to 250 whitespace tokens, deduplicated, seed 42; English distractors sharing "
+        "an 8-token shingle with any XQuAD English paragraph are dropped (D05).",
+    )
+    if not stats_path.exists():
+        report.add(section, "")
+        report.add(
+            section,
+            f"**Not built yet:** `{stats_path.relative_to(REPO_ROOT)}` is missing. "
+            "Run `uv run python scripts/build_t3_pool.py`.",
+        )
+        return
+
+    stats = json.loads(stats_path.read_text(encoding="utf-8"))
+    expected = int(config["xquad"]["expected_paragraphs"])
+    report.add(section, "")
+    report.add(section, "| Language | Gold | Distractors | Pool | Eligible | Dropped by shingle filter | Shortfall |")
+    report.add(section, "|---|---|---|---|---|---|---|")
+    for language in ("hi", "en"):
+        payload = stats.get(language)
+        if not payload:
+            continue
+        report.add(
+            section,
+            f"| {language} | {payload['n_gold']} | {payload['n_distractors']} | {payload['n_total']} | "
+            f"{payload.get('eligible_distractors', '?')} | {payload.get('dropped_overlap', 0)} | "
+            f"{payload.get('shortfall', 0)} |",
+        )
+        report.check(
+            f"T3 {language} pool has all {expected} XQuAD paragraphs",
+            payload["n_gold"] == expected,
+            f"got {payload['n_gold']}",
+        )
+        report.check(
+            f"T3 {language} pool has no shortfall",
+            int(payload.get("shortfall", 0)) == 0,
+            f"{payload.get('shortfall')} distractors short",
+        )
+        report.check(
+            f"T3 {language} pool file exists",
+            (processed / f"t3_pool_{language}.jsonl").exists(),
+            "pool file missing",
+        )
+
+    report.add(section, "")
+    report.add(section, "Paragraph length in whitespace tokens (gold vs distractor).")
+    report.add(section, "")
+    report.add(section, "| Language | Group | n | mean | median | p10 | p90 | min | max |")
+    report.add(section, "|---|---|---|---|---|---|---|---|---|")
+    for language in ("hi", "en"):
+        payload = stats.get(language)
+        if not payload:
+            continue
+        for group, key in (("gold", "gold_lengths"), ("distractor", "distractor_lengths")):
+            lengths = payload.get(key, {})
+            if not lengths or not lengths.get("n"):
+                continue
+            report.add(
+                section,
+                f"| {language} | {group} | {lengths['n']} | {lengths['mean']} | {lengths['median']} | "
+                f"{lengths['p10']} | {lengths['p90']} | {lengths['min']} | {lengths['max']} |",
+            )
+    report.add(section, "")
+    report.add(
+        section,
+        "Gold paragraphs are longer than distractors on average (XQuAD paragraphs are full Wikipedia "
+        "paragraphs, the distractor cap is 250 tokens). Length is therefore a potential shortcut and is "
+        "reported here rather than hidden; the settings were fixed before any T3 number was produced (D05).",
+    )
+
+
+def check_miracl(config: dict[str, Any], report: Report) -> None:
+    """Report the optional MIRACL-hi dev download (S33)."""
+    directory = REPO_ROOT / config["miracl"]["dir"]
+    section = "MIRACL-hi (S33, optional)"
+    report.add(section, "")
+    if not directory.exists():
+        report.add(section, "Not downloaded (optional step). Run `uv run python scripts/download_data.py --groups miracl`.")
+        return
+    language = config["miracl"]["language"]
+    split = config["miracl"]["split"]
+    topics = directory / f"topics.miracl-v1.0-{language}-{split}.tsv"
+    qrels = directory / f"qrels.miracl-v1.0-{language}-{split}.tsv"
+    shards = sorted((directory / "corpus").glob("*.jsonl.gz")) if (directory / "corpus").exists() else []
+    report.add(section, f"Source: Hugging Face `{config['miracl']['hf_dataset']}` and `miracl/miracl-corpus`, language `{language}`, split `{split}`.")
+    report.add(section, "")
+    if topics.exists():
+        query_count = sum(1 for line in topics.read_text(encoding="utf-8").splitlines() if line.strip())
+        report.add(section, f"- topics: **{query_count}** dev queries")
+    if qrels.exists():
+        relevant = 0
+        query_ids = set()
+        for line in qrels.read_text(encoding="utf-8").splitlines():
+            fields = line.split("\t")
+            if len(fields) == 4 and int(fields[3]) >= 1:
+                relevant += 1
+                query_ids.add(fields[0])
+        report.add(section, f"- qrels: **{relevant}** relevant judgments over **{len(query_ids)}** queries")
+    report.add(section, f"- corpus: **{len(shards)}** gzipped shards, {sum(path.stat().st_size for path in shards) / 1e6:.1f} MB")
+    report.add(section, "")
+    report.add(
+        section,
+        "The T3b pool keeps every judged-relevant passage of the dev queries plus a seeded sample of "
+        "20,000 further passages; the remaining corpus is not searched and the report says so.",
+    )
+
+
+def check_static_vectors(config: dict[str, Any], report: Report) -> None:
+    """Report the S19 training summaries and the S20 candidate pools.
+
+    Read from ``data/vectors/static/*.summary.json`` and
+    ``data/processed/candidates_<lang>.json``, so the data card can never drift
+    from the run that produced the artefacts.  The nearest-neighbour spot check
+    and the interpretation of the neighbours are hand-written prose and stay in
+    the file (they are not regenerated here).
+    """
+    static_root = REPO_ROOT / "data" / "vectors" / "static"
+    processed = REPO_ROOT / "data" / "processed"
+    section = "Static word vectors (S19)"
+    report.add(section, "")
+    report.add(
+        section,
+        "Trained by `scripts/train_static.py --all` on `wiki.<lang>.tok.txt` with the settings in "
+        "`configs/models.yaml` (skip-gram, 300-d, window 5, min_count 5, negative 10, 5 epochs, "
+        "`workers=8`, seed 42; fastText char n-grams 3 to 6, explicitly `bucket=2000000`, which is the "
+        "gensim default). The four runs were sequential, never in parallel. Tokens are capped at "
+        "200,000 types with gensim's `max_final_vocab`, so only the most frequent types are kept.",
+    )
+    summaries = sorted(static_root.glob("*.summary.json")) if static_root.exists() else []
+    if not summaries:
+        report.add(section, "")
+        report.add(
+            section,
+            "**Not trained yet:** `data/vectors/static/*.summary.json` is missing. "
+            "Run `uv run python scripts/train_static.py --all`.",
+        )
+    else:
+        rows = []
+        loaded = {}
+        for path in summaries:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            loaded[(payload["system"], payload["lang"])] = payload
+        report.add(section, "")
+        report.add(section, "| System | Language | Train lines | Vocabulary | Wall time |")
+        report.add(section, "|---|---|---|---|---|")
+        for system in ("w2v", "ft"):
+            for language in ("hi", "en"):
+                payload = loaded.get((system, language))
+                if not payload:
+                    continue
+                rows.append(payload)
+                report.add(
+                    section,
+                    f"| {system} | {language} | {payload['train_lines']:,} | {payload['vocab_size']:,} | "
+                    f"{payload['runtime_s']} s |",
+                )
+        for payload in rows:
+            report.check(
+                f"S19 {payload['system']}.{payload['lang']} is trained with seed {payload['seed']}",
+                int(payload.get("seed", -1)) == 42,
+                f"recorded seed {payload.get('seed')}",
+            )
+
+    section20 = "Shared candidate vocabularies (S20)"
+    report.add(section20, "")
+    report.add(
+        section20,
+        "Built by `scripts/build_candidates.py` from `wordcounts_<lang>.tsv`: tokens containing at "
+        "least one letter (Hindi also at least one Devanagari letter), top 200,000 by count, then "
+        "intersected with the vocabulary of `w2v`, `ft` and the first 200,000 lines of the pretrained "
+        "aligned fastText file, so the same pool is used by every system in T1.",
+    )
+    sidecars = [processed / f"candidates_{language}.json" for language in ("hi", "en")]
+    if not all(path.exists() for path in sidecars):
+        report.add(section20, "")
+        report.add(
+            section20,
+            "**Not built yet:** `data/processed/candidates_<lang>.json` is missing. "
+            "Run `uv run python scripts/build_candidates.py`.",
+        )
+        return
+    report.add(section20, "")
+    report.add(
+        section20,
+        "| Language | Tokens | With a letter | Top | Shared candidates | `w2v`/`ft` vocab | `ft_ref` vocab |",
+    )
+    report.add(section20, "|---|---|---|---|---|---|---|")
+    for language, path in zip(("hi", "en"), sidecars):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        vocab = payload["system_vocab"]
+        report.add(
+            section20,
+            f"| {language} | {payload['tokens']:,} | {payload['with_letter']:,} | {payload['top']:,} | "
+            f"**{payload['candidates']:,}** | {vocab['w2v']:,} | {vocab['ft_ref']:,} |",
+        )
+        report.check(
+            f"S20 {language} candidate list exists",
+            (processed / f"candidates_{language}.txt").exists(),
+            "candidate file missing",
+        )
+    missing = {language: json.loads(path.read_text(encoding="utf-8"))["missing_from_shared"] for language, path in zip(("hi", "en"), sidecars)}
+    report.add(section20, "")
+    report.add(
+        section20,
+        f"Words dropped from the top-200k list by the intersection: Hindi {missing['hi']['w2v']:,} "
+        f"(`w2v`/`ft`) and {missing['hi']['ft_ref']:,} (`ft_ref`); English {missing['en']['w2v']:,} "
+        f"(`w2v`/`ft`) and {missing['en']['ft_ref']:,} (`ft_ref`). The Hindi Wikipedia corpus is small, "
+        "so its vocabulary limits the pool; the per-language JSON sidecars record the same counters.",
+    )
+
+
 def render(report: Report, config: dict[str, Any]) -> str:
     """Render ``docs/DATA.md`` from the collected sections."""
     lines = [
@@ -546,6 +771,9 @@ def main(argv: list[str] | None = None) -> int:
         ("MUSE", check_muse),
         ("Wikipedia", check_wikipedia_manifest),
         ("Processed corpora", check_processed_corpora),
+        ("Static vectors", check_static_vectors),
+        ("T3 pools", check_t3_pools),
+        ("MIRACL", check_miracl),
     ]
     failures = 0
     for name, function in checks:

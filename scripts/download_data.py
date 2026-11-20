@@ -13,6 +13,7 @@ Groups (``--groups``, comma separated, default ``all``):
 ``wikipedia``   Hindi Wikipedia dump (English is streamed later, not stored)
 ``fasttext``    pretrained aligned fastText vectors (``ft_ref``)
 ``kaikki``      Kaikki Hindi Wiktionary extract
+``miracl``      MIRACL-hi dev topics, qrels and corpus (optional, S33 only)
 ``models``      pre-fetch encoder / MT weights into the Hugging Face cache
 ``stanza``      Stanza Hindi and English models
 
@@ -53,6 +54,7 @@ LICENSES = {
     "wikipedia": "unverified: Wikipedia dump, CC-BY-SA; cite the dump date",
     "fasttext": "unverified: fastText pretrained vectors, CC-BY-SA 3.0 stated on fasttext.cc",
     "kaikki": "unverified: Kaikki/Wiktionary extract, CC-BY-SA 3.0 / GFDL; check kaikki.org",
+    "miracl": "unverified: MIRACL (Zhang et al. 2023); check the miracl/miracl dataset card and the Wikipedia licence of the corpus",
     "models": "unverified: model licence of the upstream Hugging Face repository applies",
     "stanza": "unverified: Stanza models, Apache-2.0 for the code; check the model card",
 }
@@ -363,6 +365,39 @@ def download_kaikki(config: dict[str, Any], manifest: dict[str, Any], *, force: 
     save_manifest(manifest)
 
 
+def download_miracl(config: dict[str, Any], manifest: dict[str, Any], *, force: bool) -> None:
+    """Fetch the MIRACL-hi dev topics, qrels and corpus shards (S33, optional).
+
+    Only the ``hi`` dev split is fetched: 350 dev queries, their qrels (752
+    relevant judgments over 734 passages) and the full Hindi corpus, which is
+    about half a million short passages in two gzipped JSONL shards.
+    """
+    settings = config["miracl"]
+    directory = REPO_ROOT / settings["dir"]
+    language = settings["language"]
+    split = settings["split"]
+    repository = settings["hf_dataset"]
+    base = f"https://huggingface.co/datasets/{repository}/resolve/main"
+    corpus_repository = settings.get("corpus_hf_dataset", "miracl/miracl-corpus")
+
+    files = {
+        "topics": f"miracl-v1.0-{language}/topics/topics.miracl-v1.0-{language}-{split}.tsv",
+        "qrels": f"miracl-v1.0-{language}/qrels/qrels.miracl-v1.0-{language}-{split}.tsv",
+    }
+    for kind, path_in_repo in files.items():
+        fetch(f"{base}/{path_in_repo}", directory / f"{kind}.miracl-v1.0-{language}-{split}.tsv", "miracl", manifest, force=force)
+
+    corpus_base = f"https://huggingface.co/datasets/{corpus_repository}/resolve/main/miracl-corpus-v1.0-{language}"
+    names = _hf_repo_files(corpus_repository, f"miracl-corpus-v1.0-{language}")
+    if not names:
+        raise RuntimeError(f"could not list {corpus_repository}/miracl-corpus-v1.0-{language} on the Hub")
+    for name in sorted(names):
+        if not name.endswith(".jsonl.gz"):
+            continue
+        fetch(f"{corpus_base}/{name}", directory / "corpus" / name, "miracl", manifest, force=force)
+    save_manifest(manifest)
+
+
 def prefetch_models(manifest: dict[str, Any], *, force: bool) -> None:
     """Pre-fetch the encoder and MT weights into the Hugging Face cache.
 
@@ -414,6 +449,7 @@ GROUP_HANDLERS: dict[str, Callable[..., None]] = {
     "wikipedia": download_wikipedia,
     "fasttext": download_fasttext,
     "kaikki": download_kaikki,
+    "miracl": download_miracl,
 }
 
 

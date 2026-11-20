@@ -26,7 +26,7 @@ import re
 
 import numpy as np
 
-from src.textproc import sentence_split, tokenize
+from src.textproc import normalize, sentence_split, tokenize
 
 LOGGER = logging.getLogger("sentence_vectors")
 
@@ -230,6 +230,38 @@ def remove_projection(matrix: np.ndarray, pc: np.ndarray) -> np.ndarray:
 
 
 _SENTENCE_SPLIT = re.compile(r"[\n]+")
+
+
+def sample_fit_paragraphs(
+    para_path: Path | str,
+    *,
+    shard: str = "fit",
+    limit: int = 20_000,
+    seed: int = 42,
+) -> list[str]:
+    """Sample up to ``limit`` whole paragraphs from ``shard`` of ``wiki.<lang>.para.tsv``.
+
+    Paragraph-level composition (T3) needs its own principal component: a
+    paragraph is not a sentence, so the component fitted on sentences would
+    remove the wrong direction.  The sample is a deterministic seeded shuffle of
+    the eligible paragraphs, never evaluation data.
+    """
+    rng = np.random.default_rng(seed)
+    paragraphs: list[str] = []
+    with Path(para_path).open("r", encoding="utf-8") as handle:
+        for line in handle:
+            fields = line.rstrip("\n").split("\t", 4)
+            if len(fields) != 5 or fields[0] != shard:
+                continue
+            text = fields[4].strip()
+            if text:
+                paragraphs.append(normalize(text))
+            if len(paragraphs) >= limit * 4:
+                break
+    if not paragraphs:
+        raise ValueError(f"no {shard}-shard paragraphs found in {para_path}")
+    order = rng.permutation(len(paragraphs))[:limit]
+    return [paragraphs[index] for index in order]
 
 
 def sample_fit_sentences(
