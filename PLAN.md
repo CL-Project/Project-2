@@ -25,14 +25,14 @@ Legend: **Owner** A / B is a *suggested* split of the two members (the humans de
 - [x] S16 T2 with mE5 and MuRIL
 - [x] S17 BM25 + MT baseline on T2
 - [x] S18 Checkpoint 1: results table v0
-- [ ] S19 Train Word2Vec and fastText
-- [ ] S20 Shared candidate vocabularies
-- [ ] S21 `align.py` (Procrustes) + tests
-- [ ] S22 T1 for static systems
-- [ ] S23 T1 for encoders
-- [ ] S24 T1 cross-validated very-frequent band
-- [ ] S25 Sentence vectors (SIF) and T2 for static systems
-- [ ] S26 Checkpoint 2: results table v1
+- [x] S19 Train Word2Vec and fastText
+- [x] S20 Shared candidate vocabularies
+- [x] S21 `align.py` (Procrustes) + tests
+- [x] S22 T1 for static systems
+- [x] S23 T1 for encoders
+- [x] S24 T1 cross-validated very-frequent band
+- [x] S25 Sentence vectors (SIF) and T2 for static systems
+- [x] S26 Checkpoint 2: results table v1
 - [ ] S27 T3 data: XQuAD loading and alignment
 - [ ] S28 T3 distractors and overlap filter
 - [ ] S29 T3 BM25 baselines

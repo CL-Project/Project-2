@@ -43,6 +43,22 @@ uv run python scripts/run_eval.py --task t2_flores --system bm25_mt --settings h
 
 # 3. Results table (S18)
 uv run python scripts/make_table.py --task t2_flores
+
+# 4. Static vectors and T1 (S19-S26); four training runs, sequential, a few hours
+systemd-inhibit --what=idle:sleep:handle-lid-switch \
+    uv run python scripts/train_static.py --all
+uv run python scripts/build_candidates.py              # shared 200k candidate pools
+uv run python scripts/run_eval.py --task t2_flores --system w2v
+uv run python scripts/run_eval.py --task t2_flores --system ft
+uv run python scripts/run_eval.py --task t2_flores --system ft_ref
+uv run python scripts/run_eval.py --task t2_flores --system w2v --ablation   # plain average
+for s in w2v ft ft_ref labse me5 muril; do
+    uv run python scripts/run_eval.py --task t1_bli --system "$s"
+done
+uv run python scripts/run_eval.py --task t1_bli --system w2v --coverage-only  # S22 secondary
+uv run python scripts/run_eval.py --task t1_bli --system w2v --cvfreq         # S24 band
+uv run python scripts/make_table.py --task t1_bli --settings hi-en en-hi hi-en_cvfreq \
+    --metrics P@1 P@5
 ```
 
 Encoded vectors are cached under `data/vectors/embeddings/`; pass `--force` to re-encode.
@@ -51,10 +67,13 @@ Raw data, vectors and cached embeddings are git-ignored (`AGENTS.md` §12).
 
 ## Results
 Current numbers, with 95% bootstrap CIs and the caveats that belong with them, are in
-[`docs/RESULTS.md`](docs/RESULTS.md). **Checkpoint 1 (T2, 2,009 FLORES pairs, Acc@1):**
-LaBSE 1.000, mE5 0.999, MuRIL 0.971, BM25+MT 0.958 for `hi-en`. T2 is close to ceiling for the
-sentence-trained encoders, so it leaves little room to observe a static-vs-pretrained gap; that is
-reported rather than hidden.
+[`docs/RESULTS.md`](docs/RESULTS.md). **Checkpoint 2 (T1 word induction, P@1, common
+candidate pool, CSLS k=10):** `w2v` 0.376, `ft` 0.336, LaBSE 0.510, mE5 0.337, with
+`ft_ref` at 0.483 and MuRIL at 0.276 as controls. **Checkpoint 1 (T2, 2,009 FLORES pairs,
+Acc@1):** LaBSE 1.000, mE5 0.999, MuRIL 0.971, BM25+MT 0.958, and the static SIF systems at
+`w2v` 0.893 / `ft` 0.892 for `hi-en`. T2 is close to ceiling for the sentence-trained
+encoders, so it leaves little room to observe a static-vs-pretrained gap; that is reported
+rather than hidden.
 
 ## Repository layout
 - `configs/` dataset, model and task settings

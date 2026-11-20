@@ -31,6 +31,13 @@ Suggested workstreams (`PLAN.md` Appendix D) — the humans decide who is A and 
 | S11 | Data validation and data card | A | `scripts/validate_data.py` → `docs/DATA.md`: FLORES 997/1,012 lines per language, XQuAD 1,190 questions / 240 paragraphs, MUSE train/test disjoint |
 | S12 | `preprocess_wiki.py` | A | `scripts/preprocess_wiki.py`: 163,093 Hindi and 111,020 English articles, 1.84M / 1.76M sentences, 37.0M tokens each (0.000% apart) |
 | S13 | Contamination filter report | A | Contamination and shard sections of `docs/DATA.md`; 2 Hindi and 20 English training sentences removed by the exact-match filter |
+| S19 | Train Word2Vec and fastText | A | `src/embeddings/static.py`, `scripts/train_static.py`, `tests/test_static.py`; four sequential runs, vocab 140,590 (hi) / 147,988 (en), nearest-neighbour spot check |
+| S20 | Shared candidate vocabularies | A | `scripts/build_candidates.py`; pools of 98,069 (hi) / 112,703 (en) after intersecting with every static vocabulary; coverage counters in `docs/DATA.md` |
+| S21 | Procrustes alignment + tests | A | `src/embeddings/align.py`, `tests/test_align.py`: rotation recovery, orthogonality, OOV pair dropping, seed-accuracy direction control |
+| S22 | T1 for static systems | A | `src/tasks/bli.py`, `tests/test_bli.py`; common query set, CSLS (k=10) primary and cosine secondary, full-dictionary coverage view (`<direction>_cov`) |
+| S24 | Cross-validated frequent band | A | `run_eval.py --cvfreq`; 5-fold cross-validation over the MUSE train words, pooled n = 4,883 |
+| S25 | SIF sentence vectors and static T2 | A | `src/embeddings/sentence_vectors.py`, `tests/test_sentence_vectors.py`; PC fitted on the held-out `fit` shard, plain-average ablation; static T2 checked against three leak controls (D29) |
+| S26 | Checkpoint 2 | A | Checkpoint 2 tables and caveats in `docs/RESULTS.md`; D28–D30 in `docs/DECISIONS.md`; H1 verdict deferred to S34 |
 
 ## Statement for the report
 

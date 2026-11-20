@@ -107,6 +107,52 @@ Equal-size rule: English train tokens are **0.000%** away from the Hindi total (
 
 `wiki.en.para.tsv`: **699466** paragraph rows, all shards, disjoint by article id.
 
+## Static word vectors (S19)
+
+Trained by `scripts/train_static.py --all` on `wiki.<lang>.tok.txt` with the settings in
+`configs/models.yaml` (skip-gram, 300-d, window 5, min_count 5, negative 10, 5 epochs,
+`workers=8`, seed 42; fastText char n-grams 3 to 6, explicitly `bucket=2000000`, which is the
+gensim default). The four runs were sequential, never in parallel. Tokens are capped at
+200,000 types with gensim's `max_final_vocab`, so only the most frequent types are kept.
+
+| System | Language | Train lines | Vocabulary | Wall time |
+|---|---|---|---|---|
+| w2v | hi | 1,842,478 | 140,590 | 344.5 s |
+| ft | hi | 1,842,478 | 140,590 | 508.1 s |
+| w2v | en | 1,763,685 | 147,988 | 336.9 s |
+| ft | en | 1,763,685 | 147,988 | 544.5 s |
+
+Nearest-neighbour spot check (top 5):
+
+| Query | w2v | ft |
+|---|---|---|
+| भारत | अरूणाचल, बांलादेश, चेंगलपट्टु, आंध्रा, मुख्यमन्त्रियों | भारतहै, भारतमें, पंपभारत, भारतके, भारतात |
+| दिल्ली | दरियागंज, महरौली, 110001, चाणक्यपुरी, फरीदाबाद | दिल्लगी, चंडीगढ़, चाणक्यपुरी, गाजियाबाद, सिकन्दराबाद |
+| india | pakistan, nepal, sikkim, bangladesh, odisha | hindia, scindia, ndia, indias, nepal |
+| delhi | mumbai, chandigarh, lucknow, bangalore, kanpur | gandhinagar, tezpur, mumbai, anantapur, chandigarh |
+
+`w2v` returns semantic neighbours; `ft` returns many orthographic/subword neighbours
+(`सरकार` → `सरकारे`, `सरकारने`; `india` → `hindia`, `scindia`). That is the expected effect of
+character n-grams on a corpus where Hindi inflectional endings are often written attached,
+and it is relevant to H2's fastText clause.
+
+## Shared candidate vocabularies (S20)
+
+Built by `scripts/build_candidates.py` from `wordcounts_<lang>.tsv`: tokens containing at
+least one letter (Hindi also at least one Devanagari letter), top 200,000 by count, then
+intersected with the vocabulary of `w2v`, `ft` and the first 200,000 lines of the pretrained
+aligned fastText file, so the same pool is used by every system in T1.
+
+| Language | Tokens | With a letter | Top | Shared candidates | `w2v`/`ft` vocab | `ft_ref` vocab |
+|---|---|---|---|---|---|---|
+| hi | 812,905 | 697,817 | 200,000 | **98,069** | 140,590 | 158,016 |
+| en | 597,933 | 584,301 | 200,000 | **112,703** | 147,988 | 200,000 |
+
+Words dropped from the top-200k list by the intersection: Hindi 72,886 (`w2v`/`ft`) and
+93,077 (`ft_ref`); English 54,463 (`w2v`/`ft`) and 67,126 (`ft_ref`). The Hindi Wikipedia
+corpus is small, so its vocabulary (140,590 words) limits the pool to 98,069 words; the
+per-language JSON sidecars record the same counters.
+
 ## Contamination filter and shard sizes (S13)
 
 Exact-match filter: a `train` sentence is dropped when, after normalization, it equals a FLORES dev/devtest sentence or an XQuAD context/question/answer of the same language.
