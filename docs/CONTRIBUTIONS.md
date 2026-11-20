@@ -20,7 +20,7 @@ Suggested workstreams (`PLAN.md` Appendix D) — the humans decide who is A and 
 
 | Step | Description | Owner | Notes |
 |---|---|---|---|
-| S00 | Project docs and decision log | TBD | `docs/AI_USE_LOG.md`, `docs/CONTRIBUTIONS.md`, `docs/DECISIONS.md` created |
+| S00 | Project docs and decision log | TBD | `docs/CONTRIBUTIONS.md`, `docs/DECISIONS.md` created |
 | S03 | Reconcile skeleton with proposal | TBD | Dropped static family and `sib200` removed, `stanza`/`regex` added, configs extended, probe-set header updated, README RQs rewritten |
 | S05 | `textproc.py` + tests | A | `src/textproc.py`, `tests/test_textproc.py` (27 tests): matras not split, NFC, nukta unification, zero-width removal, danda splitting, Devanagari digits |
 | S06 | Ranking metrics and paired bootstrap | B | `src/metrics.py`, `tests/test_metrics.py` (15 tests) |

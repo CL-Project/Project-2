@@ -2,7 +2,7 @@
 
 Companion to `AGENTS.md` (rules) and `proposal.pdf` (the contract). Work **in order**: step IDs follow dependencies. Calendar weeks are targets taken from the proposal (wk1 baselines and encoders; wk2 static models and T1; wk3 T3 and analyses; wk4 taxonomy and report). If you are ahead, you may pull later steps forward as long as their dependencies are met.
 
-Legend: **Owner** A / B is a *suggested* split of the two members (the humans decide who is A and B; see Appendix D). **Accept** = the check that must pass before the step is done. **H** = needs a human. Every step also obeys the Definition of Done in `AGENTS.md` section 14 (tests pass, results logged, AI-use log updated, commit made).
+Legend: **Owner** A / B is a *suggested* split of the two members (the humans decide who is A and B; see Appendix D). **Accept** = the check that must pass before the step is done. **H** = needs a human. Every step also obeys the Definition of Done in `AGENTS.md` section 14 (tests pass, results logged, commit made).
 
 ## Status checklist
 
@@ -54,7 +54,7 @@ Legend: **Owner** A / B is a *suggested* split of the two members (the humans de
 - [ ] S45 Taxonomy aggregation and figures
 - [ ] S46 Report assets script
 - [ ] S47 Report writing
-- [ ] S48 README, AI-use statement, contributions
+- [ ] S48 README and contributions
 - [ ] S49 Final QA and submission
 
 ## 0. Pre-registered design summary
@@ -82,8 +82,8 @@ Dropped on purpose (do not add): GloVe, T4 classification, Gradio demo, BGE-M3.
 
 ### S00 Project docs and decision log
 **Owner:** A | **Est.:** 1 h | **Week:** 1
-**Do:** create `docs/AI_USE_LOG.md` (table: date, agent/tool, step id, what was produced, verification, reviewed_by), `docs/CONTRIBUTIONS.md` (per-member list, filled in as work happens), `docs/DECISIONS.md` seeded with the decisions already fixed in this plan: per-direction Procrustes mappings; shared candidate vocabulary; SIF PC fitted on held-out Wikipedia; Wikipedia shard split (S12); distractor design (S28); common-query-set rule for T1 (S22); best-system selection rule; seed 42; gensim `workers=8` is not exactly reproducible so vectors are saved.
-**Accept:** the three files exist with the above content. **Commit:** "add AI-use log, contributions and decision log".
+**Do:** create `docs/CONTRIBUTIONS.md` (per-member list, filled in as work happens) and `docs/DECISIONS.md` seeded with the decisions already fixed in this plan: per-direction Procrustes mappings; shared candidate vocabulary; SIF PC fitted on held-out Wikipedia; Wikipedia shard split (S12); distractor design (S28); common-query-set rule for T1 (S22); best-system selection rule; seed 42; gensim `workers=8` is not exactly reproducible so vectors are saved.
+**Accept:** the two files exist with the above content. **Commit:** "add contributions and decision log".
 
 ### S01 (H) Email instructors
 **Owner:** human | **Est.:** 15 min
@@ -378,12 +378,12 @@ Use the format the instructors specify (S01). Suggested structure and what each 
 8. **Failure taxonomy** (centrepiece): codebook, agreement, distribution per system and task, exemplars, interpretation.
 9. **Limitations**: in-distribution training of LaBSE and mE5, small test sets, small Hindi corpus, distractor design, Stanza and Wiktionary noise, MT quality in `bm25_mt`, contamination, non-exact reproducibility of gensim training.
 10. **Conclusion**.
-11. **Appendices**: reproducibility instructions, compute table, AI-use statement (from `docs/AI_USE_LOG.md`), per-member contribution statement.
+11. **Appendices**: reproducibility instructions, compute table, per-member contribution statement.
 Language rule: claims about causes ("because of subword n-grams") need a supporting analysis in the report; otherwise phrase as hypotheses.
 
-### S48 README, AI-use statement, contributions
+### S48 README and contributions
 **Owner:** both | **Est.:** 3 h
-README: one-paragraph summary, main results table, how to reproduce (ordered commands from `scripts/run_all.sh`), hardware used and runtimes, data sources and licenses, AI-use statement, per-member contributions, limitations pointer. Keep `scripts/run_all.sh` updated as steps complete (an ordered list of commands from download to report assets).
+README: one-paragraph summary, main results table, how to reproduce (ordered commands from `scripts/run_all.sh`), hardware used and runtimes, data sources and licenses, per-member contributions, limitations pointer. Keep `scripts/run_all.sh` updated as steps complete (an ordered list of commands from download to report assets).
 
 ### S49 Final QA and submission
 **Owner:** both | **Est.:** 1 day
@@ -397,7 +397,7 @@ README: one-paragraph summary, main results table, how to reproduce (ordered com
 
 ## Appendix A: where results go
 
-`results/results.csv` (aggregated, CIs), `results/per_item/*.csv` (per-query), `results/analysis/*.csv`, `results/plots/*.{pdf,png}`, `report/assets/` (generated), `docs/DATA.md`, `docs/DECISIONS.md`, `docs/AI_USE_LOG.md`, `docs/CONTRIBUTIONS.md`, `docs/vocab_layer_rules.md`.
+`results/results.csv` (aggregated, CIs), `results/per_item/*.csv` (per-query), `results/analysis/*.csv`, `results/plots/*.{pdf,png}`, `report/assets/` (generated), `docs/DATA.md`, `docs/DECISIONS.md`, `docs/CONTRIBUTIONS.md`, `docs/vocab_layer_rules.md`.
 
 ## Appendix B: sanity ranges (heuristics, not guarantees)
 

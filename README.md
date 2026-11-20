@@ -82,12 +82,9 @@ rather than hidden.
 - `tests/` unit tests
 - `analysis/` linguistic analyses and the polysemy probe set
 - `results/` result CSVs and plots
-- `docs/` decision log, data card, AI-use log, contributions
+- `docs/` decision log, data card, contributions
 - `report/` LaTeX report
 - `data/` downloaded and processed data (git-ignored)
-
-## AI-use statement
-TODO: describe which parts were generated with AI assistance, how they were specified, tested and reviewed.
 
 ## Contributions
 TODO: per-member contribution statement.
